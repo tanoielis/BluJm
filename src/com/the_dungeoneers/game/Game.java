@@ -1,16 +1,18 @@
 package com.the_dungeoneers.game;
 
+import com.the_dungeoneers.game.camera.Camera;
+import com.the_dungeoneers.game.entities.Enemy;
+import com.the_dungeoneers.game.entities.Entity;
+import com.the_dungeoneers.game.entities.Player;
+import com.the_dungeoneers.game.input_handler.Keyboard;
 import processing.core.*;
-import Collision.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Game extends PApplet{
 
-	private boolean intersection = false;
-	private List<Polygon> polygons = new ArrayList<>();
-
+	private Camera activeCamera;
+	private Player player;
+	private Enemy enemy;
+	
 	@Override
 	public void settings() {
 		size(1000, 1000);
@@ -18,36 +20,48 @@ public class Game extends PApplet{
 
 	@Override
 	public void setup() {
-		createPolygons();
+		player = new Player(this, new PVector());
+		activeCamera = new Camera(this, player);
+		enemy = new Enemy(this, new PVector(100,60));
 	}
 
 	@Override
 	public void draw() {
+		update();
+		
 		background(255);
-
-		drawPolygons();
+		drawEntities();
+		drawUI();
 	}
-	private void createPolygons() {
-		polygons.add(new Square(this, 500,650, 50, 50, color(255,0,0), 0));
-		polygons.add(new Square(this, 590,600, 100, 100, color(0,255,0), 70));
-
-		polygons.add(new Triangle(this, 700,650, 800, 650, (700 + 800)/2, 550, color(255,0,0), 0));
+	
+	private void drawEntities(){
+		pushMatrix();
+			translate(activeCamera.getPos().x, activeCamera.getPos().y);
+			player.draw();
+			enemy.draw();
+		popMatrix();
 	}
-
-	private void drawPolygons() {
-		for (Polygon poly : polygons) {
-			for (Polygon polygon1 : polygons) {
-				if (poly != polygon1) {
-					if (SAT_Collision.intersects(poly, polygon1)) {
-						if (!intersection) {
-							intersection = true;
-							System.out.println("Intersection detected");
-						}
-					}
-				}
-			}
-			poly.draw();
-		}
+	
+	private void drawUI(){
+		String camera = activeCamera.getFocus().id;
+		fill(0);
+		textSize(32);
+		text("Camera "+camera, 100, 100);
+	}
+	
+	private void update(){
+		player.update();
+		enemy.update();
+		activeCamera.update();
+	}
+	
+	public void keyPressed(){
+		Keyboard.checkInput(this, player, this);
+	}
+	
+	public void switchCamera(){
+		Entity focus = activeCamera.getFocus() == player ? enemy : player;
+		activeCamera.setFocus(focus);
 	}
 	
 	public static void main(String[] args){
