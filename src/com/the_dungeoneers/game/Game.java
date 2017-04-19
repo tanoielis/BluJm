@@ -9,6 +9,7 @@ public class Game extends PApplet{
 	}
 	
 	public void setup(){
+		PVector poo = new PVector(cos(5), 20);
 		
 	}
 	
