@@ -1,6 +1,7 @@
 package com.the_dungeoneers.game;
 
 import processing.core.*;
+import Collision.*;
 
 public class Game extends PApplet{
 	
@@ -11,6 +12,7 @@ public class Game extends PApplet{
 	public void setup(){
 		PVector poo = new PVector();
 		ellipse(700,700, 100,100);
+		Polygon p = new Square(1,1,1,1,1,1);
 	}
 	
 	public void draw(){
