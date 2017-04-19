@@ -17,7 +17,6 @@ public abstract class Entity{
 		this.g = g;
 		this.pos = pos;
 		this.speed = speed;
-		this.id = "Enemy";
 	}
 	
 	public PVector getPos(){
