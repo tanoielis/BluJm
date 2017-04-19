@@ -10,6 +10,7 @@ public class Game extends PApplet{
 	
 	public void setup(){
 		PVector poo = new PVector();
+		ellipse(700,700, 100,100);
 	}
 	
 	public void draw(){
