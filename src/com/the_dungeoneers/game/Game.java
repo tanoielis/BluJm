@@ -14,6 +14,7 @@ public class Game extends PApplet{
 	
 	public void draw(){
 		line(500,500,100,100);
+        line(600,500,300,400);
 	}
 	
 	public static void main(String[] args){
