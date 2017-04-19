@@ -1,8 +1,9 @@
 package com.the_dungeoneers.game.camera;
 
 import static processing.core.PVector.lerp;
+
+import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.entities.Entity;
-import processing.core.PApplet;
 import processing.core.PVector;
 
 
@@ -14,18 +15,18 @@ public class Camera{
 	private Entity focus;
 	private PVector pos;
 	private float smoothness = 0.05f;
-	private PApplet p;
+	private Game g;
 	
-	public Camera(PApplet p, Entity focus){
+	public Camera(Game g, Entity focus){
 		this.focus = focus;
-		this.p = p;
-		this.pos = focus.getPos().add(p.width/2, p.height/2);
+		this.g = g;
+		this.pos = focus.getPos().add(g.width/2, g.height/2);
 	}
 	
 	public void update(){
 		PVector antipos = focus.getPos();
-		float x = (-antipos.x)+p.width/2;
-		float y = (-antipos.y)+p.height/2;
+		float x = (-antipos.x)+ g.width/2;
+		float y = (-antipos.y)+ g.height/2;
 		pos = lerp(pos, new PVector(x,y), smoothness);
 	}
 	

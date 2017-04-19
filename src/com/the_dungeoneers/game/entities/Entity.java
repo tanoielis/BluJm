@@ -1,6 +1,6 @@
 package com.the_dungeoneers.game.entities;
 
-import processing.core.PApplet;
+import com.the_dungeoneers.game.Game;
 import processing.core.PVector;
 
 /**
@@ -9,12 +9,12 @@ import processing.core.PVector;
 public abstract class Entity{
 	
 	protected PVector pos;
-	protected PApplet p;
+	protected Game g;
 	protected float speed;
 	public String id;
 	
-	public Entity(PApplet p, PVector pos, float speed){
-		this.p = p;
+	public Entity(Game g, PVector pos, float speed){
+		this.g = g;
 		this.pos = pos;
 		this.speed = speed;
 		this.id = "Enemy";
