@@ -9,7 +9,7 @@ public class Game extends PApplet{
 	}
 	
 	public void setup(){
-		
+		ellipse(700,700, 100,100);
 	}
 	
 	public void draw(){
