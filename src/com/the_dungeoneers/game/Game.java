@@ -9,7 +9,7 @@ public class Game extends PApplet{
 	}
 	
 	public void setup(){
-		PVector poo;
+		PVector poo = new PVector();
 	}
 	
 	public void draw(){
