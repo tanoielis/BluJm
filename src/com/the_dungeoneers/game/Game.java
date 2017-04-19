@@ -8,9 +8,8 @@ import java.util.List;
 
 public class Game extends PApplet{
 
-	boolean intersection = false;
-
-	List<Polygon> polygons = new ArrayList<>();
+	private boolean intersection = false;
+	private List<Polygon> polygons = new ArrayList<>();
 
 	@Override
 	public void settings() {
@@ -38,10 +37,12 @@ public class Game extends PApplet{
 	private void drawPolygons() {
 		for (Polygon poly : polygons) {
 			for (Polygon polygon1 : polygons) {
-				if (SAT_Collision.intersects(poly, polygon1)) {
-					if (!intersection) {
-						intersection = true;
-						System.out.println("Intersection detected");
+				if (poly != polygon1) {
+					if (SAT_Collision.intersects(poly, polygon1)) {
+						if (!intersection) {
+							intersection = true;
+							System.out.println("Intersection detected");
+						}
 					}
 				}
 			}
