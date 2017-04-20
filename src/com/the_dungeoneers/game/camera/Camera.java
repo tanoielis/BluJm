@@ -15,7 +15,7 @@ public class Camera{
 	private Entity focus;
 	private PVector pos;
 	private float smoothness = 0.05f;
-	private Game g;
+	private static Game g;
 	
 	public Camera(Game g, Entity focus){
 		this.focus = focus;

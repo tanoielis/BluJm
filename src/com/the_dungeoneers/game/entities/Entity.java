@@ -9,7 +9,7 @@ import processing.core.PVector;
 public abstract class Entity{
 	
 	protected PVector pos;
-	protected Game g;
+	protected static Game g;
 	protected float speed;
 	public String id;
 	
