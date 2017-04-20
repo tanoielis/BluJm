@@ -11,4 +11,5 @@ public interface State{
 	
 	public void drawEntities();
 	
+	public void keyPressed();
 }

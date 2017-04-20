@@ -9,12 +9,12 @@ import processing.core.*;
 
 public class Game extends PApplet{
 
-	Player player;
-	Camera activeCamera;
+	private Player player;
+	private Camera activeCamera;
 
 
-	public int HEIGHT = 720;
-	public int WIDTH = 1280;
+	private final int HEIGHT = 720;
+	private final int WIDTH = 1280;
 	public int blockSize = 16;
 
 
@@ -42,20 +42,19 @@ public class Game extends PApplet{
 	}
 	
 	private void drawEntities(){
-		//states.getState().drawEntities();
+		states.getState().drawEntities();
 	}
 	
 	private void drawUI(){
-		//states.getState().drawUI();
+		states.getState().drawUI();
 	}
 	
 	private void update(){
-		player.update();
-		activeCamera.update();
+		states.getState().update();
 	}
 	
 	public void keyPressed(){
-		Keyboard.checkInput(this, player);
+		states.getState().keyPressed();
 	}
 	
 	public static void main(String[] args){

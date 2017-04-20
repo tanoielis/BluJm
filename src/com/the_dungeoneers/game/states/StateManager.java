@@ -32,5 +32,4 @@ public class StateManager{
 		return states.peek();
 	}
 	
-	
 }
