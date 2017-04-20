@@ -2,6 +2,7 @@ package com.the_dungeoneers.game.states;
 
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.camera.Camera;
+import com.the_dungeoneers.game.entities.Narrator;
 import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.input_handler.Keyboard;
 
@@ -12,10 +13,12 @@ public abstract class GameState implements State{
 	
 	protected Player player;
 	protected Game g;
+	protected Narrator narrator;
 	
-	public GameState(Game g, Player player){
+	public GameState(Game g, Player player, Narrator narrator){
 		this.player = player;
 		this.g = g;
+		this.narrator = narrator;
 	}
 	
 	@Override

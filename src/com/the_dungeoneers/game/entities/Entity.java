@@ -27,8 +27,6 @@ public abstract class Entity{
 		return pos.copy();
 	}
 
-	public abstract boolean collides(Entity e2);
-	
 	public abstract boolean collides(Entity obj);
 	
 	public abstract void moveLeft();

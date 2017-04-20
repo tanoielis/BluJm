@@ -5,6 +5,7 @@ import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.*;
+import processing.core.PConstants;
 import processing.core.PVector;
 
 import java.util.ArrayList;
@@ -15,20 +16,33 @@ import java.util.ArrayList;
 public class Level1 extends GameState {
 
 	ArrayList<Tile> boardTiles = new ArrayList<>();
-
-	public Level1(Game g, Player player){
-		super(g, player);
+	private String narratorSpeech;
+	private int startTime;
+	
+	public Level1(Game g, Player player, Narrator narrator){
+		super(g, player, narrator);
 		generateTiles();
+		narratorSpeech = narrator.talk();
+		startTime = g.millis();
 	}
 	
 	@Override
 	public void update(){
 		super.update();
+		if(g.millis() > startTime + 3000){
+			narratorSpeech = narrator.talk();
+			startTime = Integer.MAX_VALUE-3000;
+		}
+		
 	}
 	
 	@Override
 	public void drawUI(){
 		super.drawUI();
+		g.textAlign(PConstants.CENTER, PConstants.CENTER);
+		g.textSize(60);
+		g.fill(255);
+		g.text(narratorSpeech, g.width/2, g.height/4);
 	}
 	
 	@Override

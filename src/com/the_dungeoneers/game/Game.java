@@ -1,5 +1,6 @@
 package com.the_dungeoneers.game;
 
+import com.the_dungeoneers.game.entities.Narrator;
 import com.the_dungeoneers.game.input_handler.Keyboard;
 import com.the_dungeoneers.game.states.Menu;
 import com.the_dungeoneers.game.states.StateManager;
@@ -10,6 +11,7 @@ import processing.core.*;
 public class Game extends PApplet{
 
 	public Player player;
+	public Narrator narrator;
 
 
 	private final int HEIGHT = 720;
@@ -28,6 +30,7 @@ public class Game extends PApplet{
 	public void setup() {
 		states = new StateManager(new Menu(this));
 		player = new Player(this, new PVector(blockSize*3, height - blockSize * 6), new PVector(), new PVector());
+		narrator = new Narrator();
 	}
 
 	@Override
