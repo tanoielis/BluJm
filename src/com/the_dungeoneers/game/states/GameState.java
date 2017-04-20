@@ -3,6 +3,7 @@ package com.the_dungeoneers.game.states;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.Player;
+import com.the_dungeoneers.game.input_handler.Keyboard;
 
 /**
  * Abstract game class
@@ -10,7 +11,6 @@ import com.the_dungeoneers.game.entities.Player;
 public abstract class GameState implements State{
 	
 	protected Player player;
-	protected Camera camera;
 	protected Game g;
 	
 	public GameState(Game g, Player player){
@@ -21,6 +21,7 @@ public abstract class GameState implements State{
 	@Override
 	public void update(){
 		player.update();
+		Keyboard.runInput(player);
 	}
 	
 	@Override
@@ -30,13 +31,21 @@ public abstract class GameState implements State{
 	
 	@Override
 	public void drawEntities(){
-		g.pushMatrix();
-			player.draw();
-		g.popMatrix();
+		player.draw();
 	}
 	
 	@Override
 	public void keyPressed(){
+		Keyboard.checkInput(g, player);
+	}
+	
+	@Override
+	public void keyReleased(){
+		Keyboard.keyReleased(g, player);
+	}
+	
+	@Override
+	public void mousePressed(){
 		
 	}
 }

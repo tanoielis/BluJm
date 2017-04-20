@@ -47,6 +47,11 @@ public class Menu implements State{
 	}
 	
 	@Override
+	public void keyReleased(){
+		
+	}
+	
+	@Override
 	public void mousePressed(){
 		float x = g.mouseX;
 		float y = g.mouseY;

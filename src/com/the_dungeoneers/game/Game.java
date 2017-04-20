@@ -28,7 +28,7 @@ public class Game extends PApplet{
 	@Override
 	public void setup() {
 		states = new StateManager(new Menu(this));
-		player = new Player(this, new PVector(blockSize*3, height - blockSize * 6), new PVector(0,0), new PVector(0.1f, 0.3f));
+		player = new Player(this, new PVector(blockSize*3, height - blockSize * 6), new PVector(), new PVector());
 	}
 
 	@Override
@@ -54,6 +54,10 @@ public class Game extends PApplet{
 	
 	public void keyPressed(){
 		states.getState().keyPressed();
+	}
+	
+	public void keyReleased(){
+		states.getState().keyReleased();
 	}
 	
 	public void mousePressed(){

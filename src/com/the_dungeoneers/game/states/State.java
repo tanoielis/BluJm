@@ -13,5 +13,7 @@ public interface State{
 	
 	public void keyPressed();
 	
+	public void keyReleased();
+	
 	public void mousePressed();
 }
