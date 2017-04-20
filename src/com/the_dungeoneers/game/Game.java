@@ -1,5 +1,6 @@
 package com.the_dungeoneers.game;
 
+import com.the_dungeoneers.game.input_handler.Keyboard;
 import com.the_dungeoneers.game.states.Menu;
 import com.the_dungeoneers.game.states.StateManager;
 import com.the_dungeoneers.game.camera.Camera;
@@ -12,9 +13,9 @@ public class Game extends PApplet{
 	Camera activeCamera;
 
 
-	int HEIGHT = 720;
-	int WIDTH = 1280;
-	int blockSize = 16;
+	public int HEIGHT = 720;
+	public int WIDTH = 1280;
+	public int blockSize = 16;
 
 
 	private StateManager states;
@@ -28,6 +29,7 @@ public class Game extends PApplet{
 	public void setup() {
 		states = new StateManager(new Menu(this));
 		player = new Player(this, new PVector(blockSize*3, height - blockSize * 6), new PVector(0,0), new PVector((float)0.1, (float)0.3));
+		activeCamera = new Camera(this, player);
 	}
 
 	@Override
@@ -40,19 +42,20 @@ public class Game extends PApplet{
 	}
 	
 	private void drawEntities(){
-		
+		//states.getState().drawEntities();
 	}
 	
 	private void drawUI(){
-		
+		//states.getState().drawUI();
 	}
 	
 	private void update(){
-		
+		player.update();
+		activeCamera.update();
 	}
 	
 	public void keyPressed(){
-	
+		Keyboard.checkInput(this, player);
 	}
 	
 	public static void main(String[] args){

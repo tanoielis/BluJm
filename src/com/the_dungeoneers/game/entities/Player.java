@@ -2,6 +2,7 @@ package com.the_dungeoneers.game.entities;
 
 import Collision.Square;
 import com.the_dungeoneers.game.Game;
+import processing.core.PConstants;
 import processing.core.PVector;
 
 /**
@@ -9,33 +10,36 @@ import processing.core.PVector;
  */
 public class Player extends Entity {
 
-    Square playerBB;
+    Square bb;
     private float wd, ht;
-    private PVector vel;
-    private PVector accel;
 
-    public Player(Game g, PVector pos, PVector speed, PVector accel) {
-        super(g, pos, speed, accel);
+    public Player(Game g, PVector pos, PVector vel, PVector accel) {
+        super(g, pos, vel, accel);
+        this.wd = g.blockSize;
+        this.ht = g.blockSize*2;
+        this.bb = new Square(g, pos, wd, ht);
     }
 
 
-    @Override
-    public void moveLeft() {
+    public void moveLeft(){
+        pos.add(-vel.x, 0);
+    }
 
+    public void moveRight(){
+        pos.add(vel.x, 0);
     }
 
     @Override
-    public void moveRight() {
-
-    }
-
-    @Override
-    public void update() {
-
+    public void update(){
+        bb.x = pos.x;
+        bb.y = pos.y;
     }
 
     @Override
     public void draw() {
-
+        g.rectMode(PConstants.CORNER);
+        g.fill(230, 221, 214);
+        g.noStroke();
+        g.rect(pos.x, pos.y, wd, ht);
     }
 }
