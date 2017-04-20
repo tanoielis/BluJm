@@ -10,13 +10,15 @@ public abstract class Entity{
 	
 	protected PVector pos;
 	protected Game g;
-	protected float speed;
+	protected PVector speed;
+	protected PVector accel;
 	public String id;
 	
-	public Entity(Game g, PVector pos, float speed){
+	public Entity(Game g, PVector pos, PVector speed, PVector accel){
 		this.g = g;
 		this.pos = pos;
 		this.speed = speed;
+		this.accel = accel;
 	}
 	
 	public PVector getPos(){
