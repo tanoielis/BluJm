@@ -48,8 +48,9 @@ public class Level1 extends GameState {
 
 	void generateTiles() {
 		boardTiles.add(new Tile(g, new PVector(0, g.height - 4*g.blockSize), 14*g.blockSize, 4*g.blockSize, g.color(24, 24, 29)));
-		boardTiles.add(new Tile(g, new PVector(12*g.blockSize, g.height - 4*g.blockSize), 14*g.blockSize, 4*g.blockSize, g.color(24, 24, 29)));
-		boardTiles.add(new Tile(g, new PVector(14* g.blockSize, g.height - 2*g.blockSize), (g.width - 14*g.blockSize) - 14* g.blockSize, 2*g.blockSize, g.color(109,6,6)));
+		boardTiles.add(new Tile(g, new PVector(g.width - 12*g.blockSize, g.height - 4*g.blockSize), 14*g.blockSize, 4*g.blockSize, g.color(24, 24, 29)));
+		boardTiles.add(new Tile(g, new PVector(14* g.blockSize, g.height - 2*g.blockSize), (g.width - 14*g.blockSize) - 12* g.blockSize, 2*g.blockSize, g.color(109,6,6)));
+		boardTiles.add(new Tile(g, new PVector(g.width - 5*g.blockSize, g.height - 8*g.blockSize), g.blockSize, g.blockSize*4, g.color(29,168,8)));
 	}
 
 	@Override
