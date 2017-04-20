@@ -22,11 +22,12 @@ public class Level1 extends GameState{
 	@Override
 	public void drawUI(){
 		super.drawUI();
-		g.background(0);
+		
 	}
 	
 	@Override
 	public void drawEntities(){
+		g.background(0);
 		super.drawEntities();
 	}
 	
