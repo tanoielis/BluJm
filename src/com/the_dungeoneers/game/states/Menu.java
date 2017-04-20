@@ -1,5 +1,6 @@
 package com.the_dungeoneers.game.states;
 
+import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import processing.core.PConstants;
 
@@ -8,10 +9,12 @@ import processing.core.PConstants;
  */
 public class Menu implements State{
 	
-	Game g;
+	private Game g;
+	private Square play;
 	
 	public Menu(Game g){
 		this.g = g;
+		play = new Square(g, g.width/2-200, g.height/2-50, 400, 100);
 	}
 	
 	@Override
@@ -36,5 +39,19 @@ public class Menu implements State{
 	@Override
 	public void drawEntities(){
 		
+	}
+	
+	@Override
+	public void keyPressed(){
+		
+	}
+	
+	@Override
+	public void mousePressed(){
+		float x = g.mouseX;
+		float y = g.mouseY;
+		if(x > play.x && x < play.wd + play.x && y > play.y && y < play.ht + play.y){
+			g.states.startState(new Level1(g, g.player, g.activeCamera));
+		}
 	}
 }

@@ -22,6 +22,7 @@ public class Level1 extends GameState{
 	@Override
 	public void drawUI(){
 		super.drawUI();
+		g.background(0);
 	}
 	
 	@Override
@@ -32,5 +33,10 @@ public class Level1 extends GameState{
 	@Override
 	public void keyPressed(){
 		super.keyPressed();
+	}
+	
+	@Override
+	public void mousePressed(){
+		
 	}
 }

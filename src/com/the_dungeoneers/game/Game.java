@@ -9,8 +9,8 @@ import processing.core.*;
 
 public class Game extends PApplet{
 
-	private Player player;
-	private Camera activeCamera;
+	public Player player;
+	public Camera activeCamera;
 
 
 	private final int HEIGHT = 720;
@@ -18,7 +18,7 @@ public class Game extends PApplet{
 	public int blockSize = 16;
 
 
-	private StateManager states;
+	public StateManager states;
 
 	@Override
 	public void settings() {
@@ -55,6 +55,10 @@ public class Game extends PApplet{
 	
 	public void keyPressed(){
 		states.getState().keyPressed();
+	}
+	
+	public void mousePressed(){
+		states.getState().mousePressed();
 	}
 	
 	public static void main(String[] args){

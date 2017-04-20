@@ -9,9 +9,9 @@ import com.the_dungeoneers.game.entities.Player;
  */
 public abstract class GameState implements State{
 	
-	private Player player;
-	private Camera camera;
-	private Game g;
+	protected Player player;
+	protected Camera camera;
+	protected Game g;
 	
 	public GameState(Game g, Player player, Camera camera){
 		this.player = player;
