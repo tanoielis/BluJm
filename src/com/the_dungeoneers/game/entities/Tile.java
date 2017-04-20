@@ -1,5 +1,6 @@
 package com.the_dungeoneers.game.entities;
 
+import Collision.SAT_Collision;
 import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import processing.core.PConstants;
@@ -30,5 +31,15 @@ public class Tile {
         g.fill(this.col);
         g.noStroke();
         g.rect(pos.x, pos.y, wd, ht);
+    }
+
+    public boolean collides(Entity obj){
+        if(obj instanceof Player){
+            Player p = (Player) obj;
+            if(SAT_Collision.intersects(p.bb, this.bb)){
+                return true;
+            }
+        }
+        return false;
     }
 }

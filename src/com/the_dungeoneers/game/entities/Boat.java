@@ -24,8 +24,7 @@ public class Boat extends Entity{
 	public PVector getPos(){
 		return super.getPos();
 	}
-	
-	@Override
+
 	public boolean collides(Entity obj){
 		if(obj instanceof Player){
 			Player p = (Player)obj;

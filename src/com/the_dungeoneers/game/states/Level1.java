@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class Level1 extends GameState {
 
-	ArrayList<Tile> boardTiles = new ArrayList<>();
+	public ArrayList<Tile> boardTiles = new ArrayList<>();
 
 	public Level1(Game g, Player player){
 		super(g, player);
@@ -24,6 +24,7 @@ public class Level1 extends GameState {
 	@Override
 	public void update(){
 		super.update();
+		player.collisionDetection(boardTiles);
 	}
 	
 	@Override
