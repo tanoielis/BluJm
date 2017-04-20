@@ -12,8 +12,8 @@ public class Game extends PApplet{
 	Camera activeCamera;
 
 
-	int height = 720;
-	int width = 1280;
+	int HEIGHT = 720;
+	int WIDTH = 1280;
 	int blockSize = 16;
 
 
@@ -21,7 +21,7 @@ public class Game extends PApplet{
 
 	@Override
 	public void settings() {
-		size(width, height);
+		size(WIDTH, HEIGHT);
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class Game extends PApplet{
 	public void draw() {
 		update();
 		
-		background(255);
+		background(45, 41, 41);
 		drawEntities();
 		drawUI();
 	}
