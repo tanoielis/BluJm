@@ -39,12 +39,13 @@ public abstract class GameState implements State{
 		Keyboard.checkInput(g, player);
 	}
 
-	public void keyReleased() {
+	@Override
+	public void keyReleased(){
 		Keyboard.keyReleased(g, player);
 	}
 
 	@Override
-	public void mousePressed() {
+	public void mousePressed(){
 
 	}
 }

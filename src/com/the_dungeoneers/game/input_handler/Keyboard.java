@@ -12,16 +12,42 @@ public class Keyboard {
 	private static final char RIGHT = 'D';
 	private static final char JUMP = ' ';
 	
+	private static boolean leftDown;
+	private static boolean rightDown;
+	private static boolean spaceDown;
+	
 	public static void checkInput(Game g, Entity obj){
 		switch(g.keyCode){
 			case LEFT:
-				obj.moveLeft();
+				leftDown = true;
 				break;
 			case RIGHT:
-				obj.moveRight();
+				rightDown = true;
 				break;
 			case JUMP:
 				break;
+		}
+	}
+	
+	public static void keyReleased(Game g, Entity obj){
+		switch(g.keyCode){
+			case LEFT:
+				leftDown = false;
+				break;
+			case RIGHT:
+				rightDown = false;
+				break;
+			case JUMP:
+				break;
+		}
+	}
+	
+	public static void runInput(Entity obj){
+		if(leftDown){
+			obj.moveLeft();
+		}
+		if(rightDown){
+			obj.moveRight();
 		}
 	}
 }

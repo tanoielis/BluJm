@@ -4,6 +4,7 @@ import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import processing.core.PConstants;
 import processing.core.PVector;
+import static processing.core.PApplet.constrain;
 
 /**
  * Created by Chris on 20/04/2017.
@@ -22,17 +23,28 @@ public class Player extends Entity {
 
 
     public void moveLeft(){
-        pos.add(-vel.x, 0);
+		accel.set(-1, 0);
     }
 
     public void moveRight(){
-        pos.add(vel.x, 0);
+		accel.set(1, 0);
     }
 
     @Override
     public void update(){
-        bb.x = pos.x;
-        bb.y = pos.y;
+        
+		if (accel.x == 0) {
+			vel.lerp(new PVector(), 0.1f);
+		} else {
+			vel.add(accel);
+			vel.x = constrain(vel.x, -5, 5);
+		}
+		
+		pos.add(vel);
+		accel.mult(0);
+		
+		bb.x = pos.x;
+		bb.y = pos.y;
     }
 
     @Override
