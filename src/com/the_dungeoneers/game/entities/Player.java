@@ -58,9 +58,9 @@ public class Player extends Entity {
         g.noStroke();
         g.rect(pos.x, pos.y, wd, ht);
     }
-
-    @Override
-    public boolean collides(Entity e2) {
-        return true;
-    }
+	
+	@Override
+	public boolean collides(Entity obj){
+		return false;
+	}
 }

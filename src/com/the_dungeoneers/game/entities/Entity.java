@@ -29,6 +29,8 @@ public abstract class Entity{
 
 	public abstract boolean collides(Entity e2);
 	
+	public abstract boolean collides(Entity obj);
+	
 	public abstract void moveLeft();
 	
 	public abstract void moveRight();
