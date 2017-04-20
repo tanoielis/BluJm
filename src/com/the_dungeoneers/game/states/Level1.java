@@ -17,7 +17,6 @@ public class Level1 extends GameState {
 
 	ArrayList<Tile> boardTiles = new ArrayList<>();
 
-
 	public Level1(Game g, Player player){
 		super(g, player);
 	}
@@ -35,12 +34,7 @@ public class Level1 extends GameState {
 	@Override
 	public void drawEntities(){
 		g.background(43, 0, 0);
-		drawBlocks();
 		super.drawEntities();
-	}
-
-	private void drawBlocks() {
-		g.fill(24, 24, 29);
 	}
 
 	@Override
