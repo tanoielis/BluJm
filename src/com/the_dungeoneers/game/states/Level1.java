@@ -19,6 +19,7 @@ public class Level1 extends GameState {
 
 	public Level1(Game g, Player player){
 		super(g, player);
+		generateTiles();
 	}
 	
 	@Override
@@ -33,17 +34,30 @@ public class Level1 extends GameState {
 	
 	@Override
 	public void drawEntities(){
-		g.background(43, 0, 0);
+		g.background(20, 0, 0);
+		drawTiles();
 		super.drawEntities();
+	}
+
+
+	private void drawTiles() {
+		for (Tile t : boardTiles) {
+			t.draw();
+		}
+	}
+
+	void generateTiles() {
+		boardTiles.add(new Tile(g, new PVector(0, g.height - 4*g.blockSize), 14*g.blockSize, 4*g.blockSize, g.color(24, 24, 29)));
+		boardTiles.add(new Tile(g, new PVector(12*g.blockSize, g.height - 4*g.blockSize), 14*g.blockSize, 4*g.blockSize, g.color(24, 24, 29)));
+		boardTiles.add(new Tile(g, new PVector(14* g.blockSize, g.height - 2*g.blockSize), (g.width - 14*g.blockSize) - 14* g.blockSize, 2*g.blockSize, g.color(109,6,6)));
 	}
 
 	@Override
 	public void keyPressed(){
 		super.keyPressed();
 	}
-	
+
 	@Override
 	public void mousePressed(){
-		
 	}
 }

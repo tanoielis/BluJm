@@ -10,7 +10,6 @@ import processing.core.*;
 public class Game extends PApplet{
 
 	public Player player;
-	public Camera activeCamera;
 
 
 	private final int HEIGHT = 720;
