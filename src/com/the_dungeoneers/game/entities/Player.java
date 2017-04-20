@@ -1,5 +1,6 @@
 package com.the_dungeoneers.game.entities;
 
+import Collision.SAT_Collision;
 import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import processing.core.PConstants;
@@ -11,7 +12,7 @@ import static processing.core.PApplet.constrain;
  */
 public class Player extends Entity {
 
-    Square bb;
+    public Square bb;
     private float wd, ht;
 
     public Player(Game g, PVector pos, PVector vel, PVector accel) {
@@ -56,5 +57,10 @@ public class Player extends Entity {
         g.fill(230, 221, 214);
         g.noStroke();
         g.rect(pos.x, pos.y, wd, ht);
+    }
+
+    @Override
+    public boolean collides(Entity e2) {
+        return true;
     }
 }

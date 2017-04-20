@@ -4,8 +4,7 @@ package com.the_dungeoneers.game.states;
 import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.camera.Camera;
-import com.the_dungeoneers.game.entities.Player;
-import com.the_dungeoneers.game.entities.Tile;
+import com.the_dungeoneers.game.entities.*;
 import processing.core.PVector;
 
 import java.util.ArrayList;
@@ -47,10 +46,10 @@ public class Level1 extends GameState {
 	}
 
 	void generateTiles() {
-		boardTiles.add(new Tile(g, new PVector(0, g.height - 4*g.blockSize), 14*g.blockSize, 4*g.blockSize, g.color(24, 24, 29)));
-		boardTiles.add(new Tile(g, new PVector(g.width - 12*g.blockSize, g.height - 4*g.blockSize), 14*g.blockSize, 4*g.blockSize, g.color(24, 24, 29)));
-		boardTiles.add(new Tile(g, new PVector(14* g.blockSize, g.height - 2*g.blockSize), (g.width - 14*g.blockSize) - 12* g.blockSize, 2*g.blockSize, g.color(109,6,6)));
-		boardTiles.add(new Tile(g, new PVector(g.width - 5*g.blockSize, g.height - 8*g.blockSize), g.blockSize, g.blockSize*4, g.color(29,168,8)));
+		boardTiles.add(new Floor(g, new PVector(0, g.height - 4*g.blockSize), 14*g.blockSize, 4*g.blockSize, g.color(24, 24, 29)));
+		boardTiles.add(new Floor(g, new PVector(g.width - 12*g.blockSize, g.height - 4*g.blockSize), 14*g.blockSize, 4*g.blockSize, g.color(24, 24, 29)));
+		boardTiles.add(new Lava(g, new PVector(14* g.blockSize, g.height - 2*g.blockSize), (g.width - 14*g.blockSize) - 12* g.blockSize, 2*g.blockSize, g.color(109,6,6)));
+		boardTiles.add(new Exit(g, new PVector(g.width - 5*g.blockSize, g.height - 8*g.blockSize), g.blockSize, g.blockSize*4, g.color(29,168,8)));
 	}
 
 	@Override
