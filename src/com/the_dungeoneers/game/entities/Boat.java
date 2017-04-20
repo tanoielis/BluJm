@@ -13,7 +13,7 @@ public class Boat extends Entity{
 	
 	public Square bb;
 	private float wd, ht;
-	
+
 	public Boat(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
 		this.wd = g.blockSize*3;

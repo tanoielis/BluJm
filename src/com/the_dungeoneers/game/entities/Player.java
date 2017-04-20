@@ -21,6 +21,7 @@ public class Player extends Entity {
 
     // States for the player
     private boolean onBlock = true;
+    private boolean isDead = false;
 
     public Player(Game g, PVector pos, PVector vel, PVector accel) {
         super(g, pos, vel, accel);
@@ -44,7 +45,6 @@ public class Player extends Entity {
 
     @Override
     public void update(){
-
 		if (accel.x == 0) {
 			vel.lerp(new PVector(), 0.1f);
 		}
@@ -68,6 +68,15 @@ public class Player extends Entity {
                     this.pos.y = tile.pos.y - this.ht;
                 }
             }
+            else if (tile instanceof Lava) {
+                if (tile.collides(this)) {
+                    isDead = true;
+                }
+            }
+
+            // TODO: Rethink structure, should entity not have a vel, accel? moveable entity extend entity?
+            // So we can pass in entity?
+
         }
     }
 

@@ -1,7 +1,6 @@
 package com.the_dungeoneers.game.states;
 
 import com.the_dungeoneers.game.Game;
-import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.Narrator;
 import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.input_handler.Keyboard;

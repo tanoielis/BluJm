@@ -16,8 +16,6 @@ import java.util.ArrayList;
 public class Level1 extends GameState {
 
 	public ArrayList<Tile> boardTiles = new ArrayList<>();
-
-	public Level1(Game g, Player player){
 	private String narratorSpeech;
 	private int startTime;
 
@@ -35,7 +33,6 @@ public class Level1 extends GameState {
 			narratorSpeech = narrator.talk();
 			startTime = Integer.MAX_VALUE-3000;
 		}
-
 		player.collisionDetection(boardTiles);
 	}
 	
