@@ -1,5 +1,7 @@
 package com.the_dungeoneers.game;
 
+import com.the_dungeoneers.game.states.Menu;
+import com.the_dungeoneers.game.states.StateManager;
 import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.Player;
 import processing.core.*;
@@ -14,6 +16,9 @@ public class Game extends PApplet{
 	int width = 1280;
 	int blockSize = 16;
 
+
+	private StateManager states;
+
 	@Override
 	public void settings() {
 		size(width, height);
@@ -21,14 +26,15 @@ public class Game extends PApplet{
 
 	@Override
 	public void setup() {
+		states = new StateManager(new Menu(this));
 		player = new Player(this, new PVector(blockSize*3, height - blockSize * 6), new PVector(0,0), new PVector((float)0.1, (float)0.3));
 	}
 
 	@Override
 	public void draw() {
 		update();
-
-		background(45, 41, 41);
+		
+		background(255);
 		drawEntities();
 		drawUI();
 	}

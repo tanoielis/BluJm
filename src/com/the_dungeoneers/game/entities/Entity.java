@@ -14,7 +14,7 @@ public abstract class Entity{
 	protected PVector accel;
 	public String id;
 	
-	public Entity(Game g, PVector pos, PVector speed, PVector accel){
+	public Entity(Game g, PVector pos, float speed){
 		this.g = g;
 		this.pos = pos;
 		this.speed = speed;
