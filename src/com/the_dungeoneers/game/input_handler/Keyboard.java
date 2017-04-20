@@ -2,6 +2,7 @@ package com.the_dungeoneers.game.input_handler;
 
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.entities.Entity;
+import com.the_dungeoneers.game.entities.Player;
 
 /**
  * Handles all keyboard input
@@ -14,7 +15,6 @@ public class Keyboard {
 	
 	private static boolean leftDown;
 	private static boolean rightDown;
-	private static boolean spaceDown;
 	
 	public static void checkInput(Game g, Entity obj){
 		switch(g.keyCode){
@@ -25,6 +25,7 @@ public class Keyboard {
 				rightDown = true;
 				break;
 			case JUMP:
+				obj.jump();
 				break;
 		}
 	}

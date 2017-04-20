@@ -8,6 +8,8 @@ import processing.core.PVector;
  */
 public abstract class Entity{
 	
+	protected static final float GRAVITY = 0.5f;
+	
 	protected PVector pos;
 	protected Game g;
 	protected PVector vel;
@@ -28,6 +30,8 @@ public abstract class Entity{
 	public abstract void moveLeft();
 	
 	public abstract void moveRight();
+	
+	public abstract void jump();
 	
 	public abstract void update();
 	

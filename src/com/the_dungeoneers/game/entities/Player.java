@@ -23,25 +23,28 @@ public class Player extends Entity {
 
 
     public void moveLeft(){
-		accel.set(-1, 0);
+		accel.set(-1, GRAVITY);
     }
 
     public void moveRight(){
-		accel.set(1, 0);
+		accel.set(1, GRAVITY);
     }
+    
+    public void jump(){
+		vel.y = -10;
+	}
 
     @Override
     public void update(){
-        
 		if (accel.x == 0) {
 			vel.lerp(new PVector(), 0.1f);
-		} else {
-			vel.add(accel);
-			vel.x = constrain(vel.x, -5, 5);
 		}
 		
+		vel.add(accel);
+		vel.x = constrain(vel.x, -5, 5);
+		
 		pos.add(vel);
-		accel.mult(0);
+		accel.set(0, GRAVITY);
 		
 		bb.x = pos.x;
 		bb.y = pos.y;
