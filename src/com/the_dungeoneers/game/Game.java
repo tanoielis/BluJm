@@ -28,8 +28,7 @@ public class Game extends PApplet{
 	@Override
 	public void setup() {
 		states = new StateManager(new Menu(this));
-		player = new Player(this, new PVector(blockSize*3, height - blockSize * 6), new PVector(0,0), new PVector((float)0.1, (float)0.3));
-		activeCamera = new Camera(this, player);
+		player = new Player(this, new PVector(blockSize*3, height - blockSize * 6), new PVector(0,0), new PVector(0.1f, 0.3f));
 	}
 
 	@Override

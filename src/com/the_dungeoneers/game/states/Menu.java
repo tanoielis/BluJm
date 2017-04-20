@@ -51,7 +51,7 @@ public class Menu implements State{
 		float x = g.mouseX;
 		float y = g.mouseY;
 		if(x > play.x && x < play.wd + play.x && y > play.y && y < play.ht + play.y){
-			g.states.startState(new Level1(g, g.player, g.activeCamera));
+			g.states.startState(new Level1(g, g.player));
 		}
 	}
 }

@@ -13,16 +13,14 @@ public abstract class GameState implements State{
 	protected Camera camera;
 	protected Game g;
 	
-	public GameState(Game g, Player player, Camera camera){
+	public GameState(Game g, Player player){
 		this.player = player;
-		this.camera = camera;
 		this.g = g;
 	}
 	
 	@Override
 	public void update(){
 		player.update();
-		camera.update();
 	}
 	
 	@Override
@@ -33,7 +31,6 @@ public abstract class GameState implements State{
 	@Override
 	public void drawEntities(){
 		g.pushMatrix();
-			g.translate(camera.getPos().x, camera.getPos().y);
 			player.draw();
 		g.popMatrix();
 	}
