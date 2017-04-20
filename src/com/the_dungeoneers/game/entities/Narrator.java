@@ -30,7 +30,11 @@ public class Narrator{
 	}
 	
 	public String talk(){
-		return dialogue.get(level)[count];
+		if (count < dialogue.get(level).length) {
+			return dialogue.get(level)[count++];
+		} else {
+			return "";
+		}
 	}
 	
 	public void nextLevel(){

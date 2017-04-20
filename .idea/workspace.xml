@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Narrator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BluJm/com/the_dungeoneers/game/Game.class" afterPath="$PROJECT_DIR$/out/production/BluJm/com/the_dungeoneers/game/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BluJm/com/the_dungeoneers/game/entities/Entity.class" afterPath="$PROJECT_DIR$/out/production/BluJm/com/the_dungeoneers/game/entities/Entity.class" />
+    <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="Created narrator">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Level1.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Level1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Narrator.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Narrator.java" />
     </list>
     <ignored path="BluJm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,12 +101,10 @@
       <file leaf-file-name="Narrator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Narrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="900">
+              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#633#634#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -299,6 +294,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="camera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sounds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -808,7 +839,7 @@
       <workItem from="1492569610497" duration="5139000" />
       <workItem from="1492576670020" duration="2145000" />
       <workItem from="1492581183715" duration="11510000" />
-      <workItem from="1492658401783" duration="2214000" />
+      <workItem from="1492658401783" duration="2354000" />
     </task>
     <task id="LOCAL-00001" summary="data folder added">
       <created>1492571334658</created>
@@ -873,11 +904,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492659118764</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created narrator">
+      <created>1492660635333</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1492660635333</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21008000" />
+    <option name="totallyTimeSpent" value="21148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1940" height="2110" extended-state="0" />
@@ -890,8 +928,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32896805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -965,7 +1003,8 @@
     <MESSAGE value="Made a cool ass example with camera lerping around player movement and between multiple entities." />
     <MESSAGE value="Set up project structure" />
     <MESSAGE value="Created level structure using GameState." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created level structure using GameState." />
+    <MESSAGE value="Created narrator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created narrator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1285,12 +1324,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Narrator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        <state relative-caret-position="900">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
           </folding>
         </state>
       </provider>
