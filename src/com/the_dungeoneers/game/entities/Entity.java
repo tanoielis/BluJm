@@ -26,8 +26,6 @@ public abstract class Entity{
 	public PVector getPos(){
 		return pos.copy();
 	}
-
-//	public abstract boolean collides(Entity obj);
 	
 	public abstract void moveLeft();
 	
