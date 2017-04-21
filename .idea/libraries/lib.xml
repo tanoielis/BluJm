@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/Collision.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/UISound.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
