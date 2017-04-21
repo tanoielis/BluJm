@@ -8,13 +8,15 @@ import processing.core.PImage;
 /**
  * A map of islands
  */
-public class MapOfIslands implements State{
+public class MapOfIslands implements State {
 	
 	private static PImage map;
-	Game g;
-	
-	public MapOfIslands(Game g){
+	private Game g;
+	private IslandManager im;
+
+	public MapOfIslands(Game g, IslandManager im){
 		this.g = g;
+		this.im = im;
 		map = g.loadImage("images/map.png");
 	}
 	
@@ -48,4 +50,6 @@ public class MapOfIslands implements State{
 	public void mousePressed(){
 		
 	}
+
+
 }

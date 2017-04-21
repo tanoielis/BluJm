@@ -18,18 +18,25 @@ public class IslandManager implements State {
 	private Island end;
 	private static List<Island> islands;
 	private static PImage background;
-	
+
 	public IslandManager(Game g){
 		this.g = g;
-		this.background = g.loadImage("images/islandBg.png");
-				
+        this.background = g.loadImage("images/islandBg.png");
+
+        createIslands();
+		currentIsland = islands.get(0);
+		end = islands.get(islands.size() - 1);
+	}
+
+	private void createIslands() {
+
 		islands = new ArrayList<>();
 		islands.add(new VolcanoIsland(g));
-		islands.add(new PlaneIsland(g));
 		islands.add(new DistantIsland(g));
 		islands.add(new BurningIsland(g));
-		currentIsland = islands.get(0);
-		end = new PlaneIsland(g);
+		// ADD HERE
+
+		islands.add(new PlaneIsland(g));
 	}
 	
 	public void changeIsland(Island island) {
@@ -56,7 +63,7 @@ public class IslandManager implements State {
 	
 	@Override
 	public void drawUI(){
-		
+
 		g.image(background, 0, 0);
 	}
 	

@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public abstract class Island implements State {
 
-	public Map<Island, Level> levels;
+	public Map<Island, Level> levels = new HashMap<>();
 	protected String name;
 	protected Game g;
 	
