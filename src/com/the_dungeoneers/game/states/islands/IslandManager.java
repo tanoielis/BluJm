@@ -3,6 +3,7 @@ package com.the_dungeoneers.game.states.islands;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.states.State;
 import com.the_dungeoneers.game.states.levels.Level;
+import processing.core.PImage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +17,12 @@ public class IslandManager implements State {
 	private Island currentIsland;
 	private Island end;
 	private static List<Island> islands;
+	private static PImage background;
 	
 	public IslandManager(Game g){
 		this.g = g;
+		this.background = g.loadImage("images/islandBg.png");
+				
 		islands = new ArrayList<>();
 		islands.add(new VolcanoIsland(g));
 		islands.add(new PlaneIsland(g));
@@ -52,7 +56,8 @@ public class IslandManager implements State {
 	
 	@Override
 	public void drawUI(){
-		currentIsland.drawUI();
+		
+		g.image(background, 0, 0);
 	}
 	
 	@Override

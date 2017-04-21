@@ -3,7 +3,7 @@ package com.the_dungeoneers.game.states.islands;
 import com.the_dungeoneers.game.Game;
 
 /**
- * Created by Eli on 21/04/2017.
+ * End island
  */
 public class PlaneIsland extends Island {
 
