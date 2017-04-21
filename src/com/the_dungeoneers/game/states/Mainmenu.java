@@ -2,11 +2,9 @@ package com.the_dungeoneers.game.states;
 
 import Collision.Point;
 import Collision.Square;
-import com.sun.deploy.uitoolkit.impl.fx.ui.CertificateDialog;
 import com.the_dungeoneers.game.Game;
+import com.the_dungeoneers.game.states.islands.IslandManager;
 import processing.core.PConstants;
-
-import java.security.cert.CertificateNotYetValidException;
 
 /**
  * Mainmenu
@@ -56,7 +54,7 @@ public class Mainmenu implements State{
 	@Override
 	public void mousePressed(){
 		if(play.contains(new Point(g, g.mouseX, g.mouseY))){
-			g.states.startState(new Island(g));
+			g.states.startState(new IslandManager(g));
 		}
 	}
 }
