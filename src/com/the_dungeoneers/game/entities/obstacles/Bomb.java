@@ -13,7 +13,7 @@ import processing.core.PVector;
 public class Bomb extends Entity{
 	
 	private PImage img;
-	private Square bb;
+	public Square bb;
 	
 	public Bomb(Game g, PVector pos){
 		super(g, pos);
