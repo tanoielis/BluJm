@@ -11,7 +11,7 @@ import com.the_dungeoneers.game.states.islands.IslandManager;
 public abstract class Level implements State {
 
 	private Game g;
-	public boolean successful;
+	public boolean successful = true;	//todo don't forget to change this back to false
 
 	public Level(Game g) {
 		this.g = g;
