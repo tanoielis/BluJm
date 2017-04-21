@@ -15,7 +15,7 @@ public abstract class Island implements State {
 	protected String name;
 	protected Game g;
 	
-	public Island(Game g){
+	public Island(Game g, String name){
 		this.g = g;
 	}
 
