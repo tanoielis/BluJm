@@ -20,7 +20,7 @@ public class Game extends PApplet{
 	@Override
 	public void setup() {
 		states = new StateManager();
-		states.startState(new Level1(this));
+		states.startState(new Mainmenu(this));
 	}
 
 	@Override

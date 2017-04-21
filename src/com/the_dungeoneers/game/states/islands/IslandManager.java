@@ -1,9 +1,12 @@
 package com.the_dungeoneers.game.states.islands;
 
+import Collision.*;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.states.State;
+import com.the_dungeoneers.game.states.Upgrade;
 import com.the_dungeoneers.game.states.levels.Level;
 import processing.core.PImage;
+import processing.core.PVector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +21,20 @@ public class IslandManager implements State {
 	private Island end;
 	private static List<Island> islands;
 	private static PImage background;
+	private ComboPolygon mapBB;
+	private Square hutBB;
+
 
 	public IslandManager(Game g){
 		this.g = g;
         this.background = g.loadImage("images/islandBg.png");
+
+
+        mapBB = new ComboPolygon(g, 0, new Square(g, new PVector(790,440), 490, 280),
+                new Triangle(g, new PVector(790, 535), new PVector(790, 720), new PVector(535, 720))
+        );
+
+		hutBB = new Square(g, new PVector(160, 280), 125, 200);
 
         createIslands();
 		currentIsland = islands.get(0);
@@ -84,6 +97,19 @@ public class IslandManager implements State {
 	
 	@Override
 	public void mousePressed(){
+		if (g.mouseX >= g.width/2) {
+			for (Polygon polygon : mapBB.polys) {
+				if (polygon.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
+					g.states.startState(new MapOfIslands(g, this));
+				}
+			}
+		}
+
+		else {
+			if (hutBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
+				g.states.startState(new Upgrade(g));
+			}
+		}
 		currentIsland.mousePressed();
 	}
 }
