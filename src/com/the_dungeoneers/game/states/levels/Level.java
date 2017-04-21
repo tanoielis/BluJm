@@ -26,12 +26,11 @@ public abstract class Level implements State {
 	
 	@Override
 	public void drawUI(){
-		g.image(bg, 0,0);
 	}
 	
 	@Override
 	public void drawEntities(){
-		
+		g.image(bg, 0,0);
 	}
 	
 	@Override
