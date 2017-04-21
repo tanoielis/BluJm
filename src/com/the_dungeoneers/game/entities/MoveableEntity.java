@@ -35,6 +35,7 @@ public abstract class MoveableEntity extends Entity{
 				moveDown();
 			}
 		} else if (left) {
+
 			moveLeft();
 		} else if (right) {
 			moveRight();

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Island Manager
  */
-public class IslandManager implements State{
+public class IslandManager implements State {
 	
 	private Game g;
 	private Island currentIsland;
@@ -20,12 +20,15 @@ public class IslandManager implements State{
 	public IslandManager(Game g){
 		this.g = g;
 		islands = new ArrayList<>();
-		islands.add(new VolcanoIsland());
+		islands.add(new VolcanoIsland(g));
+		islands.add(new PlaneIsland(g));
+		islands.add(new DistantIsland(g));
+		islands.add(new BurningIsland(g));
 		currentIsland = islands.get(0);
-		end = new PlaneIsland();
+		end = new PlaneIsland(g);
 	}
 	
-	public void changeIsland(Island island){
+	public void changeIsland(Island island) {
 		if(currentIsland.levels.containsKey(island)){
 			if(attempt(island)){
 				currentIsland = island;

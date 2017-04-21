@@ -3,17 +3,17 @@ package com.the_dungeoneers.game.states;
 /**
  * Created by Eli on 20/04/2017.
  */
-public interface State{
+public interface State {
 	
-	public void update();
+	void update();
 	
-	public void drawUI();
+	void drawUI();
 	
-	public void drawEntities();
+	void drawEntities();
 	
-	public void keyPressed();
+	void keyPressed();
 	
-	public void keyReleased();
+	void keyReleased();
 	
-	public void mousePressed();
+	void mousePressed();
 }

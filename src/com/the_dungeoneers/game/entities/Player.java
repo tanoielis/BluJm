@@ -6,7 +6,7 @@ import processing.core.PVector;
 /**
  * Main player
  */
-public class Player extends MoveableEntity{
+public class Player extends MoveableEntity {
 	
 	public static int speed = 1;
 	public static int agility = 1;
@@ -14,7 +14,6 @@ public class Player extends MoveableEntity{
 	
 	public Player(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
-		
 	}
 	
 	@Override

@@ -1,17 +1,24 @@
 package com.the_dungeoneers.game.states.levels;
 
+import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.states.State;
+import com.the_dungeoneers.game.states.islands.Island;
+import com.the_dungeoneers.game.states.islands.IslandManager;
 
 /**
  * Created by Eli on 21/04/2017.
  */
-public class Level implements State{
-	
+public abstract class Level implements State {
+
+	private Game g;
 	public boolean successful;
-	
+
+	public Level(Game g) {
+		this.g = g;
+	}
+
 	@Override
 	public void update(){
-		
 	}
 	
 	@Override
