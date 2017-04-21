@@ -3,7 +3,6 @@ package com.the_dungeoneers.game.states.islands;
 import com.the_dungeoneers.game.states.State;
 import com.the_dungeoneers.game.states.levels.Level;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -14,7 +13,7 @@ public abstract class Island implements State {
 	public Map<Island, Level> levels;
 	
 	public Island(){
-//		new
+		
 	}
 	
 	@Override
