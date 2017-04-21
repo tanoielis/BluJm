@@ -1,1 +1,0 @@
-Add images to here and access them by "images/filename"
