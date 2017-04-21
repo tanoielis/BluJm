@@ -2,7 +2,6 @@ package com.the_dungeoneers.game.input_handler;
 
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.entities.Entity;
-import com.the_dungeoneers.game.entities.Player;
 
 /**
  * Handles all keyboard input

@@ -1,6 +1,7 @@
 package com.the_dungeoneers.game;
 
 import com.the_dungeoneers.game.input_handler.Keyboard;
+import com.the_dungeoneers.game.states.Mainmenu;
 import com.the_dungeoneers.game.states.StateManager;
 import processing.core.*;
 
@@ -16,7 +17,8 @@ public class Game extends PApplet{
 
 	@Override
 	public void setup() {
-		
+		states = new StateManager();
+		states.startState(new Mainmenu(this));
 	}
 
 	@Override
