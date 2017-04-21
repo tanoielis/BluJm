@@ -8,30 +8,18 @@ import processing.core.PVector;
  */
 public abstract class Entity{
 	
-	protected static final float GRAVITY = 0.5f;
-	
 	protected PVector pos;
 	protected Game g;
-	protected PVector vel;
-	protected PVector accel;
 	public String id;
 	
-	public Entity(Game g, PVector pos, PVector vel, PVector accel) {
+	public Entity(Game g, PVector pos) {
 		this.g = g;
 		this.pos = pos;
-		this.vel = vel;
-		this.accel = accel;
 	}
 	
 	public PVector getPos(){
 		return pos.copy();
 	}
-	
-	public abstract void moveLeft();
-	
-	public abstract void moveRight();
-	
-	public abstract void jump();
 	
 	public abstract void update();
 	
