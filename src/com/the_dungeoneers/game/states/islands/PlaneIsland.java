@@ -9,7 +9,6 @@ public class PlaneIsland extends Island {
 
 
     public PlaneIsland(Game g) {
-        super(g);
-        this.name = "The desolate isle";
+        super(g, "The desolate isle");
     }
 }

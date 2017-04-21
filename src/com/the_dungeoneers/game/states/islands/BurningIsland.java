@@ -8,7 +8,6 @@ import com.the_dungeoneers.game.Game;
 public class BurningIsland extends Island {
 
     public BurningIsland(Game g) {
-        super(g);
-        this.name = "The Burning isle";
+        super(g, "The Burning isle");
     }
 }

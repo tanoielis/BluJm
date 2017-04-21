@@ -17,6 +17,7 @@ public abstract class Island implements State {
 	
 	public Island(Game g, String name){
 		this.g = g;
+		this.name = name;
 	}
 
 	public void update(){
