@@ -4,6 +4,7 @@ import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.states.State;
 import com.the_dungeoneers.game.states.levels.Level;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -18,6 +19,7 @@ public abstract class Island implements State {
 	public Island(Game g, String name){
 		this.g = g;
 		this.name = name;
+		levels = new HashMap<>();
 	}
 
 	public void update(){
