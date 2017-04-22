@@ -15,6 +15,7 @@ public abstract class Level implements State {
 	private static PImage bg;
 	private Game g;
 	public boolean successful = true;	//todo don't forget to change this back to false
+	public boolean running = false;	//todo don't forget to change this back to false
 	protected Player player;
 	protected Camera camera;
 	Island from;
@@ -29,6 +30,10 @@ public abstract class Level implements State {
 
 	@Override
 	public void update(){
+		if(!running){
+			g.states.endState();
+			g.states.endState();
+		}
 	}
 	
 	@Override

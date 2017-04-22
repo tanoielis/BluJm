@@ -12,7 +12,7 @@ import com.the_dungeoneers.game.states.levels.Level9;
 public class PlaneIsland extends Island {
 
     public PlaneIsland(Game g, Player player, Camera camera) {
-        super(g, "Plane island", player, camera);
+        super(g, "Plane Island", player, camera);
     }
 
     @Override
