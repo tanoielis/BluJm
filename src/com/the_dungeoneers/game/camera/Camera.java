@@ -30,6 +30,7 @@ public class Camera{
 		float x = (-antipos.x)+ g.width/2;
 		float y = (-antipos.y)+ g.height/2;
 		pos = lerp(pos, new PVector(x,y), smoothness);
+		pos.x = constrain(pos.x, -1720, 0);
 	}
 	
 	public PVector getPos(){

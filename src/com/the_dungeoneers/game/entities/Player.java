@@ -119,6 +119,7 @@ public class Player extends MoveableEntity {
 			accel.add(0, 0.2f);
 		}
 		
+		pos.x = constrain(pos.x, 0, 3000-img.width);
 		pos.y = constrain(pos.y, 0, g.height-img.height);
 		vel.setMag(constrain(vel.mag(), -currentSpeed, currentSpeed));
 		

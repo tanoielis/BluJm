@@ -70,21 +70,19 @@ public class Whale extends MoveableEntity{
 	
 	public void handleSpears(){
 		
-		int nulls = 0;
+		int active = 0;
 		for(int i=0; i<spears.length; i++){
 			if(spears[i] != null){
 				spears[i].update();
-				if(spears[i].getPos().y > g.height || spears[i].getPos().x < 0 || spears[i].getPos().x > 12000){
+				if(spears[i].getPos().y > g.height || spears[i].getPos().x < 0 || spears[i].getPos().x > 3000){
 					spears[i] = null;
-				}
-			}else {
-				nulls++;
-				if(nulls==spears.length){
-					spearsActive = false;
-					System.out.println(nulls);
-					System.out.println(spears.length);
+				}else{
+					active++;
 				}
 			}
+		}
+		if(active==0){
+			spearsActive = false;
 		}
 	}
 	

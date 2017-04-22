@@ -9,6 +9,8 @@ import processing.core.PImage;
 import processing.core.PVector;
 
 import static processing.core.PApplet.constrain;
+import static processing.core.PApplet.map;
+import static processing.core.PApplet.sin;
 
 /**
  * Created by Eli on 22/04/2017.

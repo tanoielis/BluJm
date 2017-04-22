@@ -16,23 +16,22 @@ import processing.core.PVector;
  */
 public class Level1 extends Level {
 
-    private Shark s;
     private Whale w;
-    
+    private int timer;
+	
     public Level1(Game g, Player player, Camera camera, Island from) {
         super(g, player, camera, from);
-        s = new Shark(g, new PVector(7000, player.getPos().y), new PVector(), new PVector());
-        w = new Whale(g, new PVector(7000, 300), new PVector(), new PVector());
+		timer = -1;
+		w = new Whale(g, new PVector(2500,50), new PVector(), new PVector());
     }
 
     @Override
     public void update() {
         super.update();
         
-        
-        if(s.getPos().x + s.bb.wd > 0){
-            s.update();
-        }
+		if(timer == -1){
+			timer = g.millis();
+		}
         
         if(w.getPos().x + w.bb.wd > 0 || w.spearsActive){
             w.update();
@@ -52,9 +51,6 @@ public class Level1 extends Level {
 			g.imageMode(PConstants.CORNER);
             g.image(bg, 0,0);
             player.draw();
-            if(s.getPos().x + s.bb.wd > 0){
-                s.draw();
-            }
             if(w.getPos().x + w.bb.wd > 0 || w.spearsActive){
                 w.draw();
 			}

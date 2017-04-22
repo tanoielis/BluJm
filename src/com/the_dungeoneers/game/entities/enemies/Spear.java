@@ -6,7 +6,6 @@ import com.the_dungeoneers.game.entities.MoveableEntity;
 import processing.core.PApplet;
 import processing.core.PVector;
 
-import static processing.core.PApplet.abs;
 import static processing.core.PApplet.constrain;
 
 /**
