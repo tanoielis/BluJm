@@ -32,15 +32,11 @@ public class Loading implements State{
 	@Override
 	public void update(){
 		if(counter == 0){
-			if(transparency == 0){
+			if(transparency++ == 0){
 				i = new IslandManager(g);
-			}else if(transparency == 255){
+			}else if(transparency >= 255){
 				g.states.startState(i);
 			}
-			
-			g.fill(0, ++transparency);
-			g.rectMode(PConstants.CORNER);
-			g.rect(0, 0, g.width, g.height);
 		}
 	}
 	
@@ -51,6 +47,12 @@ public class Loading implements State{
 		}
 		g.imageMode(PConstants.CORNER);
 		g.image(img, 0, 0);
+		if(transparency > 0){
+			g.fill(0, (transparency+=2));
+			g.rectMode(PConstants.CORNER);
+			g.noStroke();
+			g.rect(0, 0, g.width, g.height);
+		}
 	}
 	
 	@Override

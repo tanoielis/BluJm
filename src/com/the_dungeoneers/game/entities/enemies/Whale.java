@@ -63,7 +63,6 @@ public class Whale extends MoveableEntity{
 				spears[i] = new Spear(g, new PVector(((Level)g.states.getState()).player.getPos().x + g.random(-150, 150), -150), direction, direction);
 			}
 		}
-		System.out.println("Loaded");
 	}
 	
 	public void handleSpears(){
