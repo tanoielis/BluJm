@@ -4,6 +4,7 @@ import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.states.State;
+import com.the_dungeoneers.game.states.island.Island;
 import processing.core.PImage;
 
 /**
@@ -16,9 +17,11 @@ public abstract class Level implements State {
 	public boolean successful = true;	//todo don't forget to change this back to false
 	protected Player player;
 	protected Camera camera;
+	Island from;
 
-	public Level(Game g, Player player, Camera camera) {
+	public Level(Game g, Player player, Camera camera, Island from) {
 		this.g = g;
+		this.from = from;
 		this.bg = g.loadImage("images/background.png");
 		this.player = player;
 		this.camera = camera;

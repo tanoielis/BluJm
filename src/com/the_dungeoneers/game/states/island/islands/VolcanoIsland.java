@@ -12,13 +12,10 @@ import com.the_dungeoneers.game.states.levels.Level2;
  */
 public class VolcanoIsland extends Island {
 
-    private Player player;
-    private Camera camera;
-
     public VolcanoIsland(Game g, Player player, Camera camera) {
         super(g, "Volcano Island", player, camera);
 
-        levels.put(new SkullIsland(g, player, camera), new Level1(g, player, camera ));
-        levels.put(new BigRockIsland(g, player, camera), new Level2(g, player, camera));
+        levels.put(new SkullIsland(g, player, camera), new Level1(g, player, camera, this));
+        levels.put(new BigRockIsland(g, player, camera), new Level2(g, player, camera, this));
     }
 }

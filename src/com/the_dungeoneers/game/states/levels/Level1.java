@@ -4,6 +4,7 @@ import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.entities.obstacles.Bomb;
+import com.the_dungeoneers.game.states.island.Island;
 import processing.core.PVector;
 
 /**
@@ -13,8 +14,8 @@ public class Level1 extends Level {
 
     Bomb b;
 
-    public Level1(Game g, Player player, Camera camera) {
-        super(g, player, camera);
+    public Level1(Game g, Player player, Camera camera, Island from) {
+        super(g, player, camera, from);
         b = new Bomb(g, new PVector(50, 100));
     }
 
