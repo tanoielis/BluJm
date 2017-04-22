@@ -24,6 +24,7 @@ public class Level2 extends Level {
 
     public Level2(Game g, Player player, Camera camera, Island from, IslandManager im) {
         super(g, player, camera, from, im);
+        this.bg = g.loadImage("images/Backgrounds/background.png");
     }
 
     @Override
