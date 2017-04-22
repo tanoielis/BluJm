@@ -2,6 +2,8 @@ package com.the_dungeoneers.game.states.island;
 
 import Collision.*;
 import com.the_dungeoneers.game.Game;
+import com.the_dungeoneers.game.camera.Camera;
+import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.states.State;
 import com.the_dungeoneers.game.states.Upgrade;
 import com.the_dungeoneers.game.states.island.islands.*;
@@ -24,7 +26,8 @@ public class IslandManager implements State {
 	private static PImage background;
 	private ComboPolygon mapBB;
 	private Square hutBB;
-
+	private Player player;
+	private Camera camera;
 
 	public IslandManager(Game g){
 		this.g = g;
@@ -45,12 +48,12 @@ public class IslandManager implements State {
 	private void createIslands() {
 
 		islands = new ArrayList<>();
-		islands.add(new VolcanoIsland(g));
-		islands.add(new DistantIsland(g));
-		islands.add(new BurningIsland(g));
-		islands.add(new BigRockIsland(g));
-		islands.add(new SkullIsland(g));
-		islands.add(new TreasureIsland(g));
+		islands.add(new VolcanoIsland(g, player, camera));
+		islands.add(new DistantIsland(g, player, camera));
+		islands.add(new BurningIsland(g, player, camera));
+		islands.add(new BigRockIsland(g, player, camera));
+		islands.add(new SkullIsland(g, player, camera));
+		islands.add(new TreasureIsland(g, player, camera));
 		// ADD HERE
 
 		islands.add(new PlaneIsland(g));
