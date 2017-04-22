@@ -23,7 +23,6 @@ public class Level1 extends Level {
     public Level1(Game g, Player player, Camera camera, Island to, IslandManager im) {
         super(g, player, camera, to, im);
 		
-		
 		bombs = new Bomb[]{	//todo set bomb positions
 				new Bomb(g, new PVector(643, 536)),
 				new Bomb(g, new PVector(513, 202)),
@@ -41,17 +40,15 @@ public class Level1 extends Level {
 				new Bomb(g, new PVector(2356, 396)),
 				new Bomb(g, new PVector(2129, 500))
 		};
-		
     }
 
     @Override
     public void update() {
-        super.update();
-        
-		for(Bomb b : bombs){
-			if(b != null){
-				b.update();
-				if(SAT_Collision.intersects(player.bb, b.bb)){
+		super.update();
+		for(int i=0; i<bombs.length; i++){
+			if(bombs[i] != null){
+				bombs[i].update();
+				if(SAT_Collision.intersects(player.bb, bombs[i].bb)){
 					successful = false;
 					running = false;
 				}

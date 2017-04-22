@@ -99,8 +99,7 @@ public class Player extends MoveableEntity {
 	public void update(){
 		movement();
 		
-		bb.x = pos.x;
-		bb.y = pos.y;
+		bb = new Square(g, pos.x, pos.y, img.width, img.height);
 		
 		vel.add(accel);
 		pos.add(vel);
@@ -144,6 +143,7 @@ public class Player extends MoveableEntity {
 			g.imageMode(CENTER);
 			g.image(img, 0, 0);
 		g.popMatrix();
+		this.bb.draw();
 	}
 	
 	private void swim(){
@@ -157,7 +157,6 @@ public class Player extends MoveableEntity {
 				timer = g.millis();
 				swimCount = ++swimCount % swimImages.length;
 				img = swimImages[swimCount];
-				this.bb = new Square(g, pos, img.width, img.height);
 			}
 		}
 		
@@ -167,7 +166,6 @@ public class Player extends MoveableEntity {
 		if(g.millis() > timer + 50 && stopCount < stopImages.length){
 			timer = g.millis();
 			img = stopImages[stopCount++];
-			this.bb = new Square(g, pos, img.width, img.height);
 		}
 	}
 	

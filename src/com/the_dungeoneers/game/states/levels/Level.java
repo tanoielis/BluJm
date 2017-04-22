@@ -24,7 +24,7 @@ public abstract class Level implements State {
 	private Island to;
 	private IslandManager im;
 
-	public Level(Game g, Player player, Camera camera, Island to, IslandManager im) {
+	public Level(Game g, Player player, Camera camera, Island to, IslandManager im){
 		this.g = g;
 		this.player = player;
 		this.camera = camera;
@@ -35,7 +35,7 @@ public abstract class Level implements State {
 		this.im = im;
 		this.to = to;
 	}
-
+	
 	@Override
 	public void update(){
 		if(!running){

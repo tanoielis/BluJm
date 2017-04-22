@@ -76,14 +76,10 @@ public class IslandManager implements State {
 	
 	public void changeIsland(Island island) {
 		if(currentIsland.levels.containsKey(island)){
-			attempt(island);
+			Level level = currentIsland.levels.get(island);
+			level.init();
+			g.states.startState(level);
 		}
-	}
-	
-	private boolean attempt(Island island){
-		Level level = currentIsland.levels.get(island);
-		g.states.startState(level);
-		return level.successful;
 	}
 	
 	public void attempt(boolean succesful, Island island, Level level){
@@ -100,6 +96,7 @@ public class IslandManager implements State {
 		player.down = false;
 		player.right = false;
 		player.setPos(new PVector(220, 520));
+		player.bb = new Square(g, 220, 520, 50, 100);
 	}
 	
 	@Override
