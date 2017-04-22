@@ -30,17 +30,18 @@ public class Whale extends MoveableEntity{
 	
 	@Override
 	public void update(){
-		super.update();
-		moveLeft();
-		
-		vel.x = constrain(vel.x, -speed, speed);
-		
-		if(abs(pos.x - ((Level) g.states.getState()).player.getPos().x) < 200 && !spawned){
-			spawnSpears();
-			spawned = true;
-			spearsActive = true;
+		if(pos.x + bb.wd > 0){
+			super.update();
+			moveLeft();
+			
+			vel.x = constrain(vel.x, -speed, speed);
+			
+			if(abs(pos.x - ((Level) g.states.getState()).player.getPos().x) < 200 && !spawned){
+				spawnSpears();
+				spawned = true;
+				spearsActive = true;
+			}
 		}
-		
 		if(spearsActive){
 			handleSpears();
 		}
@@ -48,7 +49,9 @@ public class Whale extends MoveableEntity{
 	
 	@Override
 	public void draw(){
-		super.draw();
+		if(pos.x + bb.wd > 0) {
+			super.draw();
+		}
 		if(spearsActive){
 			drawSpears();
 		}
@@ -71,22 +74,24 @@ public class Whale extends MoveableEntity{
 		for(int i=0; i<spears.length; i++){
 			if(spears[i] != null){
 				spears[i].update();
-				if(spears[i].getPos().y > g.height || spears[i].getPos().x < 0 || spears[i].getPos().x > 7000){
+				if(spears[i].getPos().y > g.height || spears[i].getPos().x < 0 || spears[i].getPos().x > 12000){
 					spears[i] = null;
 				}
 			}else {
 				nulls++;
+				if(nulls==spears.length){
+					spearsActive = false;
+					System.out.println(nulls);
+					System.out.println(spears.length);
+				}
 			}
-		}
-		if(nulls == spears.length){
-			spearsActive = false;
 		}
 	}
 	
 	public void drawSpears(){
-		for(Spear s : spears){
-			if(s != null){
-				s.draw();
+		for(int i=0; i<spears.length; i++){
+			if(spears[i] != null){
+				spears[i].draw();
 			}
 		}
 	}

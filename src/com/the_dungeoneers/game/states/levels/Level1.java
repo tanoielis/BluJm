@@ -8,6 +8,7 @@ import com.the_dungeoneers.game.entities.enemies.Spear;
 import com.the_dungeoneers.game.entities.enemies.Whale;
 import com.the_dungeoneers.game.entities.obstacles.Bomb;
 import com.the_dungeoneers.game.states.island.Island;
+import processing.core.PConstants;
 import processing.core.PVector;
 
 /**
@@ -33,10 +34,8 @@ public class Level1 extends Level {
             s.update();
         }
         
-        if(w.getPos().x + w.bb.wd > 0){
+        if(w.getPos().x + w.bb.wd > 0 || w.spearsActive){
             w.update();
-        }else if(w.spearsActive){
-            w.handleSpears();
         }
                 
     }
@@ -48,20 +47,17 @@ public class Level1 extends Level {
 
     @Override
     public void drawEntities() {
-        super.drawEntities();
-    
         g.pushMatrix();
             g.translate(camera.getPos().x, 0);
+			g.imageMode(PConstants.CORNER);
             g.image(bg, 0,0);
             player.draw();
             if(s.getPos().x + s.bb.wd > 0){
                 s.draw();
             }
-            if(w.getPos().x + w.bb.wd > 0){
+            if(w.getPos().x + w.bb.wd > 0 || w.spearsActive){
                 w.draw();
-            }else if(w.spearsActive){
-                w.drawSpears();
-            }
+			}
         g.popMatrix();
     
     }
