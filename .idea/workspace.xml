@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/fonts/Ranga/Ranga-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/fonts/Ranga/Ranga-Regular.ttf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/Game.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/Game.java" />
     </list>
     <ignored path="BluJm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -117,8 +114,8 @@
           <file leaf-file-name="Upgrade.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Upgrade.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="413">
-                  <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+                <state relative-caret-position="430">
+                  <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -128,7 +125,7 @@
             <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="298">
-                  <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+                  <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -1347,7 +1344,7 @@
       <workItem from="1492776470954" duration="675000" />
       <workItem from="1492807647865" duration="7787000" />
       <workItem from="1492815453182" duration="8138000" />
-      <workItem from="1492824895815" duration="23699000" />
+      <workItem from="1492824895815" duration="23825000" />
     </task>
     <task id="LOCAL-00001" summary="data folder added">
       <created>1492571334658</created>
@@ -1629,11 +1626,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492860378687</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="removed old fonts">
+      <created>1492861494623</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1492861494623</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79695000" />
+    <option name="totallyTimeSpent" value="79821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1725,7 +1729,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reworked player movement, editing keyboard controls" />
     <MESSAGE value="Added gravity to entities, added jump to player." />
     <MESSAGE value="Created a boat&#10;" />
     <MESSAGE value="Added narrator speech" />
@@ -1750,7 +1753,8 @@
     <MESSAGE value="Added heaps of artwork" />
     <MESSAGE value="Fixed player display bugs" />
     <MESSAGE value="Added new main menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new main menu" />
+    <MESSAGE value="removed old fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed old fonts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2101,11 +2105,11 @@
         <state relative-caret-position="179">
           <caret line="62" column="18" lean-forward="false" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
           <folding>
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2108#2109#0" expanded="true" />
-            <element signature="e#2150#2151#0" expanded="true" />
-            <element signature="e#2174#2175#0" expanded="true" />
-            <marker date="1492860255842" expanded="true" signature="59:349" ph="..." />
+            <element signature="e#2148#2149#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2215#2216#0" expanded="true" />
+            <element signature="e#2239#2240#0" expanded="true" />
+            <marker date="1492861505597" expanded="true" signature="59:349" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2131,7 +2135,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -2212,8 +2216,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Upgrade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+        <state relative-caret-position="430">
+          <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
           <folding />
         </state>
       </provider>
