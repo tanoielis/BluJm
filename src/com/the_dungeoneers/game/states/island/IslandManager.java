@@ -35,7 +35,7 @@ public class IslandManager implements State {
 		this.g = g;
         this.background = g.loadImage("images/Backgrounds/islandBg.png");
 
-		this.player = new Player(g, new PVector(g.width/2, g.height/2), new PVector(), new PVector());
+		this.player = new Player(g, new PVector(220, 520), new PVector(), new PVector());
 		this.camera = new Camera(g, player);
 
 		waterHutBoundingBoxes();

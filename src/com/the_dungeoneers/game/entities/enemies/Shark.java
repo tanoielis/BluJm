@@ -19,6 +19,7 @@ public class Shark extends MoveableEntity{
 	
 	private float acc = 0.6f;
 	private float speed = 30;
+	public boolean despawn;
 	
 	public Shark(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
@@ -73,6 +74,10 @@ public class Shark extends MoveableEntity{
 		vel.x = constrain(vel.x, -speed, speed);
 		
 		moveLeft();
+		
+		if(pos.x + bb.wd < 0){
+			despawn = true;
+		}
 	}
 	
 	@Override

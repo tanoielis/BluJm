@@ -16,26 +16,40 @@ import processing.core.PVector;
  */
 public class Level1 extends Level {
 
-    private Whale w;
-    private int timer;
+	private Bomb[] bombs;
 	
     public Level1(Game g, Player player, Camera camera, Island from) {
         super(g, player, camera, from);
-		timer = -1;
-		w = new Whale(g, new PVector(2500,50), new PVector(), new PVector());
+		
+		bombs = new Bomb[]{	//todo set bomb positions
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector()),
+				new Bomb(g, new PVector())
+		};
+		
     }
 
     @Override
     public void update() {
         super.update();
         
-		if(timer == -1){
-			timer = g.millis();
+		for(Bomb b : bombs){
+			if(b != null){
+				b.update();
+			}
 		}
-        
-        if(w.getPos().x + w.bb.wd > 0 || w.spearsActive){
-            w.update();
-        }
                 
     }
 
@@ -51,8 +65,10 @@ public class Level1 extends Level {
 			g.imageMode(PConstants.CORNER);
             g.image(bg, 0,0);
             player.draw();
-            if(w.getPos().x + w.bb.wd > 0 || w.spearsActive){
-                w.draw();
+            for(Bomb b : bombs){
+				if(b != null){
+					b.draw();
+				}
 			}
         g.popMatrix();
     
