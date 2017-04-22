@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/BigRockIsland.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/SkullIsland.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/TreasureIsland.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/BigRockIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/BigRockIsland.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/BurningIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/BurningIsland.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/DistantIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/DistantIsland.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/Island.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/Island.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/IslandManager.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/MapOfIslands.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/MapOfIslands.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/PlaneIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/PlaneIsland.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/SkullIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/SkullIsland.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/TreasureIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/TreasureIsland.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/VolcanoIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/VolcanoIsland.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/IslandManager.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/IslandManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Mainmenu.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Mainmenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" />
     </list>
     <ignored path="BluJm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,70 +44,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="IslandManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/IslandManager.java">
+      <file leaf-file-name="IslandManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+            <state relative-caret-position="731">
+              <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="BigRockIsland.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/BigRockIsland.java">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/BigRockIsland.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="119">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="SkullIsland.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/SkullIsland.java">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/SkullIsland.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="119">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
-                <element signature="e#206#207#0" expanded="true" />
-                <element signature="e#246#247#0" expanded="true" />
+                <element signature="e#267#268#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="TreasureIsland.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/TreasureIsland.java">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/TreasureIsland.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="119">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Triangle.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/Collision.jar!/Collision/Triangle.class">
+      <file leaf-file-name="MapOfIslands.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/MapOfIslands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="556">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VolcanoIsland.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/VolcanoIsland.java">
+      <file leaf-file-name="PlaneIsland.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/PlaneIsland.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="0">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VolcanoIsland.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/VolcanoIsland.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,18 +125,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Island.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/Island.java">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/Island.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
               <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
@@ -130,24 +138,21 @@
         </entry>
       </file>
       <file leaf-file-name="BurningIsland.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/BurningIsland.java">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/BurningIsland.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="119">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StateManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/StateManager.java">
+      <file leaf-file-name="DistantIsland.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/DistantIsland.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-              <folding>
-                <element signature="e#332#333#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -233,6 +238,9 @@
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/SkullIsland.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/TempIsland5.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/TreasureIsland.java" />
+        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Island/IslandManager.java" />
+        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java" />
+        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/VolcanoIsland.java" />
       </list>
     </option>
   </component>
@@ -393,6 +401,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="island" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="states" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="island" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="islands" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -460,60 +498,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="camera" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluJm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluJm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluJm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluJm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Collision.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluJm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluJm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Collision.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Collision" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1216,7 +1200,7 @@
       <workItem from="1492775187750" duration="1186000" />
       <workItem from="1492776470954" duration="675000" />
       <workItem from="1492807647865" duration="7787000" />
-      <workItem from="1492815453182" duration="2526000" />
+      <workItem from="1492815453182" duration="2664000" />
     </task>
     <task id="LOCAL-00001" summary="data folder added">
       <created>1492571334658</created>
@@ -1407,11 +1391,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492817502991</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="created 5 islands">
+      <created>1492819265860</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1492819265860</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50384000" />
+    <option name="totallyTimeSpent" value="50522000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1503,7 +1494,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="data folder added" />
     <MESSAGE value="settings method added" />
     <MESSAGE value="test merge" />
     <MESSAGE value="Fixed Collision lib" />
@@ -1527,7 +1517,9 @@
     <MESSAGE value="Begun islands/Level structure" />
     <MESSAGE value="Refactored levels" />
     <MESSAGE value="created IslandManager bounding boxes" />
-    <option name="LAST_COMMIT_MESSAGE" value="created IslandManager bounding boxes" />
+    <MESSAGE value="created 5 islands" />
+    <MESSAGE value="refactored structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1712,30 +1704,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/PlaneIsland.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/DistantIsland.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/MapOfIslands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Upgrade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -1834,17 +1802,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/VolcanoIsland.java">
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/MapOfIslands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="556">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/Island.java">
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/Island.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
@@ -1854,52 +1820,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/BurningIsland.java">
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="731">
+          <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/BigRockIsland.java">
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/BigRockIsland.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="119">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/SkullIsland.java">
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/BurningIsland.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/TreasureIsland.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/IslandManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+        <state relative-caret-position="119">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/DistantIsland.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/PlaneIsland.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/SkullIsland.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/TreasureIsland.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/VolcanoIsland.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,9 +1,10 @@
-package com.the_dungeoneers.game.states.islands;
+package com.the_dungeoneers.game.states.island;
 
 import Collision.*;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.states.State;
 import com.the_dungeoneers.game.states.Upgrade;
+import com.the_dungeoneers.game.states.island.islands.*;
 import com.the_dungeoneers.game.states.levels.Level;
 import processing.core.PImage;
 import processing.core.PVector;

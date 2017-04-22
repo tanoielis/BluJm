@@ -1,4 +1,4 @@
-package com.the_dungeoneers.game.states.islands;
+package com.the_dungeoneers.game.states.island;
 
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.states.State;

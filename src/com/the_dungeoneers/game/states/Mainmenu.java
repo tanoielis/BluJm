@@ -3,7 +3,7 @@ package com.the_dungeoneers.game.states;
 import Collision.Point;
 import Collision.Square;
 import com.the_dungeoneers.game.Game;
-import com.the_dungeoneers.game.states.islands.IslandManager;
+import com.the_dungeoneers.game.states.island.IslandManager;
 import processing.core.PConstants;
 
 /**

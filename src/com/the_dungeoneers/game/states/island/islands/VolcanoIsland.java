@@ -1,6 +1,7 @@
-package com.the_dungeoneers.game.states.islands;
+package com.the_dungeoneers.game.states.island.islands;
 
 import com.the_dungeoneers.game.Game;
+import com.the_dungeoneers.game.states.island.Island;
 import com.the_dungeoneers.game.states.levels.Level1;
 import com.the_dungeoneers.game.states.levels.Level2;
 

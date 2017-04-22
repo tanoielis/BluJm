@@ -2,8 +2,6 @@ package com.the_dungeoneers.game.states.levels;
 
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.states.State;
-import com.the_dungeoneers.game.states.islands.Island;
-import com.the_dungeoneers.game.states.islands.IslandManager;
 import processing.core.PImage;
 
 /**
