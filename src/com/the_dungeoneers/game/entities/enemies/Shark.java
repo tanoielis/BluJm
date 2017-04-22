@@ -3,6 +3,7 @@ package com.the_dungeoneers.game.entities.enemies;
 import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.entities.MoveableEntity;
+import com.the_dungeoneers.game.states.levels.Level;
 import processing.core.PConstants;
 import processing.core.PImage;
 import processing.core.PVector;
@@ -15,7 +16,7 @@ import static processing.core.PApplet.constrain;
 public class Shark extends MoveableEntity{
 	
 	private float acc = 0.6f;
-	private float speed = 50;
+	private float speed = 30;
 	
 	public Shark(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);

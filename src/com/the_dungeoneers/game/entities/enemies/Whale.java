@@ -6,9 +6,6 @@ import com.the_dungeoneers.game.entities.MoveableEntity;
 import com.the_dungeoneers.game.states.levels.Level;
 import processing.core.PVector;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static processing.core.PApplet.abs;
 import static processing.core.PApplet.constrain;
 
@@ -18,11 +15,12 @@ import static processing.core.PApplet.constrain;
 public class Whale extends MoveableEntity{
 	
 	private float acc = 0.5f;
-	private float speed = 30;
+	private float speed = 15;
 	private int timer;
 	
-	private Spear[] spears;
+	public Spear[] spears;
 	private boolean spawned;
+	public boolean spearsActive;
 	
 	public Whale(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
@@ -40,11 +38,12 @@ public class Whale extends MoveableEntity{
 		if(abs(pos.x - ((Level)g.states.getState()).player.getPos().x) < 200 && !spawned){
 			spawnSpears();
 			spawned = true;
+			spearsActive = true;
 			timer = g.millis();
 		
 		}
 		
-		if(spawned && g.millis() < timer + 10000){
+		if(spawned){
 			handleSpears();
 		}
 		
@@ -54,23 +53,44 @@ public class Whale extends MoveableEntity{
 	public void draw(){
 		super.draw();
 		if(spawned){
-			for(Spear s : spears){
-				s.draw();
-			}
+			drawSpears();
 		}
 	}
 	
 	private void spawnSpears(){
 		int num = (int)g.random(3, 9);
+		int nulls = 0;
 		spears = new Spear[num];
 		for(int i=0; i<num; i++){
-			spears[i] = new Spear(g, new PVector(pos.x, 0), new PVector(0, 5), new PVector());
+			if(spears[i] == null){
+				spears[i] = new Spear(g, new PVector(pos.x + g.random(-100, 100), 0), new PVector(0, 5), new PVector());
+			}else{
+				nulls++;
+			}
+		}
+		
+		if(nulls == spears.length-1){
+			spearsActive = false;
 		}
 	}
 	
-	private void handleSpears(){
+	public void handleSpears(){
+		for(int i=0; i<spears.length; i++){
+			if(spears[i] != null){
+				spears[i].update();
+				if(spears[i].getPos().y > g.height){
+					spears[i] = null;
+					System.out.println("Despawned");
+				}
+			}
+		}
+	}
+	
+	public void drawSpears(){
 		for(Spear s : spears){
-			s.update();
+			if(s != null){
+				s.draw();
+			}
 		}
 	}
 	

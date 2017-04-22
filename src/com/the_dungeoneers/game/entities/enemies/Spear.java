@@ -14,7 +14,7 @@ import static processing.core.PApplet.constrain;
  */
 public class Spear extends MoveableEntity{
 	
-	private float speed = 7;
+	private float speed = 15;
 	
 	public Spear(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
