@@ -1,6 +1,9 @@
 package com.the_dungeoneers.game.entities;
 
+import Collision.Square;
 import com.the_dungeoneers.game.Game;
+import processing.core.PConstants;
+import processing.core.PImage;
 import processing.core.PVector;
 
 /**
@@ -8,8 +11,10 @@ import processing.core.PVector;
  */
 public abstract class MoveableEntity extends Entity{
 	
+	public Square bb;
 	public PVector vel, accel;
 	public boolean left, right, up, down;
+	protected PImage img;
 	
 	public MoveableEntity(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos);
@@ -45,11 +50,19 @@ public abstract class MoveableEntity extends Entity{
 	@Override
 	public void update(){
 		movement();
+		
+		bb.x = pos.x;
+		bb.y = pos.y;
+		
+		vel.add(accel);
+		pos.add(vel);
+		accel.mult(0);
 	}
 	
 	@Override
 	public void draw(){
-		
+		g.imageMode(PConstants.CORNER);
+		g.image(img, pos.x, pos.y);
 	}
 	
 	protected abstract void moveLeft();

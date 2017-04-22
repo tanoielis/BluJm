@@ -13,11 +13,11 @@ import processing.core.PImage;
  */
 public abstract class Level implements State {
 
-	private static PImage bg;
-	private Game g;
+	protected static PImage bg;
+	protected Game g;
 	public boolean successful = false;	//todo don't forget to change this back to false
 	public boolean running = true;	//todo don't forget to change this back to false
-	protected Player player;
+	public Player player;
 	protected Camera camera;
 	Island from;
 
@@ -47,11 +47,6 @@ public abstract class Level implements State {
 	
 	@Override
 	public void drawEntities(){
-		g.pushMatrix();
-			g.translate(camera.getPos().x, 0);
-			g.image(bg, 0,0);
-			player.draw();
-		g.popMatrix();
 	}
 	
 	@Override
