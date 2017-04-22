@@ -8,6 +8,7 @@ import com.the_dungeoneers.game.states.State;
 import com.the_dungeoneers.game.states.Upgrade;
 import com.the_dungeoneers.game.states.island.islands.*;
 import com.the_dungeoneers.game.states.levels.Level;
+import processing.core.PConstants;
 import processing.core.PImage;
 import processing.core.PVector;
 
@@ -19,7 +20,7 @@ import java.util.HashMap;
 public class IslandManager implements State {
 	
 	private Game g;
-	private Island currentIsland;
+	public Island currentIsland;
 	private Island end;
 	public static HashMap<String, Island> islands;
 	private static PImage background;
@@ -27,6 +28,7 @@ public class IslandManager implements State {
 	private Square hutBB;
 	private Player player;
 	private Camera camera;
+	private int day;
 
 	public IslandManager(Game g){
 		this.g = g;
@@ -41,6 +43,8 @@ public class IslandManager implements State {
         // Start and End Islands
 		currentIsland = islands.get("VolcanoIsland");
 		end = islands.get("PlaneIsland");
+		
+		day = 1;
 	}
 
 	private void waterHutBoundingBoxes() {
@@ -72,6 +76,7 @@ public class IslandManager implements State {
 			if(attempt(island)){
 				currentIsland = island;
 			}
+			day++;
 		}
 	}
 	
@@ -93,6 +98,14 @@ public class IslandManager implements State {
 	public void drawUI(){
 
 		g.image(background, 0, 0);
+		g.textAlign(PConstants.RIGHT, PConstants.TOP);
+		g.textSize(60);
+		g.fill(243,203,116);
+		
+		g.textFont(Game.ranga);
+		g.text("Day: "+day, g.width, 0);
+		g.text(currentIsland.name, g.width, 50);
+				
 	}
 	
 	@Override

@@ -3,6 +3,7 @@ package com.the_dungeoneers.game.states;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.util.Button;
+import processing.core.PImage;
 
 import static processing.core.PApplet.max;
 import static processing.core.PConstants.CORNER;
@@ -16,11 +17,14 @@ public class Upgrade implements State{
 	
 	private Button upgradeLungs, upgradeSpeed, upgradeAgility;
 	
+	private PImage img;
+	
 	public Upgrade(Game g){
 		this.g = g;
 		upgradeAgility = new Button(g, 50, 200, "Agility");
 		upgradeLungs = new Button(g, 50, 350, "Lungs");
 		upgradeSpeed = new Button(g, 50, 500, "Speed");
+		img = g.loadImage("images/upgrade.png");
 	}
 	
 	@Override
@@ -30,7 +34,8 @@ public class Upgrade implements State{
 	
 	@Override
 	public void drawUI(){
-		g.background(0);
+		g.imageMode(CORNER);
+		g.image(img, 0, 0);
 		upgradeLungs.draw();
 		upgradeSpeed.draw();
 		upgradeAgility.draw();
@@ -67,11 +72,11 @@ public class Upgrade implements State{
 	
 	@Override
 	public void mousePressed(){
-		if(upgradeLungs.clicked(g.mouseX, g.mouseY)){
+		if(upgradeLungs.clicked(g.mouseX, g.mouseY) && Player.lungs < 10){
 			Player.lungs++;
-		}else if(upgradeAgility.clicked(g.mouseX, g.mouseY)){
+		}else if(upgradeAgility.clicked(g.mouseX, g.mouseY) && Player.agility < 10){
 			Player.agility++;
-		}else if(upgradeSpeed.clicked(g.mouseX, g.mouseY)){
+		}else if(upgradeSpeed.clicked(g.mouseX, g.mouseY) && Player.speed < 10){
 			Player.speed++;
 		}
 	}
