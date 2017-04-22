@@ -1,5 +1,6 @@
 package com.the_dungeoneers.game.states.levels;
 
+import Collision.SAT_Collision;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.Player;
@@ -22,21 +23,21 @@ public class Level1 extends Level {
         super(g, player, camera, from);
 		
 		bombs = new Bomb[]{	//todo set bomb positions
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector()),
-				new Bomb(g, new PVector())
+				new Bomb(g, new PVector(643, 536)),
+				new Bomb(g, new PVector(513, 202)),
+				new Bomb(g, new PVector(951, 302)),
+				new Bomb(g, new PVector(1171, 120)),
+				new Bomb(g, new PVector(1175, 564)),
+				new Bomb(g, new PVector(1196, 407)),
+				new Bomb(g, new PVector(1525, 8)),
+				new Bomb(g, new PVector(1508, 284)),
+				new Bomb(g, new PVector(1662, 522)),
+				new Bomb(g, new PVector(1761, 382)),
+				new Bomb(g, new PVector(1964, 249)),
+				new Bomb(g, new PVector(1765, 105)),
+				new Bomb(g, new PVector(2238, 151)),
+				new Bomb(g, new PVector(2356, 396)),
+				new Bomb(g, new PVector(2129, 500))
 		};
 		
     }
@@ -48,6 +49,9 @@ public class Level1 extends Level {
 		for(Bomb b : bombs){
 			if(b != null){
 				b.update();
+				if(SAT_Collision.intersects(player.bb, b.bb)){
+					
+				}
 			}
 		}
                 

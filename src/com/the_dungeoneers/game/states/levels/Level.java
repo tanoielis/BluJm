@@ -15,8 +15,8 @@ public abstract class Level implements State {
 
 	protected static PImage bg;
 	protected Game g;
-	public boolean successful = false;	//todo don't forget to change this back to false
-	public boolean running = true;	//todo don't forget to change this back to false
+	public boolean successful = false;
+	public boolean running = true;
 	public Player player;
 	protected Camera camera;
 	Island from;
@@ -37,6 +37,10 @@ public abstract class Level implements State {
 		}else {
 			camera.update();
 			player.update();
+			if(player.getPos().x > 2670){
+				successful = true;
+				running = false;
+			}
 		}
 		
 	}
