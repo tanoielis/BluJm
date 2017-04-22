@@ -101,8 +101,7 @@ public class IslandManager implements State {
 		g.textAlign(PConstants.RIGHT, PConstants.TOP);
 		g.textSize(60);
 		g.fill(243,203,116);
-		
-		g.textFont(Game.ranga);
+
 		g.text("Day: "+day, g.width, 0);
 		g.text(currentIsland.name, g.width, 50);
 				
