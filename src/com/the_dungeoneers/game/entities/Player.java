@@ -1,10 +1,12 @@
 package com.the_dungeoneers.game.entities;
 
+import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import processing.core.PImage;
 import processing.core.PVector;
 
 import static processing.core.PApplet.constrain;
+import static processing.core.PApplet.lerp;
 
 /**
  * Main player
@@ -23,10 +25,6 @@ public class Player extends MoveableEntity {
 	public static float currentLung;
 	public static float currentAgility;
 	
-	
-	
-	private PImage img;
-	
 	private PImage[] swimImages = new PImage[8];
 	private int timer;
 	private int count = 0;
@@ -42,6 +40,7 @@ public class Player extends MoveableEntity {
 			swimImages[i] = g.loadImage("images/Player/Swimming/swim/"+i+".png");
 		}
 		img = swimImages[0];
+		this.bb = new Square(g, pos.x, pos.y ,img.width, img.height);
 	}
 	
 	@Override
@@ -91,13 +90,12 @@ public class Player extends MoveableEntity {
 		currentAgility = baseAgility * agility;
 		currentSpeed = baseSpeed * speed;
 		
-		if(!(left || up || down || right)){
-			vel.lerp(new PVector(), 0.1f);
+		if(!(left || right)){
+			vel.x = lerp(vel.x, 0, 0.1f);
 		}
-		
-		vel.add(accel);
-		pos.add(vel);
-		accel.mult(0);
+		if(!(up || down)){
+			vel.y = lerp(vel.y, 0, 0.1f);
+		}
 		
 		pos.y = constrain(pos.y, 0, g.height-img.height);
 		vel.x = constrain(vel.x, -currentSpeed, currentSpeed);
@@ -113,7 +111,5 @@ public class Player extends MoveableEntity {
 			count = (count+1)%swimImages.length;
 			img = swimImages[count];
 		}
-		
-		g.image(img, pos.x, pos.y);
 	}
 }
