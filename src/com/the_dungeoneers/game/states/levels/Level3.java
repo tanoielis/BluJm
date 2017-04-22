@@ -14,4 +14,17 @@ public class Level3 extends Level  {
     public Level3(Game g, Player player, Camera camera, Island from, IslandManager im) {
         super(g, player, camera, from, im);
     }
+    
+    @Override
+    public void update(){
+        super.update();
+		
+    }
+    
+    @Override
+    public void drawEntities(){
+        super.drawEntities();
+    }
+    
+    
 }

@@ -29,7 +29,8 @@ public class Camera{
 		PVector antipos = focus.getPos();
 		float x = (-antipos.x)+ g.width/2;
 		float y = (-antipos.y)+ g.height/2;
-		pos = lerp(pos, new PVector(x,y), smoothness);
+//		pos = lerp(pos, new PVector(x,y), smoothness);
+		pos = new PVector(x,y);
 		pos.x = constrain(pos.x, -1720, 0);
 	}
 	

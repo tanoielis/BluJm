@@ -77,7 +77,6 @@ public class IslandManager implements State {
 	public void changeIsland(Island island) {
 		if(currentIsland.levels.containsKey(island)){
 			Level level = currentIsland.levels.get(island);
-			level.init();
 			g.states.startState(level);
 		}
 	}

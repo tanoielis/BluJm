@@ -19,6 +19,8 @@ import processing.core.PVector;
 public class Level1 extends Level {
 
 	private Bomb[] bombs;
+	private Shark shark;
+	private int timer;
 	
     public Level1(Game g, Player player, Camera camera, Island to, IslandManager im) {
         super(g, player, camera, to, im);
@@ -40,11 +42,18 @@ public class Level1 extends Level {
 				new Bomb(g, new PVector(2356, 396)),
 				new Bomb(g, new PVector(2129, 500))
 		};
+		
+		timer = -1;
     }
 
     @Override
     public void update() {
 		super.update();
+		
+		if(timer == -1){
+			timer = g.millis();
+		}
+		
 		for(int i=0; i<bombs.length; i++){
 			if(bombs[i] != null){
 				bombs[i].update();
@@ -53,6 +62,14 @@ public class Level1 extends Level {
 					running = false;
 				}
 			}
+		}
+		
+		if(g.millis() > timer + 4000 && shark == null){
+			shark = new Shark(g, new PVector(3000, player.getPos().y), new PVector(), new PVector());
+		}
+		
+		if(shark != null){
+			shark.update();
 		}
                 
     }
@@ -73,6 +90,9 @@ public class Level1 extends Level {
 				if(b != null){
 					b.draw();
 				}
+			}
+			if(shark != null){
+				shark.draw();
 			}
         g.popMatrix();
     

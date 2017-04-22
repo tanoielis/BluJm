@@ -143,7 +143,6 @@ public class Player extends MoveableEntity {
 			g.imageMode(CENTER);
 			g.image(img, 0, 0);
 		g.popMatrix();
-		this.bb.draw();
 	}
 	
 	private void swim(){

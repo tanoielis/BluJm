@@ -85,13 +85,13 @@ public class Upgrade implements State{
 	public void mousePressed(){
 		if(player.upgradePoints > 0){
 			if(upgradeLungs.clicked(g.mouseX, g.mouseY) && player.lungs < 10){
-				player.lungs++;
+				player.lungs+=2;
 				player.upgradePoints--;
 			}else if(upgradeAgility.clicked(g.mouseX, g.mouseY) && player.agility < 10){
-				player.agility++;
+				player.agility+=0.05f;
 				player.upgradePoints--;
 			}else if(upgradeSpeed.clicked(g.mouseX, g.mouseY) && player.speed < 10){
-				player.speed++;
+				player.speed+=0.5f;
 				player.upgradePoints--;
 			}
 		}
