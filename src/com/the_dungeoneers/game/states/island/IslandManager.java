@@ -56,7 +56,7 @@ public class IslandManager implements State {
 		islands.add(new TreasureIsland(g, player, camera));
 		// ADD HERE
 
-		islands.add(new PlaneIsland(g));
+		islands.add(new PlaneIsland(g, player, camera));
 	}
 	
 	public void changeIsland(Island island) {

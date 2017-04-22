@@ -1,6 +1,8 @@
 package com.the_dungeoneers.game.states.island.islands;
 
 import com.the_dungeoneers.game.Game;
+import com.the_dungeoneers.game.camera.Camera;
+import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.states.island.Island;
 
 /**
@@ -8,8 +10,7 @@ import com.the_dungeoneers.game.states.island.Island;
  */
 public class PlaneIsland extends Island {
 
-
-    public PlaneIsland(Game g) {
-        super(g, "Plane island");
+    public PlaneIsland(Game g, Player player, Camera camera) {
+        super(g, "Plane island", player, camera);
     }
 }
