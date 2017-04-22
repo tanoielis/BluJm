@@ -14,6 +14,8 @@ public class MapOfIslands implements State {
 	private Game g;
 	private IslandManager im;
 
+
+
 	public MapOfIslands(Game g, IslandManager im){
 		this.g = g;
 		this.im = im;

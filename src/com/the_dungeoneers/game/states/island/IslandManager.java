@@ -46,11 +46,11 @@ public class IslandManager implements State {
 
 		islands = new ArrayList<>();
 		islands.add(new VolcanoIsland(g));
-		islands.add(new DistantIsland(g));
+		islands.add(new YellowIsland(g));
 		islands.add(new BurningIsland(g));
 		islands.add(new BigRockIsland(g));
 		islands.add(new SkullIsland(g));
-		islands.add(new TreasureIsland(g));
+		islands.add(new TinyIsland(g));
 		// ADD HERE
 
 		islands.add(new PlaneIsland(g));

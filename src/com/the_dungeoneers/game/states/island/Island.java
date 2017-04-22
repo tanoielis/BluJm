@@ -1,6 +1,8 @@
 package com.the_dungeoneers.game.states.island;
 
 import com.the_dungeoneers.game.Game;
+import com.the_dungeoneers.game.camera.Camera;
+import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.states.State;
 import com.the_dungeoneers.game.states.levels.Level;
 
@@ -16,7 +18,7 @@ public abstract class Island implements State {
 	protected String name;
 	protected Game g;
 	
-	public Island(Game g, String name){
+	public Island(Game g, String name, Player player, Camera camera){
 		this.g = g;
 		this.name = name;
 		levels = new HashMap<>();

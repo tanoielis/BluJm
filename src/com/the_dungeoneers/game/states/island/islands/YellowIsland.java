@@ -8,13 +8,10 @@ import com.the_dungeoneers.game.states.island.Island;
 /**
  * Created by Chris on 22/04/2017.
  */
-public class BigRockIsland extends Island {
+public class YellowIsland extends Island {
 
-    Camera camera;
-    Player player;
 
-    public BigRockIsland(Game g) {
-        super(g, "Big Rock Island");
-
+    public YellowIsland(Game g, Player player, Camera camera) {
+        super(g, "Yellow Island", player, camera);
     }
 }

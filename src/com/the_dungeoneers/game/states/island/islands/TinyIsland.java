@@ -6,9 +6,9 @@ import com.the_dungeoneers.game.states.island.Island;
 /**
  * Created by Chris on 22/04/2017.
  */
-public class DistantIsland extends Island {
+public class TinyIsland extends Island {
 
-    public DistantIsland(Game g) {
-        super(g, "The distant isle");
+    public TinyIsland(Game g) {
+        super(g, "Tiny Island");
     }
 }

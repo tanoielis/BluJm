@@ -1,6 +1,8 @@
 package com.the_dungeoneers.game.states.island.islands;
 
 import com.the_dungeoneers.game.Game;
+import com.the_dungeoneers.game.camera.Camera;
+import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.states.island.Island;
 import com.the_dungeoneers.game.states.levels.Level1;
 import com.the_dungeoneers.game.states.levels.Level2;
@@ -10,10 +12,13 @@ import com.the_dungeoneers.game.states.levels.Level2;
  */
 public class VolcanoIsland extends Island {
 
-    public VolcanoIsland(Game g) {
-        super(g, "Volcano Island");
+    private Player player;
+    private Camera camera;
 
-        levels.put(new DistantIsland(g), new Level1(g));
-        levels.put(new BurningIsland(g), new Level2(g));
+    public VolcanoIsland(Game g, Player player, Camera camera) {
+        super(g, "Volcano Island", player, camera);
+
+        levels.put(new SkullIsland(g), new Level1(g, ));
+        levels.put(new BigRockIsland(g), new Level2(g));
     }
 }
