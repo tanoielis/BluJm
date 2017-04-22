@@ -11,7 +11,6 @@ import processing.core.PVector;
  */
 public class Jellyfish extends MoveableEntity {
 
-    PImage img;
     PVector origPos;
     boolean movingUp = up;
 
@@ -19,9 +18,6 @@ public class Jellyfish extends MoveableEntity {
         super(g, pos, vel, accel);
         this.origPos = pos.copy();
         this.img = g.loadImage("images/Enemies/jellyfish.png");
-
-        this.bb = new Square(g, pos.x, pos.y, img.width, img.height);
-
     }
 
     @Override
@@ -36,15 +32,15 @@ public class Jellyfish extends MoveableEntity {
 
     @Override
     protected void moveUp() {
-        if (pos.y <= origPos.y - 10 || pos.y >= origPos.y + 10) {
+        if (pos.y == origPos.y - g.height/6 || pos.y == origPos.y + g.height/6) {
             movingUp = !movingUp;
             vel.y *= -1;
         }
         if (movingUp) {
-            g.constrain(pos.y += vel.y, origPos.y, origPos.y - 10);
+            g.constrain(pos.y += vel.y, origPos.y, origPos.y - g.height/6);
         }
         else {
-            g.constrain(pos.y += vel.y, origPos.y, origPos.y + 10);
+            g.constrain(pos.y += vel.y, origPos.y, origPos.y + g.height/6);
         }
     }
 
@@ -71,5 +67,17 @@ public class Jellyfish extends MoveableEntity {
     @Override
     protected void moveDownRight() {
 
+    }
+
+    @Override
+    public void update() {
+
+        this.bb = new Square(g, pos.x, pos.y, img.width, img.height);
+        moveUp();
+    }
+
+    @Override
+    public void draw() {
+        super.draw();
     }
 }
