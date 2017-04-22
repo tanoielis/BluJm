@@ -34,7 +34,6 @@ public class Player extends MoveableEntity {
 		accel.add(currentSpeed, 0);
 	}
 	
-	
 	@Override
 	protected void moveUp(){
 		accel.add(0, -currentSpeed);
