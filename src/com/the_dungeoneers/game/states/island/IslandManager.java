@@ -49,7 +49,7 @@ public class IslandManager implements State {
 
 		islands = new ArrayList<>();
 		islands.add(new VolcanoIsland(g, player, camera));
-		islands.add(new DistantIsland(g, player, camera));
+		islands.add(new YellowIsland(g, player, camera));
 		islands.add(new BurningIsland(g, player, camera));
 		islands.add(new BigRockIsland(g, player, camera));
 		islands.add(new SkullIsland(g, player, camera));

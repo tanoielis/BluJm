@@ -8,9 +8,9 @@ import com.the_dungeoneers.game.states.island.Island;
 /**
  * Created by Chris on 22/04/2017.
  */
-public class SkullIsland extends Island {
+public class TreasureIsland extends Island {
     
-    public SkullIsland(Game g,  Player player, Camera camera){
-        super(g, "Skull Island", player, camera);
+    public TreasureIsland(Game g, Player player, Camera camera){
+        super(g, "Treasure Island", player, camera);
     }
 }
