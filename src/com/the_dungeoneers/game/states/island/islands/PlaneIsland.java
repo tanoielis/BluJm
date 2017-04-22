@@ -14,4 +14,9 @@ public class PlaneIsland extends Island {
     public PlaneIsland(Game g, Player player, Camera camera) {
         super(g, "Plane island", player, camera);
     }
+
+    @Override
+    public void setLevels() {
+        return;
+    }
 }

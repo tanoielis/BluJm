@@ -25,7 +25,6 @@ public abstract class Island implements State {
 		this.name = name;
 		this.camera = camera;
 		this.player = player;
-		levels = new HashMap<>();
 	}
 
 	public abstract void setLevels();

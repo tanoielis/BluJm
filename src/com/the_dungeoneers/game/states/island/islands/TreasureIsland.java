@@ -17,7 +17,10 @@ public class TreasureIsland extends Island {
     
     public TreasureIsland(Game g, Player player, Camera camera){
         super(g, "Treasure Island", player, camera);
+    }
 
+    @Override
+    public void setLevels() {
         levels.put(IslandManager.islands.get(6), new Level8(g, player, camera, this));
         levels.put(IslandManager.islands.get(1), new Level7(g, player, camera, this));
         levels.put(IslandManager.islands.get(3), new Level6(g, player, camera, this));

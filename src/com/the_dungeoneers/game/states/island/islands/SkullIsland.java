@@ -17,11 +17,12 @@ public class SkullIsland extends Island {
     
     public SkullIsland(Game g,  Player player, Camera camera){
         super(g, "Skull Island", player, camera);
+    }
 
 
+    @Override
+    public void setLevels() {
         levels.put(IslandManager.islands.get(0), new Level1(g, player, camera, this));
         levels.put(IslandManager.islands.get(1), new Level3(g, player, camera, this));
     }
-    
-    
 }

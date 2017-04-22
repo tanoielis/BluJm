@@ -16,7 +16,10 @@ public class BigRockIsland extends Island {
     
     public BigRockIsland(Game g, Player player, Camera camera){
         super(g, "Big Rock Island", player, camera);
+    }
 
+    @Override
+    public void setLevels() {
         levels.put(IslandManager.islands.get(5), new Level7(g, player, camera, this));
         levels.put(IslandManager.islands.get(1), new Level4(g, player, camera, this));
         levels.put(IslandManager.islands.get(0), new Level2(g, player, camera, this));
