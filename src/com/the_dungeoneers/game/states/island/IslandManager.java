@@ -11,8 +11,7 @@ import com.the_dungeoneers.game.states.levels.Level;
 import processing.core.PImage;
 import processing.core.PVector;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 /**
  * Island Manager
@@ -22,7 +21,7 @@ public class IslandManager implements State {
 	private Game g;
 	private Island currentIsland;
 	private Island end;
-	public static List<Island> islands;
+	public static HashMap<String, Island> islands;
 	private static PImage background;
 	private ComboPolygon mapBB;
 	private Square hutBB;
@@ -36,31 +35,34 @@ public class IslandManager implements State {
 		player = new Player(g, new PVector(), new PVector(), new PVector());
 		camera = new Camera(g, player);
 
-        mapBB = new ComboPolygon(g, 0, new Square(g, new PVector(790,440), 490, 280),
-                new Triangle(g, new PVector(790, 535), new PVector(790, 720), new PVector(535, 720))
-        );
+		waterHutBoundingBoxes();
+        createIslands();
+
+        // Start and End Islands
+		currentIsland = islands.get("VolcanoIsland");
+		end = islands.get("PlaneIsland");
+	}
+
+	private void waterHutBoundingBoxes() {
+		mapBB = new ComboPolygon(g, 0, new Square(g, new PVector(790,440), 490, 280),
+				new Triangle(g, new PVector(790, 535), new PVector(790, 720), new PVector(535, 720))
+		);
 
 		hutBB = new Square(g, new PVector(160, 280), 125, 200);
-
-        createIslands();
-		currentIsland = islands.get(0);
-		end = islands.get(islands.size() - 1);
 	}
 
 	private void createIslands() {
 
-		islands = new ArrayList<>();
-		islands.add(new VolcanoIsland(g, player, camera));
-		islands.add(new YellowIsland(g, player, camera));
-		islands.add(new BurningIsland(g, player, camera));
-		islands.add(new BigRockIsland(g, player, camera));
-		islands.add(new SkullIsland(g, player, camera));
-		islands.add(new TreasureIsland(g, player, camera));
-		// ADD HERE
-
-		islands.add(new PlaneIsland(g, player, camera));
+		islands = new HashMap<>();
+		islands.put("VolcanoIsland", new VolcanoIsland(g, player, camera));
+		islands.put("YellowIsland", new YellowIsland(g, player, camera));
+		islands.put("BurningIsland", new BurningIsland(g, player, camera));
+		islands.put("BigRockIsland", new BigRockIsland(g, player, camera));
+		islands.put("SkullIsland", new SkullIsland(g, player, camera));
+		islands.put("TreasureIsland", new TreasureIsland(g, player, camera));
+		islands.put("PlaneIsland", new PlaneIsland(g, player, camera));
 		
-		for(Island i : islands){
+		for(Island i : islands.values()){
 			i.setLevels();
 		}
 	}
