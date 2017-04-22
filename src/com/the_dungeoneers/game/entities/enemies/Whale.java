@@ -8,6 +8,7 @@ import processing.core.PVector;
  * Created by Eli on 22/04/2017.
  */
 public class Whale extends MoveableEntity{
+
 	public Whale(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
 	}

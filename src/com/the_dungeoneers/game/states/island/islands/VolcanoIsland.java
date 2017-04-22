@@ -17,9 +17,8 @@ public class VolcanoIsland extends Island {
         super(g, "Volcano Island", player, camera);
     }
 
-
     @Override
-    public void setLevels() {
+    public void setNeighbours() {
         levels.put(IslandManager.islands.get("SkullIsland"), new Level1(g, player, camera, this));
         levels.put(IslandManager.islands.get("BigRockIsland"), new Level2(g, player, camera, this));
     }

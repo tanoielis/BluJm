@@ -83,25 +83,25 @@ public class MapOfIslands implements State {
 	@Override
 	public void mousePressed(){
 		if (volcanoBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-			im.changeIsland(IslandManager.islands.get(0));
+			im.changeIsland(IslandManager.islands.get("VolcanoIsland"));
 		}
 		else if (skullBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-			im.changeIsland(IslandManager.islands.get(4));
+			im.changeIsland(IslandManager.islands.get("SkullIsland"));
 		}
 		else if (yellowBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-			im.changeIsland(IslandManager.islands.get(1));
+			im.changeIsland(IslandManager.islands.get("YellowIsland"));
 		}
 		else if (burningBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-			im.changeIsland(IslandManager.islands.get(2));
+			im.changeIsland(IslandManager.islands.get("BurningIsland"));
 		}
 		else if (bigRock.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-			im.changeIsland(IslandManager.islands.get(3));
+			im.changeIsland(IslandManager.islands.get("BigRockIsland"));
 		}
 		else if (treasureBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-			im.changeIsland(IslandManager.islands.get(5));
+			im.changeIsland(IslandManager.islands.get("TreasureIsland"));
 		}
 		else if (planeBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-			im.changeIsland(IslandManager.islands.get(6));
+			im.changeIsland(IslandManager.islands.get("PlaneIsland"));
 		}
 	}
 

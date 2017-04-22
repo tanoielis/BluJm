@@ -16,7 +16,7 @@ public class PlaneIsland extends Island {
     }
 
     @Override
-    public void setLevels() {
+    public void setNeighbours() {
         return;
     }
 }

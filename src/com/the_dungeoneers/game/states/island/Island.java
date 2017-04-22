@@ -27,7 +27,7 @@ public abstract class Island implements State {
 		this.player = player;
 	}
 
-	public abstract void setLevels();
+	public abstract void setNeighbours();
 	
 	public void update(){
 		

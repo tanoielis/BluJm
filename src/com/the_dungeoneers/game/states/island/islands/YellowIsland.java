@@ -20,7 +20,7 @@ public class YellowIsland extends Island {
     }
 
     @Override
-    public void setLevels() {
+    public void setNeighbours() {
         levels.put(IslandManager.islands.get("BigRockIsland"), new Level2(g, player, camera, this));
         levels.put(IslandManager.islands.get("BurningIsland"), new Level5(g, player, camera, this));
         levels.put(IslandManager.islands.get("TreasureIsland"), new Level6(g, player, camera, this));

@@ -17,7 +17,7 @@ public class BurningIsland extends Island {
     }
 
     @Override
-    public void setLevels() {
+    public void setNeighbours() {
         levels.put(IslandManager.islands.get("TreasureIsland"), new Level7(g, player, camera, this));
         levels.put(IslandManager.islands.get("YellowIsland"), new Level4(g, player, camera, this));
         levels.put(IslandManager.islands.get("VolcanoIsland"), new Level2(g, player, camera, this));
