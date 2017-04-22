@@ -21,8 +21,8 @@ public class TreasureIsland extends Island {
 
     @Override
     public void setNeighbours() {
-        levels.put(IslandManager.islands.get("PlaneIsland"), new Level8(g, player, camera, this));
-        levels.put(IslandManager.islands.get("BurningIsland"), new Level7(g, player, camera, this));
-        levels.put(IslandManager.islands.get("YellowIsland"), new Level6(g, player, camera, this));
+        levels.put(IslandManager.islands.get("PlaneIsland"), new Level8(g, player, camera, IslandManager.islands.get("PlaneIsland")));
+        levels.put(IslandManager.islands.get("BurningIsland"), new Level7(g, player, camera, IslandManager.islands.get("BurningIsland")));
+        levels.put(IslandManager.islands.get("YellowIsland"), new Level6(g, player, camera, IslandManager.islands.get("YellowIsland")));
     }
 }

@@ -157,6 +157,7 @@ public class Player extends MoveableEntity {
 				timer = g.millis();
 				swimCount = ++swimCount % swimImages.length;
 				img = swimImages[swimCount];
+				this.bb = new Square(g, pos, img.width, img.height);
 			}
 		}
 		
@@ -166,6 +167,7 @@ public class Player extends MoveableEntity {
 		if(g.millis() > timer + 50 && stopCount < stopImages.length){
 			timer = g.millis();
 			img = stopImages[stopCount++];
+			this.bb = new Square(g, pos, img.width, img.height);
 		}
 	}
 	

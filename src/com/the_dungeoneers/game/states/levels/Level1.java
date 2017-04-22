@@ -19,8 +19,9 @@ public class Level1 extends Level {
 
 	private Bomb[] bombs;
 	
-    public Level1(Game g, Player player, Camera camera, Island from) {
-        super(g, player, camera, from);
+    public Level1(Game g, Player player, Camera camera, Island to) {
+        super(g, player, camera, to);
+		
 		
 		bombs = new Bomb[]{	//todo set bomb positions
 				new Bomb(g, new PVector(643, 536)),
@@ -50,7 +51,9 @@ public class Level1 extends Level {
 			if(b != null){
 				b.update();
 				if(SAT_Collision.intersects(player.bb, b.bb)){
-					
+					successful = false;
+					running = false;
+//					System.out.println();
 				}
 			}
 		}

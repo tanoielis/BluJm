@@ -22,7 +22,7 @@ public class SkullIsland extends Island {
 
     @Override
     public void setNeighbours() {
-        levels.put(IslandManager.islands.get("VolcanoIsland"), new Level1(g, player, camera, this));
-        levels.put(IslandManager.islands.get("YellowIsland"), new Level3(g, player, camera, this));
+        levels.put(IslandManager.islands.get("VolcanoIsland"), new Level1(g, player, camera, IslandManager.islands.get("VolcanoIsland")));
+        levels.put(IslandManager.islands.get("YellowIsland"), new Level3(g, player, camera, IslandManager.islands.get("YellowIsland")));
     }
 }

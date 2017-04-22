@@ -76,11 +76,7 @@ public class IslandManager implements State {
 	
 	public void changeIsland(Island island) {
 		if(currentIsland.levels.containsKey(island)){
-			if(attempt(island)){
-				currentIsland = island;
-			}
-			day++;
-			player.upgradePoints++;
+			attempt(island);
 		}
 	}
 	
@@ -88,6 +84,14 @@ public class IslandManager implements State {
 		Level level = currentIsland.levels.get(island);
 		g.states.startState(level);
 		return level.successful;
+	}
+	
+	public void attempt(boolean succesful, Island island){
+		day++;
+		player.upgradePoints++;
+		if(succesful){
+			currentIsland = island;
+		}
 	}
 	
 	@Override

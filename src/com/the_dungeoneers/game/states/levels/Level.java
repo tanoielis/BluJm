@@ -15,18 +15,20 @@ public abstract class Level implements State {
 
 	protected static PImage bg;
 	protected Game g;
-	public boolean successful = false;
-	public boolean running = true;
+	public boolean successful;
+	public boolean running;
 	public Player player;
 	protected Camera camera;
-	Island from;
+	private Island to;
 
-	public Level(Game g, Player player, Camera camera, Island from) {
+	public Level(Game g, Player player, Camera camera, Island to) {
 		this.g = g;
-		this.from = from;
 		this.bg = g.loadImage("images/Backgrounds/background.png");
 		this.player = player;
 		this.camera = camera;
+		
+		this.successful = false;
+		this.running = true;
 	}
 
 	@Override
