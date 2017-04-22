@@ -13,8 +13,6 @@ public class Game extends PApplet{
 
 	public StateManager states;
 	
-	public static PFont ranga;
-	
 	@Override
 	public void settings() {
 		size(1280, 720);
@@ -24,8 +22,6 @@ public class Game extends PApplet{
 	public void setup() {
 		states = new StateManager();
 		states.startState(new Mainmenu(this));
-		ranga = createFont("fonts/Ranga-Bold.tff", 60);
-		textFont(ranga);
 	}
 
 	@Override
