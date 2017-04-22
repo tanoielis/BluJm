@@ -29,22 +29,25 @@ public class IslandManager implements State {
 	private Player player;
 	private Camera camera;
 	private int day;
+	private int transparency;
 
 	public IslandManager(Game g){
 		this.g = g;
         this.background = g.loadImage("images/Backgrounds/islandBg.png");
 
-		player = new Player(g, new PVector(g.width/2, g.height/2), new PVector(), new PVector());
-		camera = new Camera(g, player);
+		this.player = new Player(g, new PVector(g.width/2, g.height/2), new PVector(), new PVector());
+		this.camera = new Camera(g, player);
 
 		waterHutBoundingBoxes();
         createIslands();
 
         // Start and End Islands
-		currentIsland = islands.get("VolcanoIsland");
-		end = islands.get("PlaneIsland");
+		this.currentIsland = islands.get("VolcanoIsland");
+		this.end = islands.get("PlaneIsland");
 		
-		day = 1;
+		this.day = 1;
+
+		this.transparency = 255;
 	}
 
 	private void waterHutBoundingBoxes() {
@@ -77,6 +80,7 @@ public class IslandManager implements State {
 				currentIsland = island;
 			}
 			day++;
+			player.upgradePoints++;
 		}
 	}
 	
@@ -97,6 +101,7 @@ public class IslandManager implements State {
 	@Override
 	public void drawUI(){
 
+
 		g.image(background, 0, 0);
 		g.textAlign(PConstants.RIGHT, PConstants.TOP);
 		g.textSize(60);
@@ -104,7 +109,15 @@ public class IslandManager implements State {
 
 		g.text("Day: "+day, g.width, 0);
 		g.text(currentIsland.name, g.width, 50);
-				
+
+		if(transparency <= 0){
+			transparency = 0;
+		}else{
+			g.fill(0, (transparency-=2));
+			g.rectMode(PConstants.CORNER);
+			g.rect(0, 0, g.width, g.height);
+		}
+
 	}
 	
 	@Override
@@ -134,7 +147,7 @@ public class IslandManager implements State {
 
 		else {
 			if (hutBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-				g.states.startState(new Upgrade(g));
+				g.states.startState(new Upgrade(g, player));
 			}
 		}
 		currentIsland.mousePressed();

@@ -22,6 +22,7 @@ public class Game extends PApplet{
 	public void setup() {
 		states = new StateManager();
 		states.startState(new Mainmenu(this));
+		surface.setTitle("Deep Blue");
 	}
 
 	@Override

@@ -10,6 +10,8 @@ import processing.core.PVector;
 
 import static processing.core.PApplet.max;
 import static processing.core.PConstants.CORNER;
+import static processing.core.PConstants.RIGHT;
+import static processing.core.PConstants.TOP;
 
 /**
  * Upgrage menu
@@ -20,17 +22,17 @@ public class Upgrade implements State{
 	
 	private Button upgradeLungs, upgradeSpeed, upgradeAgility;
 	private Square backBB;
-	
+	private Player player;
 	private PImage img;
 	
-	public Upgrade(Game g){
+	public Upgrade(Game g, Player player){
 		this.g = g;
-		upgradeAgility = new Button(g, 50, 200, "Agility");
-		upgradeLungs = new Button(g, 50, 350, "Lungs");
-		upgradeSpeed = new Button(g, 50, 500, "Speed");
-		backBB = new Square(g, new PVector(25,25), 160, 75);
-
-		img = g.loadImage("images/Backgrounds/upgrade.png");
+		this.upgradeAgility = new Button(g, 50, 200, "Agility");
+		this.upgradeLungs = new Button(g, 50, 350, "Lungs");
+		this.upgradeSpeed = new Button(g, 50, 500, "Speed");
+		this.backBB = new Square(g, new PVector(25,25), 160, 75);
+		this.player = player;
+		this.img = g.loadImage("images/Backgrounds/upgrade.png");
 	}
 	
 	@Override
@@ -46,19 +48,22 @@ public class Upgrade implements State{
 		upgradeSpeed.draw();
 		upgradeAgility.draw();
 		g.ellipseMode(CORNER);
-		g.fill(216, 223, 51);
+		g.fill(226, 200, 51);
 		g.stroke(255);
-		for(int i=0; i<max(Player.agility, Player.lungs, Player.speed); i++){
-			if(i < Player.agility){
+		for(int i=0; i<max(player.agility, player.lungs, player.speed); i++){
+			if(i < player.agility){
 				g.ellipse(160 + i*50 + i*10, 200, 50, 50);
 			}
-			if(i < Player.speed){
+			if(i < player.speed){
 				g.ellipse(160 + i*50 + i*10, 500, 50, 50);
 			}
-			if(i < Player.lungs){
+			if(i < player.lungs){
 				g.ellipse(160 + i*50 + i*10, 350, 50, 50);
 			}
 		}
+		g.textAlign(RIGHT, TOP);
+		g.fill(0);
+		g.text("Upgrade Points: "+player.upgradePoints, g.width, 0);
 	}
 	
 	@Override
@@ -78,12 +83,17 @@ public class Upgrade implements State{
 	
 	@Override
 	public void mousePressed(){
-		if(upgradeLungs.clicked(g.mouseX, g.mouseY) && Player.lungs < 10){
-			Player.lungs++;
-		}else if(upgradeAgility.clicked(g.mouseX, g.mouseY) && Player.agility < 10){
-			Player.agility++;
-		}else if(upgradeSpeed.clicked(g.mouseX, g.mouseY) && Player.speed < 10){
-			Player.speed++;
+		if(player.upgradePoints > 0){
+			if(upgradeLungs.clicked(g.mouseX, g.mouseY) && player.lungs < 10){
+				player.lungs++;
+				player.upgradePoints--;
+			}else if(upgradeAgility.clicked(g.mouseX, g.mouseY) && player.agility < 10){
+				player.agility++;
+				player.upgradePoints--;
+			}else if(upgradeSpeed.clicked(g.mouseX, g.mouseY) && player.speed < 10){
+				player.speed++;
+				player.upgradePoints--;
+			}
 		}
 
 		if (backBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {

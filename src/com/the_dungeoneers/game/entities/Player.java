@@ -13,17 +13,19 @@ import static processing.core.PApplet.lerp;
  */
 public class Player extends MoveableEntity {
 	
-	public static float speed = 1;
-	public static float agility = 1;
-	public static float lungs = 1;
+	public float speed = 1;
+	public float agility = 1;
+	public float lungs = 1;
 	
 	public static float baseLung = 30; //seconds
 	public static float baseSpeed = 7;//move left right
-	public static float baseAgility = 0.3f; //move up down
+	public static float baseAgility = 0.5f; //move up down
 	
 	public static float currentSpeed;
 	public static float currentLung;
 	public static float currentAgility;
+	
+	public int upgradePoints;
 	
 	private PImage[] swimImages = new PImage[8];
 	private int timer;
@@ -33,6 +35,7 @@ public class Player extends MoveableEntity {
 		super(g, pos, vel, accel);
 		loadImages();
 		timer = g.millis();
+		upgradePoints = 0;
 	}
 	
 	private void loadImages(){
@@ -96,6 +99,9 @@ public class Player extends MoveableEntity {
 		if(!(up || down)){
 			vel.y = lerp(vel.y, 0, 0.1f);
 		}
+		if(!(up || down || left || right)){
+			accel.add(0, 0.2f);
+		}
 		
 		pos.y = constrain(pos.y, 0, g.height-img.height);
 		vel.x = constrain(vel.x, -currentSpeed, currentSpeed);
@@ -106,10 +112,14 @@ public class Player extends MoveableEntity {
 	public void draw(){
 		super.draw();
 		
-		if(g.millis() > timer+100){
-			timer = g.millis();
-			count = (count+1)%swimImages.length;
-			img = swimImages[count];
+		if(up || down || left || right){
+			if(g.millis() > timer + 100){
+				timer = g.millis();
+				count = (count + 1) % swimImages.length;
+				img = swimImages[count];
+			}
+		}else{
+//			img =
 		}
 	}
 }
