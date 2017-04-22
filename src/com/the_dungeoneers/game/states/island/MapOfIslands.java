@@ -1,7 +1,10 @@
 package com.the_dungeoneers.game.states.island;
 
 import com.the_dungeoneers.game.Game;
+import com.the_dungeoneers.game.camera.Camera;
+import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.states.State;
+import com.the_dungeoneers.game.states.island.islands.SkullIsland;
 import processing.core.PConstants;
 import processing.core.PImage;
 
@@ -13,12 +16,15 @@ public class MapOfIslands implements State {
 	private static PImage map;
 	private Game g;
 	private IslandManager im;
+	private Player player;
+	private Camera camera;
 
 
-
-	public MapOfIslands(Game g, IslandManager im){
+	public MapOfIslands(Game g, IslandManager im, Player player, Camera camera){
 		this.g = g;
 		this.im = im;
+		this.camera = camera;
+		this.player = player;
 		map = g.loadImage("images/map.png");
 	}
 	
@@ -50,7 +56,7 @@ public class MapOfIslands implements State {
 	
 	@Override
 	public void mousePressed(){
-		
+		im.changeIsland(new SkullIsland(g, player, camera));
 	}
 
 

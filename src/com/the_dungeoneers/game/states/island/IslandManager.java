@@ -33,6 +33,8 @@ public class IslandManager implements State {
 		this.g = g;
         this.background = g.loadImage("images/islandBg.png");
 
+		player = new Player(g, new PVector(), new PVector(), new PVector());
+		camera = new Camera(g, player);
 
         mapBB = new ComboPolygon(g, 0, new Square(g, new PVector(790,440), 490, 280),
                 new Triangle(g, new PVector(790, 535), new PVector(790, 720), new PVector(535, 720))
@@ -107,7 +109,7 @@ public class IslandManager implements State {
 		if (g.mouseX >= g.width/2) {
 			for (Polygon polygon : mapBB.polys) {
 				if (polygon.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-					g.states.startState(new MapOfIslands(g, this));
+					g.states.startState(new MapOfIslands(g, this, player, camera));
 				}
 			}
 		}

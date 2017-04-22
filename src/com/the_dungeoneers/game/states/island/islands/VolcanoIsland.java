@@ -18,4 +18,6 @@ public class VolcanoIsland extends Island {
         levels.put(new SkullIsland(g, player, camera), new Level1(g, player, camera, this));
         levels.put(new BigRockIsland(g, player, camera), new Level2(g, player, camera, this));
     }
+    
+    
 }

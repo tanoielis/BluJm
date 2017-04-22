@@ -17,10 +17,14 @@ public abstract class Island implements State {
 	public Map<Island, Level> levels = new HashMap<>();
 	protected String name;
 	protected Game g;
+	protected Player player;
+	protected Camera camera;
 	
 	public Island(Game g, String name, Player player, Camera camera){
 		this.g = g;
 		this.name = name;
+		this.camera = camera;
+		this.player = player;
 		levels = new HashMap<>();
 	}
 
@@ -51,5 +55,11 @@ public abstract class Island implements State {
 	@Override
 	public void mousePressed(){
 		
+	}
+	
+	@Override
+	public boolean equals(Object obj){
+		System.out.println(obj.getClass() == this.getClass());
+		return obj.getClass() == this.getClass();
 	}
 }

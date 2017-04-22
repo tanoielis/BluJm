@@ -3,6 +3,7 @@ package com.the_dungeoneers.game;
 import com.the_dungeoneers.game.input_handler.Keyboard;
 import com.the_dungeoneers.game.states.Mainmenu;
 import com.the_dungeoneers.game.states.StateManager;
+import com.the_dungeoneers.game.states.island.islands.VolcanoIsland;
 import com.the_dungeoneers.game.states.levels.Level;
 import com.the_dungeoneers.game.states.levels.Level1;
 import processing.core.*;
