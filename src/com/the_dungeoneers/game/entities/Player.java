@@ -25,6 +25,8 @@ public class Player extends MoveableEntity {
 	public static float currentLung;
 	public static float currentAgility;
 	
+	public int upgradePoints;
+	
 	private PImage[] swimImages = new PImage[8];
 	private int timer;
 	private int count = 0;
@@ -33,6 +35,7 @@ public class Player extends MoveableEntity {
 		super(g, pos, vel, accel);
 		loadImages();
 		timer = g.millis();
+		upgradePoints = 0;
 	}
 	
 	private void loadImages(){

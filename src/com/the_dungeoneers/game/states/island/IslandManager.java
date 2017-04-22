@@ -77,6 +77,7 @@ public class IslandManager implements State {
 				currentIsland = island;
 			}
 			day++;
+			player.upgradePoints++;
 		}
 	}
 	
@@ -102,7 +103,6 @@ public class IslandManager implements State {
 		g.textSize(60);
 		g.fill(243,203,116);
 		
-		g.textFont(Game.ranga);
 		g.text("Day: "+day, g.width, 0);
 		g.text(currentIsland.name, g.width, 50);
 				
@@ -135,7 +135,7 @@ public class IslandManager implements State {
 
 		else {
 			if (hutBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
-				g.states.startState(new Upgrade(g));
+				g.states.startState(new Upgrade(g, player));
 			}
 		}
 		currentIsland.mousePressed();

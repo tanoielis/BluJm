@@ -58,7 +58,7 @@ public class Mainmenu implements State{
 	@Override
 	public void mousePressed(){
 		if(playBtn.contains(new Point(g, g.mouseX, g.mouseY))){
-			g.states.startState(new IslandManager(g));
+			g.states.startState(new Loading(g));
 		}
 		else if(instructionsBtn.contains(new Point(g, g.mouseX, g.mouseY))){
 			g.states.startState(new Instructions(g));
