@@ -9,6 +9,7 @@ import com.the_dungeoneers.game.entities.enemies.Spear;
 import com.the_dungeoneers.game.entities.enemies.Whale;
 import com.the_dungeoneers.game.entities.obstacles.Bomb;
 import com.the_dungeoneers.game.states.island.Island;
+import com.the_dungeoneers.game.states.island.IslandManager;
 import processing.core.PConstants;
 import processing.core.PVector;
 
@@ -19,8 +20,8 @@ public class Level1 extends Level {
 
 	private Bomb[] bombs;
 	
-    public Level1(Game g, Player player, Camera camera, Island to) {
-        super(g, player, camera, to);
+    public Level1(Game g, Player player, Camera camera, Island to, IslandManager im) {
+        super(g, player, camera, to, im);
 		
 		
 		bombs = new Bomb[]{	//todo set bomb positions

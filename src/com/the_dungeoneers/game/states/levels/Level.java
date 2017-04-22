@@ -4,8 +4,10 @@ import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.input_handler.Keyboard;
+import com.the_dungeoneers.game.states.Instructions;
 import com.the_dungeoneers.game.states.State;
 import com.the_dungeoneers.game.states.island.Island;
+import com.the_dungeoneers.game.states.island.IslandManager;
 import processing.core.PImage;
 
 /**
@@ -20,8 +22,9 @@ public abstract class Level implements State {
 	public Player player;
 	protected Camera camera;
 	private Island to;
+	private IslandManager im;
 
-	public Level(Game g, Player player, Camera camera, Island to) {
+	public Level(Game g, Player player, Camera camera, Island to, IslandManager im) {
 		this.g = g;
 		this.bg = g.loadImage("images/Backgrounds/background.png");
 		this.player = player;
@@ -29,6 +32,9 @@ public abstract class Level implements State {
 		
 		this.successful = false;
 		this.running = true;
+		
+		this.im = im;
+		this.to = to;
 	}
 
 	@Override
@@ -36,6 +42,7 @@ public abstract class Level implements State {
 		if(!running){
 			g.states.endState();
 			g.states.endState();
+			im.attempt(successful, to);
 		}else {
 			camera.update();
 			player.update();
@@ -44,7 +51,6 @@ public abstract class Level implements State {
 				running = false;
 			}
 		}
-		
 	}
 	
 	@Override
