@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public abstract class Island implements State {
 
-	public Map<Island, Level> levels = new HashMap<>();
+	protected Map<Island, Level> levels = new HashMap<>();
 	protected String name;
 	protected Game g;
 	protected Player player;
@@ -28,6 +28,8 @@ public abstract class Island implements State {
 		levels = new HashMap<>();
 	}
 
+	public abstract void setLevels();
+	
 	public void update(){
 		
 	}

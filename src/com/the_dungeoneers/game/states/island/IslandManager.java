@@ -22,7 +22,7 @@ public class IslandManager implements State {
 	private Game g;
 	private Island currentIsland;
 	private Island end;
-	private static List<Island> islands;
+	public static List<Island> islands;
 	private static PImage background;
 	private ComboPolygon mapBB;
 	private Square hutBB;
@@ -59,6 +59,10 @@ public class IslandManager implements State {
 		// ADD HERE
 
 		islands.add(new PlaneIsland(g, player, camera));
+		
+		for(Island i : islands){
+			i.setLevels();
+		}
 	}
 	
 	public void changeIsland(Island island) {
