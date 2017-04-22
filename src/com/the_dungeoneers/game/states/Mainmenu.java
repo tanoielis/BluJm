@@ -5,56 +5,66 @@ import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.states.island.IslandManager;
 import processing.core.PConstants;
+import processing.core.PImage;
+import processing.core.PVector;
 
 /**
  * Mainmenu
  */
 public class Mainmenu implements State{
-	
-	private Square play;
+
 	private Game g;
-	
+	private PImage menu;
+
+	private Square playBtn;
+	private Square instructionsBtn;
+	private Square quitBtn;
+
 	public Mainmenu(Game g){
 		this.g = g;
-		play = new Square(g, g.width/2-200, g.height/2-50, 400, 100);
+
+		menu = g.loadImage("images/Backgrounds/mainMenu.png");
+
+		playBtn = new Square(g, new PVector(320, 575), 495, 115);
+		instructionsBtn = new Square(g, new PVector(270, 500), 425, 532);
+		quitBtn = new Square(g, new PVector(620, 435), 115, 25);
 	}
-	
+
 	@Override
 	public void update(){
-		
+
 	}
-	
+
 	@Override
 	public void drawUI(){
-		g.background(0);
-		g.fill(255);
-		g.rectMode(PConstants.CENTER);
-		g.rect(g.width/2, g.height/2, 400, 100);
-		g.fill(0);
-		g.textAlign(PConstants.CENTER, PConstants.CENTER);
-		g.textSize(60);
-		g.text("Play", g.width/2, g.height/2);
+		g.background(menu);
 	}
-	
+
 	@Override
 	public void drawEntities(){
-		
+
 	}
-	
+
 	@Override
 	public void keyPressed(){
-		
+
 	}
-	
+
 	@Override
 	public void keyReleased(){
-		
+
 	}
-	
+
 	@Override
 	public void mousePressed(){
-		if(play.contains(new Point(g, g.mouseX, g.mouseY))){
+		if(playBtn.contains(new Point(g, g.mouseX, g.mouseY))){
 			g.states.startState(new IslandManager(g));
+		}
+		else if(instructionsBtn.contains(new Point(g, g.mouseX, g.mouseY))){
+			g.states.startState(new Instructions(g));
+		}
+		else if(quitBtn.contains(new Point(g, g.mouseX, g.mouseY))){
+			g.exit();
 		}
 	}
 }
