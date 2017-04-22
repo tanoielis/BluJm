@@ -70,6 +70,9 @@ public class Level1 extends Level {
 		
 		if(shark != null){
 			shark.update();
+			if(shark.getPos().x + shark.bb.wd < 0){
+				shark = null;
+			}
 		}
                 
     }

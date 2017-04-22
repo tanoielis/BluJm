@@ -49,6 +49,9 @@ public abstract class Level implements State {
 				successful = true;
 				running = false;
 			}
+			if(player.timer == -1){
+//				timer =
+			}
 		}
 	}
 	

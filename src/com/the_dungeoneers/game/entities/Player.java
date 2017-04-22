@@ -34,14 +34,14 @@ public class Player extends MoveableEntity {
 	
 	private PImage[] swimImages = new PImage[8];
 	private PImage[] stopImages = new PImage[10];
-	private int timer;
+	public int timer;
 	private int swimCount = 0;
 	private int stopCount = 0;
 	
 	public Player(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
 		loadImages();
-		timer = g.millis();
+		timer = -1;
 		upgradePoints = 0;
 		facingRight = true;
 	}
@@ -123,6 +123,7 @@ public class Player extends MoveableEntity {
 		vel.setMag(constrain(vel.mag(), -currentSpeed, currentSpeed));
 		
 		facingRight = (vel.x >= 0);
+		
 	}
 	
 	@Override
