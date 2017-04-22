@@ -1,9 +1,12 @@
 package com.the_dungeoneers.game.states;
 
+import Collision.Point;
+import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.util.Button;
 import processing.core.PImage;
+import processing.core.PVector;
 
 import static processing.core.PApplet.max;
 import static processing.core.PConstants.CORNER;
@@ -16,6 +19,7 @@ public class Upgrade implements State{
 	private Game g;
 	
 	private Button upgradeLungs, upgradeSpeed, upgradeAgility;
+	private Square backBB;
 	
 	private PImage img;
 	
@@ -24,6 +28,8 @@ public class Upgrade implements State{
 		upgradeAgility = new Button(g, 50, 200, "Agility");
 		upgradeLungs = new Button(g, 50, 350, "Lungs");
 		upgradeSpeed = new Button(g, 50, 500, "Speed");
+		backBB = new Square(g, new PVector(25,25), 160, 75);
+
 		img = g.loadImage("images/Backgrounds/upgrade.png");
 	}
 	
@@ -78,6 +84,10 @@ public class Upgrade implements State{
 			Player.agility++;
 		}else if(upgradeSpeed.clicked(g.mouseX, g.mouseY) && Player.speed < 10){
 			Player.speed++;
+		}
+
+		if (backBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
+			g.states.endState();
 		}
 	}
 }

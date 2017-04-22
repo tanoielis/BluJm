@@ -35,18 +35,16 @@ public class Whale extends MoveableEntity{
 		
 		vel.x = constrain(vel.x, -speed, speed);
 		
-		if(abs(pos.x - ((Level)g.states.getState()).player.getPos().x) < 200 && !spawned){
+		if(abs(pos.x - ((Level) g.states.getState()).player.getPos().x) < 200 && !spawned){
 			spawnSpears();
 			spawned = true;
 			spearsActive = true;
 			timer = g.millis();
-		
 		}
 		
 		if(spawned){
 			handleSpears();
 		}
-		
 	}
 	
 	@Override

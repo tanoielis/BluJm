@@ -52,6 +52,7 @@ public class MapOfIslands implements State {
 		bigRock = new Square(g, new PVector(790, 120), 90, 105);
 		treasureBB = new Square(g, new PVector(780, 535), 110, 90);
 		planeBB = new Square(g, new PVector(1030, 250), 250, 371);
+		backBB = new Square(g, new PVector(25,25), 160, 75);
 	}
 
 	@Override
@@ -82,7 +83,10 @@ public class MapOfIslands implements State {
 
 	@Override
 	public void mousePressed(){
-		if (volcanoBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
+		if (backBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
+			g.states.endState();
+		}
+		else if (volcanoBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {
 			im.changeIsland(IslandManager.islands.get("VolcanoIsland"));
 		}
 		else if (skullBB.contains(new Point(g, new PVector(g.mouseX, g.mouseY)))) {

@@ -22,7 +22,7 @@ public class Camera{
 	public Camera(Game g, Entity focus){
 		this.focus = focus;
 		this.g = g;
-		this.pos = focus.getPos().add(g.width/2, g.height/2);
+		this.pos = focus.getPos().sub(new PVector(g.width, 0));
 	}
 	
 	public void update(){
