@@ -21,15 +21,12 @@ public class Spear extends MoveableEntity{
 		
 		this.img = g.loadImage("images/Enemies/spear.png");
 		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, vel.heading());
-		System.out.println(pos.y);
 	}
 	
 	@Override
 	public void update(){
 		vel.add(accel);
 		pos.add(vel);
-		pos.x = abs(pos.x);
-		pos.y = abs(pos.y);
 		vel.setMag(constrain(vel.mag(), -speed, speed));
 	}
 	

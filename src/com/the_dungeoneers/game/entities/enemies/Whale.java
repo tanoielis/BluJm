@@ -60,9 +60,10 @@ public class Whale extends MoveableEntity{
 		for(int i=0; i<num; i++){
 			if(spears[i] == null){
 				PVector direction = PVector.fromAngle(radians(g.random(60, 120)));
-				spears[i] = new Spear(g, new PVector(pos.x + g.random(-150, 150), -150), direction.mult(3), direction);
+				spears[i] = new Spear(g, new PVector(((Level)g.states.getState()).player.getPos().x + g.random(-150, 150), -150), direction, direction);
 			}
 		}
+		System.out.println("Loaded");
 	}
 	
 	public void handleSpears(){
