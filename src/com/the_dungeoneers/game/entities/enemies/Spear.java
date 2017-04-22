@@ -14,13 +14,14 @@ import static processing.core.PApplet.constrain;
  */
 public class Spear extends MoveableEntity{
 	
-	private float speed = 15;
+	private float speed = 10;
 	
 	public Spear(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
 		
 		this.img = g.loadImage("images/Enemies/spear.png");
 		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, vel.heading());
+		System.out.println(pos.y);
 	}
 	
 	@Override
@@ -29,8 +30,7 @@ public class Spear extends MoveableEntity{
 		pos.add(vel);
 		pos.x = abs(pos.x);
 		pos.y = abs(pos.y);
-		vel.x = constrain(vel.x, -speed, speed);
-		vel.y = constrain(vel.y, -speed, speed);
+		vel.setMag(constrain(vel.mag(), -speed, speed));
 	}
 	
 	@Override

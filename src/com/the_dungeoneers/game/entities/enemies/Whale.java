@@ -8,6 +8,7 @@ import processing.core.PVector;
 
 import static processing.core.PApplet.abs;
 import static processing.core.PApplet.constrain;
+import static processing.core.PApplet.radians;
 
 /**
  * Created by Eli on 22/04/2017.
@@ -16,7 +17,6 @@ public class Whale extends MoveableEntity{
 	
 	private float acc = 0.5f;
 	private float speed = 15;
-	private int timer;
 	
 	public Spear[] spears;
 	private boolean spawned;
@@ -39,10 +39,9 @@ public class Whale extends MoveableEntity{
 			spawnSpears();
 			spawned = true;
 			spearsActive = true;
-			timer = g.millis();
 		}
 		
-		if(spawned){
+		if(spearsActive){
 			handleSpears();
 		}
 	}
@@ -50,37 +49,37 @@ public class Whale extends MoveableEntity{
 	@Override
 	public void draw(){
 		super.draw();
-		if(spawned){
+		if(spearsActive){
 			drawSpears();
 		}
 	}
 	
 	private void spawnSpears(){
 		int num = (int)g.random(3, 9);
-		int nulls = 0;
 		spears = new Spear[num];
 		for(int i=0; i<num; i++){
 			if(spears[i] == null){
-				spears[i] = new Spear(g, new PVector(pos.x + g.random(-100, 100), 0), new PVector(0, 5), new PVector());
-			}else{
-				nulls++;
+				PVector direction = PVector.fromAngle(radians(g.random(60, 120)));
+				spears[i] = new Spear(g, new PVector(pos.x + g.random(-150, 150), -150), direction.mult(3), direction);
 			}
-		}
-		
-		if(nulls == spears.length-1){
-			spearsActive = false;
 		}
 	}
 	
 	public void handleSpears(){
+		
+		int nulls = 0;
 		for(int i=0; i<spears.length; i++){
 			if(spears[i] != null){
 				spears[i].update();
-				if(spears[i].getPos().y > g.height){
+				if(spears[i].getPos().y > g.height || spears[i].getPos().x < 0 || spears[i].getPos().x > 7000){
 					spears[i] = null;
-					System.out.println("Despawned");
 				}
+			}else {
+				nulls++;
 			}
+		}
+		if(nulls == spears.length){
+			spearsActive = false;
 		}
 	}
 	

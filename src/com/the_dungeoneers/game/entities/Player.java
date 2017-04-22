@@ -19,7 +19,7 @@ public class Player extends MoveableEntity {
 	
 	public static float baseLung = 30; //seconds
 	public static float baseSpeed = 7;//move left right
-	public static float baseAgility = 0.15f; //move up down
+	public static float baseAgility = 0.3f; //move up down
 	
 	public static float currentSpeed;
 	public static float currentLung;

@@ -17,13 +17,11 @@ public class Level1 extends Level {
 
     private Shark s;
     private Whale w;
-    private Spear spear;
     
     public Level1(Game g, Player player, Camera camera, Island from) {
         super(g, player, camera, from);
         s = new Shark(g, new PVector(7000, player.getPos().y), new PVector(), new PVector());
         w = new Whale(g, new PVector(7000, 300), new PVector(), new PVector());
-        spear = new Spear(g, new PVector(100, 50), new PVector(), new PVector());
     }
 
     @Override
@@ -41,7 +39,6 @@ public class Level1 extends Level {
             w.handleSpears();
         }
                 
-        spear.update();
     }
 
     @Override
@@ -65,8 +62,6 @@ public class Level1 extends Level {
             }else if(w.spearsActive){
                 w.drawSpears();
             }
-            System.out.println(w.spearsActive);
-            spear.draw();
         g.popMatrix();
     
     }
