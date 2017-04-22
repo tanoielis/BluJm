@@ -19,6 +19,7 @@ public abstract class Island implements State {
 	protected Game g;
 	protected Player player;
 	protected Camera camera;
+
 	
 	public Island(Game g, String name, Player player, Camera camera){
 		this.g = g;
@@ -27,7 +28,7 @@ public abstract class Island implements State {
 		this.player = player;
 	}
 
-	public abstract void setNeighbours();
+	public abstract void setNeighbours(IslandManager im);
 	
 	public void update(){
 		

@@ -17,8 +17,8 @@ public class BigRockIsland extends Island {
     }
 
     @Override
-    public void setNeighbours() {
-        levels.put(IslandManager.islands.get("PlaneIsland"), new Level9(g, player, camera, IslandManager.islands.get("PlaneIsland")));
-        levels.put(IslandManager.islands.get("YellowIsland"), new Level5(g, player, camera, IslandManager.islands.get("YellowIsland")));
+    public void setNeighbours(IslandManager im) {
+        levels.put(IslandManager.islands.get("PlaneIsland"), new Level9(g, player, camera, IslandManager.islands.get("PlaneIsland"), im) );
+        levels.put(IslandManager.islands.get("YellowIsland"), new Level5(g, player, camera, IslandManager.islands.get("YellowIsland"), im));
     }
 }

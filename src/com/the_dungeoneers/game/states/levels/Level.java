@@ -43,6 +43,11 @@ public abstract class Level implements State {
 			g.states.endState();
 			g.states.endState();
 			im.attempt(successful, to);
+
+			// Resetting fields
+			successful = false;
+			running = true;
+			System.out.println("print");
 		}else {
 			camera.update();
 			player.update();

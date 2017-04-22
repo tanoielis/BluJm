@@ -70,7 +70,7 @@ public class IslandManager implements State {
 		islands.put("PlaneIsland", new PlaneIsland(g, player, camera));
 		
 		for(Island i : islands.values()){
-			i.setNeighbours();
+			i.setNeighbours(this);
 		}
 	}
 	
