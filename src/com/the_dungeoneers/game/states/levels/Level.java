@@ -1,6 +1,8 @@
 package com.the_dungeoneers.game.states.levels;
 
 import com.the_dungeoneers.game.Game;
+import com.the_dungeoneers.game.camera.Camera;
+import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.states.State;
 import processing.core.PImage;
 
@@ -12,10 +14,14 @@ public abstract class Level implements State {
 	private static PImage bg;
 	private Game g;
 	public boolean successful = true;	//todo don't forget to change this back to false
+	protected Player player;
+	protected Camera camera;
 
-	public Level(Game g) {
+	public Level(Game g, Player player, Camera camera) {
 		this.g = g;
 		this.bg = g.loadImage("images/background.png");
+		this.player = player;
+		this.camera = camera;
 	}
 
 	@Override
