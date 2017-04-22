@@ -7,6 +7,9 @@ import processing.core.PVector;
 
 import static processing.core.PApplet.constrain;
 import static processing.core.PApplet.lerp;
+import static processing.core.PApplet.max;
+import static processing.core.PConstants.CENTER;
+import static processing.core.PConstants.CORNER;
 
 /**
  * Main player
@@ -19,28 +22,34 @@ public class Player extends MoveableEntity {
 	
 	public static float baseLung = 30; //seconds
 	public static float baseSpeed = 7;//move left right
-	public static float baseAgility = 0.5f; //move up down
+	public static float baseAgility = 0.35f; //move up down
 	
 	public static float currentSpeed;
 	public static float currentLung;
 	public static float currentAgility;
 	
+	private boolean facingRight;
+	
 	public int upgradePoints;
 	
 	private PImage[] swimImages = new PImage[8];
+	private PImage[] stopImages = new PImage[10];
 	private int timer;
-	private int count = 0;
+	private int swimCount = 0;
+	private int stopCount = 0;
 	
 	public Player(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
 		loadImages();
 		timer = g.millis();
 		upgradePoints = 0;
+		facingRight = true;
 	}
 	
 	private void loadImages(){
-		for(int i=0; i<swimImages.length; i++){
-			swimImages[i] = g.loadImage("images/Player/Swimming/swim/"+i+".png");
+		for(int i=0; i<max(swimImages.length, stopImages.length); i++){
+			if(i < swimImages.length) swimImages[i] = g.loadImage("images/Player/Swimming/swim/"+i+".png");
+			if(i < stopImages.length) stopImages[i] = g.loadImage("images/Player/Swimming/stop/"+i+".png");
 		}
 		img = swimImages[0];
 		this.bb = new Square(g, pos.x, pos.y ,img.width, img.height);
@@ -88,7 +97,14 @@ public class Player extends MoveableEntity {
 	
 	@Override
 	public void update(){
-		super.update();
+		movement();
+		
+		bb.x = pos.x;
+		bb.y = pos.y;
+		
+		vel.add(accel);
+		pos.add(vel);
+		accel.mult(0);
 		
 		currentAgility = baseAgility * agility;
 		currentSpeed = baseSpeed * speed;
@@ -104,22 +120,53 @@ public class Player extends MoveableEntity {
 		}
 		
 		pos.y = constrain(pos.y, 0, g.height-img.height);
-		vel.x = constrain(vel.x, -currentSpeed, currentSpeed);
-		vel.y = constrain(vel.y, -currentSpeed, currentSpeed);
+		vel.setMag(constrain(vel.mag(), -currentSpeed, currentSpeed));
+		
+		facingRight = (vel.x >= 0);
 	}
 	
 	@Override
 	public void draw(){
-		super.draw();
 		
-		if(up || down || left || right){
+		if(left || right || up || down){
+			swim();
+		} else {
+			stop();
+		}
+		
+		
+		g.pushMatrix();
+			g.translate(pos.x+bb.wd/2, pos.y+bb.ht/2);
+			if(!facingRight){
+				g.scale(-1, 1);
+			}
+			g.imageMode(CENTER);
+			g.image(img, 0, 0);
+		g.popMatrix();
+	}
+	
+	private void swim(){
+		if(stopCount > 0){
+			if(g.millis() > timer + 50){
+				timer = g.millis();
+				img = stopImages[--stopCount];
+			}
+		} else {
 			if(g.millis() > timer + 100){
 				timer = g.millis();
-				count = (count + 1) % swimImages.length;
-				img = swimImages[count];
+				swimCount = ++swimCount % swimImages.length;
+				img = swimImages[swimCount];
 			}
-		}else{
-//			img =
+		}
+		
+	}
+	
+	private void stop(){
+		if(g.millis() > timer + 50 && stopCount < stopImages.length){
+			timer = g.millis();
+			img = stopImages[stopCount++];
 		}
 	}
+	
+	
 }

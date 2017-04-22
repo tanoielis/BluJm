@@ -22,7 +22,7 @@ public abstract class MoveableEntity extends Entity{
 		this.accel = accel;
 	}
 	
-	private void movement(){
+	protected void movement(){
 		if (up) {
 			if (left) {
 				moveUpLeft();

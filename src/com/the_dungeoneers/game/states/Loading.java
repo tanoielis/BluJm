@@ -5,6 +5,8 @@ import com.the_dungeoneers.game.states.island.IslandManager;
 import processing.core.PConstants;
 import processing.core.PImage;
 
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * Created by Eli on 22/04/2017.
  */
@@ -15,9 +17,10 @@ public class Loading implements State{
 	private PImage img;
 	private Game g;
 	private int transparency;
-	private IslandManager i;
+	private State s;
+	private String stateName;
 	
-	public Loading(Game g){
+	public Loading(Game g, String stateName){
 		this.g = g;
 		this.timer = g.millis();
 		this.background = new PImage[9];
@@ -27,15 +30,18 @@ public class Loading implements State{
 		this.img = background[0];
 		this.counter = 8;
 		this.transparency = 0;
+		this.stateName = stateName;
 	}
 	
 	@Override
 	public void update(){
 		if(counter == 0){
 			if(transparency++ == 0){
-				i = new IslandManager(g);
+				if(stateName.equals("IslandManager")) s = new IslandManager(g);
+				else if(stateName.equals("Instructions")) s = new Instructions(g);
+				else s = new Quit(g);
 			}else if(transparency >= 255){
-				g.states.startState(i);
+				g.states.startState(s);
 			}
 		}
 	}
