@@ -2,24 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/Player/Swimming/swim/swim0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/Player/Swimming/swim/swim1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/Player/Swimming/swim/swim2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/Player/Swimming/swim/swim3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/Player/Swimming/swim/swim4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/Player/Swimming/swim/swim5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/Player/Swimming/swim/swim6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/Player/Swimming/swim/swim7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/hut.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/islandBg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/jellyfish.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/mine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/shark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/spear.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/upgrade.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/images/whale.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BluJm.iws" />
@@ -97,8 +79,8 @@
           <file leaf-file-name="Whale.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Whale.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+                <state relative-caret-position="221">
+                  <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
                   <folding>
                     <element signature="e#327#328#0" expanded="true" />
                     <element signature="e#359#360#0" expanded="true" />
@@ -370,7 +352,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="obstacles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enemies" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -388,7 +430,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="sounds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,22 +445,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swimming" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="swim" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1104,7 +1130,7 @@
       <workItem from="1492776470954" duration="675000" />
       <workItem from="1492807647865" duration="7787000" />
       <workItem from="1492815453182" duration="8138000" />
-      <workItem from="1492824895815" duration="14330000" />
+      <workItem from="1492824895815" duration="15152000" />
     </task>
     <task id="LOCAL-00001" summary="data folder added">
       <created>1492571334658</created>
@@ -1351,11 +1377,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492838028569</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added heaps of artwork">
+      <created>1492847174692</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1492847174692</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70326000" />
+    <option name="totallyTimeSpent" value="71148000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1447,7 +1480,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created level structure using GameState." />
     <MESSAGE value="Created narrator" />
     <MESSAGE value="Fixed potential bug" />
     <MESSAGE value="Reworked player movement, editing keyboard controls" />
@@ -1472,7 +1504,8 @@
     <MESSAGE value="fixed SO" />
     <MESSAGE value="broke mapping" />
     <MESSAGE value="Images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Images" />
+    <MESSAGE value="Added heaps of artwork" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added heaps of artwork" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1895,8 +1928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Whale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
           <folding>
             <element signature="e#327#328#0" expanded="true" />
             <element signature="e#359#360#0" expanded="true" />
