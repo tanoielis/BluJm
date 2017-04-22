@@ -24,7 +24,7 @@ public class Upgrade implements State{
 		upgradeAgility = new Button(g, 50, 200, "Agility");
 		upgradeLungs = new Button(g, 50, 350, "Lungs");
 		upgradeSpeed = new Button(g, 50, 500, "Speed");
-		img = g.loadImage("images/upgrade.png");
+		img = g.loadImage("images/Backgrounds/upgrade.png");
 	}
 	
 	@Override

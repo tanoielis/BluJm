@@ -26,7 +26,7 @@ public class Whale extends MoveableEntity{
 	
 	public Whale(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
-		this.img = g.loadImage("images/whale.png");
+		this.img = g.loadImage("images/Enemies/whale.png");
 		this.bb = new Square(g, pos.x, pos.y, img.width, img.height);
 	}
 	

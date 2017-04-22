@@ -19,7 +19,7 @@ public class Spear extends MoveableEntity{
 	public Spear(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
 		
-		this.img = g.loadImage("images/spear.png");
+		this.img = g.loadImage("images/Enemies/spear.png");
 		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, vel.heading());
 	}
 	

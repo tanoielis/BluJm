@@ -18,7 +18,7 @@ public class Bomb extends Entity{
 	public Bomb(Game g, PVector pos){
 		super(g, pos);
 		
-		this.img = g.loadImage("images/mine.png");
+		this.img = g.loadImage("images/Enemies/mine.png");
 		bb = new Square(g, pos.x, pos.y, 100, 100);
 	}
 	

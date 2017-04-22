@@ -32,7 +32,7 @@ public class IslandManager implements State {
 
 	public IslandManager(Game g){
 		this.g = g;
-        this.background = g.loadImage("images/islandBg.png");
+        this.background = g.loadImage("images/Backgrounds/islandBg.png");
 
 		player = new Player(g, new PVector(), new PVector(), new PVector());
 		camera = new Camera(g, player);

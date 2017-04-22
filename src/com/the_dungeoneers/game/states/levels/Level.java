@@ -24,7 +24,7 @@ public abstract class Level implements State {
 	public Level(Game g, Player player, Camera camera, Island from) {
 		this.g = g;
 		this.from = from;
-		this.bg = g.loadImage("images/background.png");
+		this.bg = g.loadImage("images/Backgrounds/background.png");
 		this.player = player;
 		this.camera = camera;
 	}

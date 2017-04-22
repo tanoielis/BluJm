@@ -40,7 +40,7 @@ public class MapOfIslands implements State {
 		this.im = im;
 		this.camera = camera;
 		this.player = player;
-		map = g.loadImage("images/map.png");
+		map = g.loadImage("images/Backgrounds/map.png");
 		createCollisionMasks();
 	}
 
