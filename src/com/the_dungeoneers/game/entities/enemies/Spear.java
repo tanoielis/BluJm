@@ -24,6 +24,7 @@ public class Spear extends MoveableEntity{
 	
 	@Override
 	public void update(){
+		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, vel.heading());
 		vel.add(accel);
 		pos.add(vel);
 		vel.setMag(constrain(vel.mag(), -speed, speed));

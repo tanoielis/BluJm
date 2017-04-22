@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="double callback?">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Collision.jar" afterPath="$PROJECT_DIR$/lib/Collision.jar" />
+    <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Player.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Bomb.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Bomb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" />
     </list>
     <ignored path="BluJm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
@@ -55,31 +51,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bomb.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Bomb.java">
+      <file leaf-file-name="Whale.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Whale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            <state relative-caret-position="272">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IslandManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java">
+      <file leaf-file-name="Shark.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Shark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="834">
-              <caret line="124" column="41" selection-start-line="124" selection-start-column="41" selection-end-line="124" selection-end-column="41" />
+            <state relative-caret-position="-400">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Loading.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Loading.java">
+      <file leaf-file-name="Spear.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+            <state relative-caret-position="650">
+              <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,7 +83,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MoveableEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Geyser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Geyser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+              <folding>
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#306#307#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Rock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+              <folding>
+                <element signature="e#282#283#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Entity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Level.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="700">
@@ -159,9 +201,7 @@
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Loading.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Quit.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/Game.java" />
-        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/camera/Camera.java" />
-        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Whale.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Shark.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/TreasureIsland.java" />
@@ -183,6 +223,8 @@
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Bomb.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" />
+        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" />
+        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java" />
       </list>
     </option>
   </component>
@@ -1144,14 +1186,7 @@
       <workItem from="1492847163033" duration="128000" />
       <workItem from="1492852079286" duration="4996000" />
       <workItem from="1492857104939" duration="9476000" />
-      <workItem from="1492868890611" duration="21470000" />
-    </task>
-    <task id="LOCAL-00011" summary="Fixed potential bug">
-      <created>1492660770540</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1492660770540</updated>
+      <workItem from="1492868890611" duration="21584000" />
     </task>
     <task id="LOCAL-00012" summary="Reworked player movement, editing keyboard controls">
       <created>1492662817259</created>
@@ -1489,11 +1524,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492885443772</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="bb.x and bb.y dont move the bb">
+      <created>1492890933457</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1492890933457</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105630000" />
+    <option name="totallyTimeSpent" value="105744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
@@ -1578,7 +1620,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed triangle area calc" />
     <MESSAGE value="Removed prints from Triangle" />
     <MESSAGE value="Updated player" />
     <MESSAGE value="Updated player 2" />
@@ -1603,7 +1644,8 @@
     <MESSAGE value="Gave levels an IslandManager" />
     <MESSAGE value="createIslands mod" />
     <MESSAGE value="double callback?" />
-    <option name="LAST_COMMIT_MESSAGE" value="double callback?" />
+    <MESSAGE value="bb.x and bb.y dont move the bb" />
+    <option name="LAST_COMMIT_MESSAGE" value="bb.x and bb.y dont move the bb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1640,36 +1682,6 @@
     <entry file="file://$PROJECT_DIR$/data/images/Player/Swimming/swim/0.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Geyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="e#286#287#0" expanded="false" />
-            <element signature="e#306#307#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Rock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="e#282#283#0" expanded="false" />
-            <element signature="e#302#303#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/State.java">
@@ -1737,42 +1749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Whale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1022">
-          <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/StateManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Shark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="54" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1956,14 +1936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="101" column="64" selection-start-line="101" selection-start-column="64" selection-end-line="101" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Bomb.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -1990,6 +1962,78 @@
             <marker date="1492890918137" expanded="false" signature="1483:1487" ph=" { " />
             <marker date="1492890918137" expanded="false" signature="1519:1522" ph=" }" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Shark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Whale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Geyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Rock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="101" column="64" selection-start-line="101" selection-start-column="64" selection-end-line="101" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>

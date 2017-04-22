@@ -51,8 +51,7 @@ public abstract class MoveableEntity extends Entity{
 	public void update(){
 		movement();
 		
-		bb.x = pos.x;
-		bb.y = pos.y;
+		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, vel.heading());
 		
 		vel.add(accel);
 		pos.add(vel);
