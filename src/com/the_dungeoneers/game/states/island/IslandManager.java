@@ -86,12 +86,20 @@ public class IslandManager implements State {
 		return level.successful;
 	}
 	
-	public void attempt(boolean succesful, Island island){
+	public void attempt(boolean succesful, Island island, Level level){
 		day++;
 		player.upgradePoints++;
 		if(succesful){
 			currentIsland = island;
 		}
+		
+		level.successful = false;
+		level.running = true;
+		player.right = false;
+		player.up = false;
+		player.down = false;
+		player.right = false;
+		player.setPos(new PVector(220, 520));
 	}
 	
 	@Override

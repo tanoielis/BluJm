@@ -171,5 +171,7 @@ public class Player extends MoveableEntity {
 		}
 	}
 	
-	
+	public void setPos(PVector pos){
+		this.pos = pos;
+	}
 }

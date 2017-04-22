@@ -54,7 +54,6 @@ public class Level1 extends Level {
 				if(SAT_Collision.intersects(player.bb, b.bb)){
 					successful = false;
 					running = false;
-//					System.out.println();
 				}
 			}
 		}
