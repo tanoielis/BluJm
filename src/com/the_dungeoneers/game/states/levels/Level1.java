@@ -32,7 +32,7 @@ public class Level1 extends Level {
     @Override
     public void drawEntities() {
         super.drawEntities();
-        b.draw();
+    
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.the_dungeoneers.game.camera;
 
+import static processing.core.PApplet.abs;
+import static processing.core.PApplet.constrain;
 import static processing.core.PVector.lerp;
 
 import com.the_dungeoneers.game.Game;

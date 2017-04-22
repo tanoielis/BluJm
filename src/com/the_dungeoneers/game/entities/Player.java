@@ -1,7 +1,10 @@
 package com.the_dungeoneers.game.entities;
 
 import com.the_dungeoneers.game.Game;
+import processing.core.PImage;
 import processing.core.PVector;
+
+import static processing.core.PApplet.constrain;
 
 /**
  * Main player
@@ -13,67 +16,104 @@ public class Player extends MoveableEntity {
 	public static float lungs = 1;
 	
 	public static float baseLung = 30; //seconds
-	public static float baseSpeed = 10;	//move left right
-	public static float baseAgility = 5; //move up down
+	public static float baseSpeed = 7;//move left right
+	public static float baseAgility = 0.15f; //move up down
 	
 	public static float currentSpeed;
 	public static float currentLung;
 	public static float currentAgility;
 	
+	
+	
+	private PImage img;
+	
+	private PImage[] swimImages = new PImage[8];
+	private int timer;
+	private int count = 0;
+	
 	public Player(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos, vel, accel);
+		loadImages();
+		timer = g.millis();
+	}
+	
+	private void loadImages(){
+		for(int i=0; i<swimImages.length; i++){
+			swimImages[i] = g.loadImage("images/Player/Swimming/swim/"+i+".png");
+		}
+		img = swimImages[0];
 	}
 	
 	@Override
 	protected void moveLeft(){
-		accel.add(-currentSpeed, 0);
+		accel.add(-currentAgility, 0);
 	}
 	
 	@Override
 	protected void moveRight(){
-		accel.add(currentSpeed, 0);
+		accel.add(currentAgility, 0);
 	}
 	
 	@Override
 	protected void moveUp(){
-		accel.add(0, -currentSpeed);
+		accel.add(0, -currentAgility);
 	}
 	
 	@Override
 	protected void moveDown(){
-		accel.add(0, currentSpeed);
+		accel.add(0, currentAgility);
 	}
 	
 	@Override
 	protected void moveUpLeft(){
-		accel.add(-currentSpeed, -currentSpeed);
+		accel.add(-currentAgility, -currentAgility);
 	}
 	
 	@Override
 	protected void moveUpRight(){
-		accel.add(currentSpeed, -currentSpeed);
+		accel.add(currentAgility, -currentAgility);
 	}
 	
 	@Override
 	protected void moveDownLeft(){
-		accel.add(currentSpeed, -currentSpeed);
+		accel.add(-currentAgility, currentAgility);
 	}
 	
 	@Override
 	protected void moveDownRight(){
-		accel.add(currentSpeed, currentSpeed);
+		accel.add(currentAgility, currentAgility);
 	}
 	
 	@Override
 	public void update(){
 		super.update();
+		
+		currentAgility = baseAgility * agility;
+		currentSpeed = baseSpeed * speed;
+		
+		if(!(left || up || down || right)){
+			vel.lerp(new PVector(), 0.1f);
+		}
+		
 		vel.add(accel);
 		pos.add(vel);
 		accel.mult(0);
+		
+		pos.y = constrain(pos.y, 0, g.height-img.height);
+		vel.x = constrain(vel.x, -currentSpeed, currentSpeed);
+		vel.y = constrain(vel.y, -currentSpeed, currentSpeed);
 	}
 	
 	@Override
 	public void draw(){
 		super.draw();
+		
+		if(g.millis() > timer+100){
+			timer = g.millis();
+			count = (count+1)%swimImages.length;
+			img = swimImages[count];
+		}
+		
+		g.image(img, pos.x, pos.y);
 	}
 }

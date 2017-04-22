@@ -3,6 +3,7 @@ package com.the_dungeoneers.game.states.levels;
 import com.the_dungeoneers.game.Game;
 import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.Player;
+import com.the_dungeoneers.game.input_handler.Keyboard;
 import com.the_dungeoneers.game.states.State;
 import com.the_dungeoneers.game.states.island.Island;
 import processing.core.PImage;
@@ -14,8 +15,8 @@ public abstract class Level implements State {
 
 	private static PImage bg;
 	private Game g;
-	public boolean successful = true;	//todo don't forget to change this back to false
-	public boolean running = false;	//todo don't forget to change this back to false
+	public boolean successful = false;	//todo don't forget to change this back to false
+	public boolean running = true;	//todo don't forget to change this back to false
 	protected Player player;
 	protected Camera camera;
 	Island from;
@@ -33,7 +34,11 @@ public abstract class Level implements State {
 		if(!running){
 			g.states.endState();
 			g.states.endState();
+		}else {
+			camera.update();
+			player.update();
 		}
+		
 	}
 	
 	@Override
@@ -42,17 +47,21 @@ public abstract class Level implements State {
 	
 	@Override
 	public void drawEntities(){
-		g.image(bg, 0,0);
+		g.pushMatrix();
+			g.translate(camera.getPos().x, 0);
+			g.image(bg, 0,0);
+			player.draw();
+		g.popMatrix();
 	}
 	
 	@Override
 	public void keyPressed(){
-		
+		Keyboard.checkInput(g, player);
 	}
 	
 	@Override
 	public void keyReleased(){
-		
+		Keyboard.keyReleased(g, player);
 	}
 	
 	@Override

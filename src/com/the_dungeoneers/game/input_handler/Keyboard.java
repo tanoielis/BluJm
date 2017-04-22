@@ -11,36 +11,38 @@ public class Keyboard {
 	
 	private static final char LEFT = 'A';
 	private static final char RIGHT = 'D';
-	
-	private static boolean leftDown;
-	private static boolean rightDown;
+	private static final char UP = 'W';
+	private static final char DOWN = 'S';
 	
 	public static void checkInput(Game g, MoveableEntity obj){
 		switch(g.keyCode){
 			case LEFT:
-				leftDown = true;
+				obj.left = true;
 				break;
 			case RIGHT:
-				rightDown = true;
+				obj.right = true;
 				break;
+			case UP:
+				obj.up = true;
+				break;
+			case DOWN:
+				obj.down = true;
 		}
 	}
 	
-	public static void keyReleased(Game g, Entity obj){
+	public static void keyReleased(Game g, MoveableEntity obj){
 		switch(g.keyCode){
 			case LEFT:
-				leftDown = false;
+				obj.left = false;
 				break;
 			case RIGHT:
-				rightDown = false;
+				obj.right = false;
 				break;
-		}
-	}
-	
-	public static void runInput(Entity obj){
-		if(leftDown){
-		}
-		if(rightDown){
+			case UP:
+				obj.up = false;
+				break;
+			case DOWN:
+				obj.down = false;
 		}
 	}
 }

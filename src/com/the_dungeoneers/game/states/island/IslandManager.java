@@ -82,7 +82,7 @@ public class IslandManager implements State {
 	
 	private boolean attempt(Island island){
 		Level level = currentIsland.levels.get(island);
-		g.states.startState(currentIsland.levels.get(island));
+		g.states.startState(level);
 		return level.successful;
 	}
 	

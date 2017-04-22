@@ -9,7 +9,7 @@ import processing.core.PVector;
 public abstract class MoveableEntity extends Entity{
 	
 	public PVector vel, accel;
-	private boolean left, right, up, down;
+	public boolean left, right, up, down;
 	
 	public MoveableEntity(Game g, PVector pos, PVector vel, PVector accel){
 		super(g, pos);
