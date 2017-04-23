@@ -34,6 +34,10 @@ public class Whale extends MoveableEntity{
 			super.update();
 			moveLeft();
 			
+			if(!(g.states.getState() instanceof Level)){
+				return;
+			}
+			
 			vel.x = constrain(vel.x, -speed, speed);
 			
 			if(abs(pos.x - ((Level) g.states.getState()).player.getPos().x) < 200 && !spawned){

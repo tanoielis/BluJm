@@ -29,6 +29,6 @@ public class Rock extends Entity{
 	@Override
 	public void draw(){
 		g.imageMode(PConstants.CORNER);
-		g.image(img, pos.x, pos.y);
+		g.image(img, pos.x, pos.y, bb.wd, bb.ht);
 	}
 }

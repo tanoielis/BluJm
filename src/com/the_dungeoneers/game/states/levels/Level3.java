@@ -73,7 +73,7 @@ public class Level3 extends Level  {
 	private void collisionDetection() {
 		for(int i = 0; i < rocks.length; i++) {
 			if(SAT_Collision.intersects(rocks[i].bb, player.bb)){
-				player.setPos(PVector.sub(player.vel,player.getPos()));
+				player.setPos(PVector.sub(player.vel, player.getPos()));
 			}
 		}
 	}
