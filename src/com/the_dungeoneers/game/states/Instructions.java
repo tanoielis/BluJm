@@ -35,7 +35,7 @@ public class Instructions implements State {
 
     @Override
     public void keyPressed() {
-
+        g.states.endState();
     }
 
     @Override
@@ -45,6 +45,6 @@ public class Instructions implements State {
 
     @Override
     public void mousePressed() {
-
+        g.states.endState();
     }
 }

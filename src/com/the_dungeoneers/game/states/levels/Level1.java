@@ -25,7 +25,7 @@ public class Level1 extends Level {
     public Level1(Game g, Player player, Camera camera, Island to, IslandManager im) {
         super(g, player, camera, to, im);
 		
-		bombs = new Bomb[]{	//todo set bomb positions
+		bombs = new Bomb[]{
 				new Bomb(g, new PVector(643, 536)),
 				new Bomb(g, new PVector(513, 202)),
 				new Bomb(g, new PVector(951, 302)),

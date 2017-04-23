@@ -63,7 +63,6 @@ public class Level2 extends Level {
                 if (jellyFish[i] != null) {
                     jellyFish[i].update();
                     if (SAT_Collision.intersects(player.bb, jellyFish[i].bb)) {
-                        jellyFish = new Jellyfish[1]; // Clear array
                         successful = false;
                         running = false;
                     }
