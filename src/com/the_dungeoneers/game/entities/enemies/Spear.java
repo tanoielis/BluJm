@@ -42,8 +42,8 @@ public class Spear extends MoveableEntity{
 	@Override
 	public void draw(){
 		g.pushMatrix();
-			g.imageMode(CORNER);
-			g.translate(pos.x, pos.y);
+			g.imageMode(CENTER);
+			g.translate(pos.x + img.width/2, pos.y + img.height/2);
 			g.rotate(vel.heading() - PApplet.radians(90));
 			g.image(img, 0, 0);
 		g.popMatrix();
