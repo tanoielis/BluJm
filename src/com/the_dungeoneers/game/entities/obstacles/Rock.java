@@ -12,7 +12,7 @@ import processing.core.PVector;
  */
 public class Rock extends Entity{
 	
-	PImage img;
+	private PImage img;
 	
 	public Rock(Game g, PVector pos, String name, Square bb){
 		super(g, pos);
