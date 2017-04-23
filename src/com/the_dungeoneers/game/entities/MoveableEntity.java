@@ -6,6 +6,8 @@ import processing.core.PConstants;
 import processing.core.PImage;
 import processing.core.PVector;
 
+import static processing.core.PApplet.degrees;
+
 /**
  * Abstract movable entity
  */
@@ -51,7 +53,7 @@ public abstract class MoveableEntity extends Entity{
 	public void update(){
 		movement();
 		
-		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, vel.heading());
+		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, degrees(vel.heading()) - 90);
 		
 		vel.add(accel);
 		pos.add(vel);

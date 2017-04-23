@@ -46,7 +46,6 @@ public class Level3 extends Level  {
         super.update();
 
 		collisionDetection();
-        whale = null;
 		
 		if(timer == -1){
 			timer = g.millis();
@@ -109,15 +108,21 @@ public class Level3 extends Level  {
 		g.image(bg, 0, 0);
 		
 		player.draw();
-		player.bb.draw();
 		
 		for(int i=0; i<rocks.length; i++){
 			rocks[i].draw();
-            rocks[i].bb.draw();
 		}
-		
+
+
 		if(whale != null){
 			whale.draw();
+			if (whale.spearsActive) {
+                for (Spear s : whale.spears) {
+                    if (s != null) {
+                        s.bb.draw();
+                    }
+                }
+            }
 		}
     }
     
