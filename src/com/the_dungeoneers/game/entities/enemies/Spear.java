@@ -6,7 +6,12 @@ import com.the_dungeoneers.game.entities.MoveableEntity;
 import processing.core.PApplet;
 import processing.core.PVector;
 
+import static java.lang.Math.abs;
 import static processing.core.PApplet.constrain;
+import static processing.core.PApplet.degrees;
+import static processing.core.PApplet.radians;
+import static processing.core.PConstants.CENTER;
+import static processing.core.PConstants.CORNER;
 
 /**
  * Spear
@@ -19,22 +24,28 @@ public class Spear extends MoveableEntity{
 		super(g, pos, vel, accel);
 		
 		this.img = g.loadImage("images/Enemies/spear.png");
-		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, vel.heading());
+		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, degrees(-(vel.heading())) + 90);
 	}
 	
 	@Override
 	public void update(){
-		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, vel.heading());
+		g.frameRate(30);
 		vel.add(accel);
 		pos.add(vel);
+
 		vel.setMag(constrain(vel.mag(), -speed, speed));
+
+		this.bb = new Square(g, pos.x, pos.y, img.width, img.height, degrees(-(vel.heading())) + 90);
+
 	}
 	
 	@Override
 	public void draw(){
 		g.pushMatrix();
-			g.rotate(vel.heading()- PApplet.radians(90));
-			g.image(img, pos.x, pos.y);
+			g.imageMode(CORNER);
+			g.translate(pos.x, pos.y);
+			g.rotate(vel.heading() - PApplet.radians(90));
+			g.image(img, 0, 0);
 		g.popMatrix();
 	}
 	

@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/TreasureIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/TreasureIsland.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/YellowIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/YellowIsland.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level3.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level4.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level4.java" />
     </list>
     <ignored path="BluJm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +57,7 @@
           <file leaf-file-name="Whale.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Whale.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
+                <state relative-caret-position="494">
                   <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
                   <folding>
                     <marker date="1492914699304" expanded="true" signature="59:349" ph="..." />
@@ -184,14 +182,68 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Level3.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Level3.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level3.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="686">
-                  <caret line="102" column="25" lean-forward="false" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
+                <state relative-caret-position="953">
+                  <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Square.class" pinned="false" current-in-tab="false">
+            <entry file="jar://$PROJECT_DIR$/lib/Collision.jar!/Collision/Square.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="421">
+                  <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SAT_Collision.class" pinned="false" current-in-tab="false">
+            <entry file="jar://$PROJECT_DIR$/lib/Collision.jar!/Collision/SAT_Collision.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-534">
+                  <caret line="20" column="66" lean-forward="false" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MoveableEntity.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="55" column="91" lean-forward="true" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Spear.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="248">
+                  <caret line="37" column="78" lean-forward="false" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PVector.class" pinned="false" current-in-tab="false">
+            <entry file="jar://$PROJECT_DIR$/lib/core.jar!/processing/core/PVector.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="230">
+                  <caret line="377" column="5" lean-forward="true" selection-start-line="377" selection-start-column="5" selection-end-line="377" selection-end-column="5" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -247,7 +299,6 @@
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Island.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/IslandManager.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/MapOfIslands.java" />
-        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/State.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/PlaneIsland.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/islands/DistanceIsles.java" />
@@ -275,7 +326,6 @@
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/MapOfIslands.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Player.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Whale.java" />
-        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Instructions.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Mainmenu.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/Game.java" />
@@ -295,6 +345,8 @@
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level3.java" />
+        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java" />
+        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" />
       </list>
     </option>
   </component>
@@ -560,6 +612,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="camera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Collision.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluJm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Collision.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Collision" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1251,7 +1357,7 @@
       <workItem from="1492776470954" duration="675000" />
       <workItem from="1492807647865" duration="7787000" />
       <workItem from="1492815453182" duration="8138000" />
-      <workItem from="1492824895815" duration="47177000" />
+      <workItem from="1492824895815" duration="49032000" />
     </task>
     <task id="LOCAL-00001" summary="data folder added">
       <created>1492571334658</created>
@@ -1589,11 +1695,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492914011596</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="trying to solve collision with rocks">
+      <created>1492915657014</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1492915657014</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103173000" />
+    <option name="totallyTimeSpent" value="105028000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1611,14 +1724,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.4632196" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.45895523" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33044422" sideWeight="0.37313432" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33044422" sideWeight="0.37846482" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.45309168" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33044422" sideWeight="0.6268657" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33044422" sideWeight="0.6215352" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1654,7 +1767,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added point to collision" />
     <MESSAGE value="Created mainmenu" />
     <MESSAGE value="Created upgrade menu" />
     <MESSAGE value="Created player." />
@@ -1679,7 +1791,8 @@
     <MESSAGE value="Trying to fix navigation of islands" />
     <MESSAGE value="finished lvl2" />
     <MESSAGE value="Sorted level 1 collision" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sorted level 1 collision" />
+    <MESSAGE value="trying to solve collision with rocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to solve collision with rocks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1692,11 +1805,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/images/upgradeBg.psd">
-      <provider selected="true" editor-type-id="layeredimageeditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/images/colourPallete.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1824,25 +1932,6 @@
         <state relative-caret-position="119">
           <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/Collision.jar!/Collision/SAT_Collision.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="66" lean-forward="false" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/Collision.jar!/Collision/Square.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1992,23 +2081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-          <folding>
-            <marker date="1492891095197" expanded="true" signature="845:964" ph="{...}" />
-            <marker date="1492891095197" expanded="true" signature="1004:1011" ph="{...}" />
-            <marker date="1492891095197" expanded="true" signature="1052:1059" ph="{...}" />
-            <marker date="1492891095197" expanded="true" signature="1097:1104" ph="{...}" />
-            <marker date="1492891095197" expanded="true" signature="1144:1151" ph="{...}" />
-            <marker date="1492891095197" expanded="true" signature="1193:1200" ph="{...}" />
-            <marker date="1492891095197" expanded="true" signature="1243:1250" ph="{...}" />
-            <marker date="1492891095197" expanded="true" signature="1294:1301" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/camera/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -2026,14 +2098,6 @@
             <element signature="e#1570#1571#0" expanded="true" />
             <element signature="e#1598#1599#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2161,7 +2225,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Whale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
+        <state relative-caret-position="494">
           <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
           <folding>
             <marker date="1492914699304" expanded="true" signature="59:349" ph="..." />
@@ -2171,8 +2235,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="102" column="25" lean-forward="false" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
+        <state relative-caret-position="953">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/Collision.jar!/Collision/SAT_Collision.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-534">
+          <caret line="20" column="66" lean-forward="false" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/Collision.jar!/Collision/Square.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core.jar!/processing/core/PVector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="377" column="5" lean-forward="true" selection-start-line="377" selection-start-column="5" selection-end-line="377" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="55" column="91" lean-forward="true" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="37" column="78" lean-forward="false" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
