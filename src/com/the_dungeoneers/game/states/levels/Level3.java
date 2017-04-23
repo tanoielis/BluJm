@@ -44,12 +44,7 @@ public class Level3 extends Level  {
     @Override
     public void update(){
         super.update();
-		
-		for(int i=0; i<rocks.length; i++){
-			if(SAT_Collision.intersects(rocks[i].bb, player.bb)){
-				player.setPos(PVector.sub(player.getPos(),player.vel));
-			}
-		}
+		collisionDetection();
 		
 		if(timer == -1){
 			timer = g.millis();
@@ -63,19 +58,28 @@ public class Level3 extends Level  {
 			whale.update();
 			if(whale.spearsActive){
 				for(Spear s : whale.spears){
-					if(SAT_Collision.intersects(s.bb, player.bb)){
-						running = false;
-						successful = false;
-						whale = null;
+					if (s != null) {
+						if (SAT_Collision.intersects(s.bb, player.bb)) {
+							running = false;
+							successful = false;
+							whale = null;
+						}
 					}
 				}
 			}
 		}
-		
     }
-    
-    
-    @Override
+
+	private void collisionDetection() {
+		for(int i = 0; i < rocks.length; i++) {
+			if(SAT_Collision.intersects(rocks[i].bb, player.bb)){
+				player.setPos(PVector.sub(player.vel,player.getPos()));
+			}
+		}
+	}
+
+
+	@Override
     public void drawEntities(){
 	
 		g.imageMode(PConstants.CORNER);

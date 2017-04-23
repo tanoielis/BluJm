@@ -42,7 +42,7 @@ public class IslandManager implements State {
         createIslands();
 
         // Start and End Islands
-		this.currentIsland = islands.get("VolcanoIsland");
+		this.currentIsland = islands.get("SkullIsland");
 		this.end = islands.get("PlaneIsland");
 		
 		this.day = 1;

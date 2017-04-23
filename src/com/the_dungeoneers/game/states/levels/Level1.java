@@ -43,38 +43,44 @@ public class Level1 extends Level {
 				new Bomb(g, new PVector(2129, 500))
 		};
 		
-		timer = -1;
+		timer = 4000;
     }
 
     @Override
     public void update() {
 		super.update();
-		
-		if(timer == -1){
+
+		if(timer == 4000){
 			timer = g.millis();
 		}
-		
-		for(int i=0; i<bombs.length; i++){
-			if(bombs[i] != null){
-				bombs[i].update();
-				if(SAT_Collision.intersects(player.bb, bombs[i].bb)){
-					successful = false;
-					running = false;
-				}
-			}
-		}
+
+        collisionDetection();
 		
 		if(g.millis() > timer + 4000 && shark == null){
 			shark = new Shark(g, new PVector(3000, player.getPos().y), new PVector(), new PVector());
 		}
-		
-		if(shark != null){
-			shark.update();
-			if(shark.getPos().x + shark.bb.wd < 0){
-				shark = null;
-			}
-		}
                 
+    }
+
+    private void collisionDetection() {
+        for(int i=0; i<bombs.length; i++){
+            if(bombs[i] != null){
+                bombs[i].update();
+                if(SAT_Collision.intersects(player.bb, bombs[i].bb)){
+                    successful = false;
+                    running = false;
+                }
+            }
+        }
+
+        if(shark != null){
+            shark.update();
+            if(SAT_Collision.intersects(player.bb, shark.bb)){
+                shark = null;
+                successful = false;
+                running = false;
+            }
+        }
     }
 
     @Override
@@ -89,16 +95,24 @@ public class Level1 extends Level {
 			g.imageMode(PConstants.CORNER);
             g.image(bg, 0,0);
             player.draw();
-            for(Bomb b : bombs){
-				if(b != null){
-					b.draw();
-				}
-			}
-			if(shark != null){
-				shark.draw();
-			}
+            drawBombs();
+            drawSharks();
         g.popMatrix();
     
+    }
+
+    private void drawSharks() {
+        if(shark != null){
+            shark.draw();
+        }
+    }
+
+    private void drawBombs() {
+        for(Bomb b : bombs){
+            if(b != null){
+                b.draw();
+            }
+        }
     }
 
     @Override
