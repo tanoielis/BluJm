@@ -24,6 +24,11 @@ public class Jellyfish extends MoveableEntity {
         this.bb = new Square(g, pos.x, pos.y + 55, img.width, img.height - 55, degrees(vel.heading()) - 90);
     }
 
+    public Jellyfish(Game g, PVector pos, PVector vel, PVector accel, boolean movingUp) {
+        this(g, pos, vel, accel);
+        this.movingUp = movingUp;
+    }
+
     @Override
     protected void moveLeft() {
 

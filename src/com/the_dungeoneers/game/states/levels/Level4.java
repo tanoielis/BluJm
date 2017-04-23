@@ -91,6 +91,7 @@ public class Level4 extends Level {
 
     @Override
     public void drawEntities() {
+        // TODO: add rotation to bombs? Or add more jellifish, either wya, make it harder
         g.pushMatrix();
         g.translate(camera.getPos().x, 0);
         g.imageMode(PConstants.CORNER);
