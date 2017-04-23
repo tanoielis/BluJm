@@ -14,7 +14,6 @@ public class Keyboard {
 	private static final char RIGHT = 'D';
 	private static final char UP = 'W';
 	private static final char DOWN = 'S';
-	public static final char SPACE = ' ';
 	
 	public static void checkInput(Game g, MoveableEntity obj){
 		switch(g.keyCode){
@@ -30,9 +29,6 @@ public class Keyboard {
 			case DOWN:
 				obj.down = true;
 				break;
-			case SPACE:
-				((Level)g.states.getState()).successful = true;	//todo REMOVE ME CHEAT CODE
-				((Level)g.states.getState()).running = false;
 		}
 	}
 	

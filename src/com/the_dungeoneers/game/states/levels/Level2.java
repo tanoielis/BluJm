@@ -81,7 +81,7 @@ public class Level2 extends Level {
                         removearr.add(sharks.get(i));
                     }
                 }
-                removearr.clear();
+                sharks.removeAll(removearr);
             }
         }
     }

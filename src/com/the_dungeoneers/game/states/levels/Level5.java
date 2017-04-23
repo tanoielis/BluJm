@@ -62,8 +62,8 @@ public class Level5 extends Level {
                         removearr.add(sharks.get(i));
                     }
                 }
-                removearr.clear();
             }
+            sharks.removeAll(removearr);
         }
 
         float playerX = player.getPos().x;

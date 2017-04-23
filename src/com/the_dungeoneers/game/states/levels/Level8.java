@@ -25,7 +25,7 @@ public class Level8 extends Level  {
 
     private Rock[] rocks;
     private PImage bg;
-    private ArrayList<Shark> whales;
+    private ArrayList<Whale> whales;
     private int whaleTimer;
     private ArrayList<Entity> removearr = new ArrayList<>();
 
@@ -43,21 +43,51 @@ public class Level8 extends Level  {
                 new Rock(g, new PVector(2252, 0), "images/Rocks/rock7.png", new Square(g, new PVector(2252, 0), 91, 431)),
         };
 
+        whales = new ArrayList<>();
         whaleTimer = 4000;
     }
 
     @Override
     public void update(){
         super.update();
-
         collisionDetection();
 
         if (g.millis() > whaleTimer + 3000) {
+            whales.add(new Whale(g, new PVector(player.getPos().x + 1500 < 3000 ? player.getPos().x + 1500 : 3000, 200), new PVector(), new PVector()));
             whaleTimer = g.millis();
         }
+
+        for (Whale whale : whales) {
+            if (whale.getPos().x + whale.bb.wd > 0 || whale.spearsActive) {
+                whale.update();
+                if(whale.spearsActive){
+                    for(Spear s : whale.spears){
+                        if (s != null) {
+                            if (SAT_Collision.intersects(s.bb, player.bb)) {
+                                running = false;
+                                successful = false;
+                                whales.clear();
+                            }
+                        }
+                    }
+                }
+            }
+
+            else {
+                removearr.add(whale);
+            }
+        }
+        whales.removeAll(removearr);
+        if (!running) whales.clear();
     }
 
     private void collisionDetection() {
+        rockCollision();
+
+    }
+
+
+    private void rockCollision() {
         for(int i = 0; i < rocks.length; i++) {
             if(SAT_Collision.intersects(rocks[i].bb, player.bb)){
                 PVector playerPos = player.getPos();
@@ -95,9 +125,24 @@ public class Level8 extends Level  {
         g.image(bg, 0, 0);
 
         player.draw();
+        drawWhales();
+        drawRocks();
 
-        
         g.popMatrix();
+    }
+
+    private void drawWhales() {
+        for (Whale whale : whales) {
+                whale.draw();
+        }
+    }
+
+    private void drawRocks() {
+        for (Rock rock : rocks) {
+            if (rock != null) {
+                rock.draw();
+            }
+        }
     }
 
 
