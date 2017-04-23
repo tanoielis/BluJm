@@ -102,23 +102,31 @@ public class IslandManager implements State {
 	@Override
 	public void update(){
 		if(currentIsland == end){
-			//todo GAMEOVER DUDE, GAAAAAMEE OVER!
+			
+		}else{
+			currentIsland.update();
 		}
-		currentIsland.update();
 	}
 	
 	@Override
 	public void drawUI(){
 
+		
 		g.imageMode(PConstants.CORNER);
 		g.image(background, 0, 0);
 		g.textAlign(PConstants.RIGHT, PConstants.TOP);
 		g.textSize(60);
 		g.fill(243,203,116);
-
-		g.text("Day: "+day, g.width, 0);
-		g.text(currentIsland.name, g.width, 50);
-
+		
+		
+		if(currentIsland == end){
+			g.textAlign(PConstants.CENTER, PConstants.CENTER);
+			g.text("GAME OVER", g.width/2, g.height/2);
+		}else{
+			g.text("Day: " + day, g.width, 0);
+			g.text(currentIsland.name, g.width, 50);
+		}
+			
 		if(transparency <= 0){
 			transparency = 0;
 		}else{
@@ -126,6 +134,7 @@ public class IslandManager implements State {
 			g.rectMode(PConstants.CORNER);
 			g.rect(0, 0, g.width, g.height);
 		}
+		
 
 	}
 	
