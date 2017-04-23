@@ -75,19 +75,28 @@ public class Level3 extends Level  {
 	private void collisionDetection() {
 		for(int i = 0; i < rocks.length; i++) {
 			if(SAT_Collision.intersects(rocks[i].bb, player.bb)){
-				if (player.getPos().x + player.bb.wd >= rocks[i].bb.x && player.getPos().x <= rocks[i].bb.x + 30) {
-					player.setPos(new PVector(rocks[i].bb.x - player.bb.wd, player.getPos().y));
+				PVector playerPos = player.getPos();
+				float playerX = playerPos.x;
+				float playerY = playerPos.y;
+				float playerWd = player.bb.wd;
+				float playerHt = player.bb.ht;
+				float rockX = rocks[i].bb.x;
+				float rockY = rocks[i].bb.y;
+				float rockWd = rocks[i].bb.wd;
+				float rockHt = rocks[i].bb.ht;
+				
+				if (playerX + playerWd >= rockX && playerX <= rockX + 30 && (playerY > rockY + 30 && playerY < rockY + rockHt - 30)) {
+					player.setPos(new PVector(rockX - playerWd, playerY));
 				}
-				else if (player.getPos().x + player.vel.x <= rocks[i].bb.x + rocks[i].bb.wd && player.getPos().x <= rocks[i].bb.x + rocks[i].bb.wd - 30) {
-					player.setPos(new PVector(rocks[i].bb.x + rocks[i].bb.wd - player.vel.x, player.getPos().y));
+				else if (playerX + player.vel.x <= rockX + rockWd && (playerY > rockY + 30 && playerY < rockY + rockHt - 30)){
+					player.setPos(new PVector(rockX + rockWd, playerY));
 				}
-				if (player.getPos().y >= rocks[i].bb.y && player.getPos().y <= rocks[i].bb.y + 40) {
-					player.setPos(new PVector(player.getPos().x, rocks[i].bb.y - player.bb.ht));
+				if (playerY + playerHt >= rockY && playerY + playerHt <= rockY + 30) {
+					player.setPos(new PVector(playerX, rockY - playerHt));
 				}
-				else if (player.getPos().y >= rocks[i].bb.y && player.getPos().y <= rocks[i].bb.y - 40) {
-					player.setPos(new PVector(player.getPos().x, rocks[i].bb.y + rocks[i].bb.ht));
+				else if (playerY <= rockY + rockHt && playerY >= rockY + rockHt - 30) {
+					player.setPos(new PVector(playerX, rockY + rockHt));
 				}
-//				player.setPos(PVector.sub(player.vel,player.getPos()));
 			}
 		}
 	}
