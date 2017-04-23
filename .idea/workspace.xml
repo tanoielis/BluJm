@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java" />
     </list>
     <ignored path="BluJm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +72,7 @@
       <file leaf-file-name="Spear.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="900">
               <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
               <folding />
             </state>
@@ -1341,14 +1340,7 @@
       <workItem from="1492847163033" duration="128000" />
       <workItem from="1492852079286" duration="4996000" />
       <workItem from="1492857104939" duration="9476000" />
-      <workItem from="1492868890611" duration="34613000" />
-    </task>
-    <task id="LOCAL-00019" summary="Added point to collision">
-      <created>1492758738287</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1492758738287</updated>
+      <workItem from="1492868890611" duration="34656000" />
     </task>
     <task id="LOCAL-00020" summary="Created mainmenu">
       <created>1492759415023</created>
@@ -1686,11 +1678,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492917578353</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="FIXED SPEAR ROTATION">
+      <created>1492918640362</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1492918640362</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118773000" />
+    <option name="totallyTimeSpent" value="118816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
@@ -1775,7 +1774,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented player movement" />
     <MESSAGE value="Addeed soem enmines&#10;" />
     <MESSAGE value="Refactored file names" />
     <MESSAGE value="Adjusted whale and shark" />
@@ -1800,7 +1798,8 @@
     <MESSAGE value="Timer takes ~25 sec" />
     <MESSAGE value="Removed path from yellow island to treasure island, on map" />
     <MESSAGE value="Level 3 collision fixed for rocks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Level 3 collision fixed for rocks" />
+    <MESSAGE value="FIXED SPEAR ROTATION" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIXED SPEAR ROTATION" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2179,7 +2178,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/enemies/Spear.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="900">
           <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
           <folding />
         </state>
