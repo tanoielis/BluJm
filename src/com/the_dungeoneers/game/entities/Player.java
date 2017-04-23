@@ -107,6 +107,7 @@ public class Player extends MoveableEntity {
 		
 		currentAgility = baseAgility * agility;
 		currentSpeed = baseSpeed * speed;
+		currentLung = baseLung + (lungs*2);
 		
 		if(!(left || right)){
 			vel.x = lerp(vel.x, 0, 0.1f);

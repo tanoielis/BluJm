@@ -90,6 +90,7 @@ public class IslandManager implements State {
 		
 		level.successful = false;
 		level.running = true;
+		player.timer = -1;
 		player.right = false;
 		player.up = false;
 		player.down = false;

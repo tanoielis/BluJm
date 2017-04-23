@@ -10,6 +10,9 @@ import com.the_dungeoneers.game.states.island.Island;
 import com.the_dungeoneers.game.states.island.IslandManager;
 import processing.core.PImage;
 
+import static processing.core.PApplet.floor;
+import static processing.core.PApplet.map;
+
 /**
  * Created by Eli on 21/04/2017.
  */
@@ -23,7 +26,9 @@ public abstract class Level implements State {
 	protected Camera camera;
 	private Island to;
 	private IslandManager im;
-
+	private int transparency;
+	private float timePassed;
+	
 	public Level(Game g, Player player, Camera camera, Island to, IslandManager im){
 		this.g = g;
 		this.player = player;
@@ -50,13 +55,27 @@ public abstract class Level implements State {
 				running = false;
 			}
 			if(player.timer == -1){
-//				timer =
+				player.timer = g.millis();
+				timePassed = 0;
+				transparency = 0;
 			}
+			
+			if(g.millis() > ((player.timer + Player.currentLung*1000)/255)-timePassed){
+				timePassed = g.millis();
+				transparency++;
+				if(transparency == 255){
+					successful = false;
+					running = false;
+				}
+			}
+			
 		}
 	}
 	
 	@Override
 	public void drawUI(){
+		g.fill(0,0,60,transparency);
+		g.rect(0,0,g.width,g.height);
 	}
 	
 	@Override
