@@ -105,8 +105,8 @@ public class Player extends MoveableEntity {
 		pos.add(vel);
 		accel.mult(0);
 		
-		currentAgility = baseAgility * agility;
-		currentSpeed = baseSpeed * speed;
+		currentAgility = baseAgility * (agility*0.5f);
+		currentSpeed = baseSpeed * (speed*0.5f);
 		currentLung = baseLung + (lungs*2);
 		
 		if(!(left || right)){

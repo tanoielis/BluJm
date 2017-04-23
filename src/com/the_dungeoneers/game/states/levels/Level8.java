@@ -66,7 +66,6 @@ public class Level8 extends Level  {
                             if (SAT_Collision.intersects(s.bb, player.bb)) {
                                 running = false;
                                 successful = false;
-                                whales.clear();
                             }
                         }
                     }
