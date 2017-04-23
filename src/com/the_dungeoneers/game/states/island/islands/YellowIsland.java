@@ -23,7 +23,6 @@ public class YellowIsland extends Island {
     public void setNeighbours(IslandManager im) {
         levels.put(IslandManager.islands.get("BigRockIsland"), new Level2(g, player, camera, IslandManager.islands.get("BigRockIsland"), im));
         levels.put(IslandManager.islands.get("BurningIsland"), new Level5(g, player, camera, IslandManager.islands.get("BurningIsland"), im));
-        levels.put(IslandManager.islands.get("TreasureIsland"), new Level6(g, player, camera, IslandManager.islands.get("TreasureIsland"), im));
         levels.put(IslandManager.islands.get("SkullIsland"), new Level3(g, player, camera, IslandManager.islands.get("SkullIsland"), im));
     }
 }

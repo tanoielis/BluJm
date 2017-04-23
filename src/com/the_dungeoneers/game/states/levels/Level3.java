@@ -44,7 +44,9 @@ public class Level3 extends Level  {
     @Override
     public void update(){
         super.update();
+
 		collisionDetection();
+        whale = null;
 		
 		if(timer == -1){
 			timer = g.millis();
@@ -73,7 +75,19 @@ public class Level3 extends Level  {
 	private void collisionDetection() {
 		for(int i = 0; i < rocks.length; i++) {
 			if(SAT_Collision.intersects(rocks[i].bb, player.bb)){
-				player.setPos(PVector.sub(player.vel, player.getPos()));
+				if (player.getPos().x + player.bb.wd >= rocks[i].bb.x && player.getPos().x <= rocks[i].bb.x + 30) {
+					player.setPos(new PVector(rocks[i].bb.x - player.bb.wd, player.getPos().y));
+				}
+				else if (player.getPos().x + player.vel.x <= rocks[i].bb.x + rocks[i].bb.wd && player.getPos().x <= rocks[i].bb.x + rocks[i].bb.wd - 30) {
+					player.setPos(new PVector(rocks[i].bb.x + rocks[i].bb.wd - player.vel.x, player.getPos().y));
+				}
+				if (player.getPos().y >= rocks[i].bb.y && player.getPos().y <= rocks[i].bb.y + 40) {
+					player.setPos(new PVector(player.getPos().x, rocks[i].bb.y - player.bb.ht));
+				}
+				else if (player.getPos().y >= rocks[i].bb.y && player.getPos().y <= rocks[i].bb.y - 40) {
+					player.setPos(new PVector(player.getPos().x, rocks[i].bb.y + rocks[i].bb.ht));
+				}
+//				player.setPos(PVector.sub(player.vel,player.getPos()));
 			}
 		}
 	}
@@ -86,9 +100,11 @@ public class Level3 extends Level  {
 		g.image(bg, 0, 0);
 		
 		player.draw();
+		player.bb.draw();
 		
 		for(int i=0; i<rocks.length; i++){
 			rocks[i].draw();
+            rocks[i].bb.draw();
 		}
 		
 		if(whale != null){

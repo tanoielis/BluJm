@@ -68,7 +68,6 @@ public abstract class Level implements State {
 					running = false;
 				}
 			}
-			
 		}
 	}
 	
