@@ -44,6 +44,7 @@ public class Level1 extends Level {
 		};
 		
 		timer = 4000;
+		bg = g.loadImage("images/Backgrounds/Levels/bluey/part1.png");
     }
 
     @Override

@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c15ffe7-b4df-48f9-a567-c07ebb097d2e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/images/Backgrounds/Levels/level3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/images/Backgrounds/Levels/level5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Pyramid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Entity.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/IslandManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/YellowIsland.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/YellowIsland.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level2.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level3.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level4.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level4.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level5.java" afterPath="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level5.java" />
     </list>
     <ignored path="BluJm.iws" />
@@ -43,8 +34,8 @@
       <file leaf-file-name="Level1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+            <state relative-caret-position="875">
+              <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -80,20 +71,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level5.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Level5.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="225">
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
               <folding>
-                <element signature="e#2174#2175#0" expanded="true" />
-                <element signature="e#2204#2205#0" expanded="true" />
+                <element signature="e#2178#2179#0" expanded="true" />
+                <element signature="e#2208#2209#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Level.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
@@ -169,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/MoveableEntity.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/Upgrade.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/camera/Camera.java" />
-        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/input_handler/Keyboard.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Player.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Rock.java" />
@@ -180,10 +170,11 @@
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/obstacles/Pyramid.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/entities/Entity.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/island/islands/YellowIsland.java" />
-        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level5.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level2.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level4.java" />
         <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level.java" />
+        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java" />
+        <option value="$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level5.java" />
       </list>
     </option>
   </component>
@@ -1240,14 +1231,7 @@
       <workItem from="1492847163033" duration="128000" />
       <workItem from="1492852079286" duration="4996000" />
       <workItem from="1492857104939" duration="9476000" />
-      <workItem from="1492868890611" duration="38934000" />
-    </task>
-    <task id="LOCAL-00021" summary="Created upgrade menu">
-      <created>1492762957203</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1492762957203</updated>
+      <workItem from="1492868890611" duration="39354000" />
     </task>
     <task id="LOCAL-00022" summary="Created player.">
       <created>1492769080750</created>
@@ -1585,11 +1569,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492918677241</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="updated level bg">
+      <created>1492922967991</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1492922967997</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123094000" />
+    <option name="totallyTimeSpent" value="123514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
@@ -1674,7 +1665,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Addeed soem enmines&#10;" />
     <MESSAGE value="Refactored file names" />
     <MESSAGE value="Adjusted whale and shark" />
     <MESSAGE value="Tweeked spears" />
@@ -1699,7 +1689,8 @@
     <MESSAGE value="Removed path from yellow island to treasure island, on map" />
     <MESSAGE value="Level 3 collision fixed for rocks" />
     <MESSAGE value="FIXED SPEAR ROTATION" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIXED SPEAR ROTATION" />
+    <MESSAGE value="updated level bg" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated level bg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2064,29 +2055,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="e#2174#2175#0" expanded="true" />
-            <element signature="e#2204#2205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -2104,6 +2076,25 @@
         <state relative-caret-position="500">
           <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/the_dungeoneers/game/states/levels/Level5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding>
+            <element signature="e#2178#2179#0" expanded="true" />
+            <element signature="e#2208#2209#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -20,7 +20,7 @@ public class Level5 extends Level {
     public Level5(Game g, Player player, Camera camera, Island from, IslandManager im) {
         super(g, player, camera, from, im);
         
-//        bg = g.loadImage("images/Backgrounds/Levels/level5.png");
+        bg = g.loadImage("images/Backgrounds/Levels/level5.png");
         this.pyramid = new Pyramid(g, new PVector(805, 720), new PVector(1382, 117), new PVector(2096, 720));
     }
     
@@ -29,6 +29,8 @@ public class Level5 extends Level {
         super.update();
      
         collision();
+		
+		
     }
     
     private void collision(){
