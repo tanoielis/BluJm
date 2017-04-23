@@ -42,7 +42,7 @@ public class IslandManager implements State {
         createIslands();
 
         // Start and End Islands
-		this.currentIsland = islands.get("SkullIsland");
+		this.currentIsland = islands.get("VolcanoIsland");
 		this.end = islands.get("PlaneIsland");
 		
 		this.day = 1;
@@ -110,7 +110,7 @@ public class IslandManager implements State {
 	@Override
 	public void drawUI(){
 
-
+		g.imageMode(PConstants.CORNER);
 		g.image(background, 0, 0);
 		g.textAlign(PConstants.RIGHT, PConstants.TOP);
 		g.textSize(60);

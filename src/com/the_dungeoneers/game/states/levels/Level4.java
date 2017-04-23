@@ -18,7 +18,7 @@ public class Level4 extends Level {
 
     public Level4(Game g, Player player, Camera camera, Island from, IslandManager im) {
         super(g, player, camera, from, im);
-        this.bg = g.loadImage("images/Backgrounds/Levels/greeny/part2.png");
+        bg = g.loadImage("images/Backgrounds/Levels/greeny/part2.png");
         init();
     }
 

@@ -18,7 +18,7 @@ import static processing.core.PApplet.map;
  */
 public abstract class Level implements State {
 
-	protected static PImage bg;
+	protected PImage bg;
 	protected Game g;
 	public boolean successful;
 	public boolean running;

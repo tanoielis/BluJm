@@ -27,7 +27,7 @@ public class Level3 extends Level  {
     public Level3(Game g, Player player, Camera camera, Island from, IslandManager im) {
         super(g, player, camera, from, im);
 		
-		bg = g.loadImage("images/Backgrounds/levels/darker/part2.png");
+		bg = g.loadImage("images/Backgrounds/levels/level3.png");
 		
 		rocks = new Rock[]{
 				new Rock(g, new PVector(612, 289), "images/Rocks/rock5.png", new Square(g, new PVector(612, 289), 91, 431)),
@@ -51,7 +51,7 @@ public class Level3 extends Level  {
 			timer = g.millis();
 		}
 		
-		if(g.millis() > timer + 3 && whale == null){
+		if(g.millis() > timer + 3000 && whale == null){
 			whale = new Whale(g, new PVector(3000, 200), new PVector(), new PVector());
 		}
 		
@@ -103,27 +103,17 @@ public class Level3 extends Level  {
 
 	@Override
     public void drawEntities(){
+		g.pushMatrix();
+			g.translate(camera.getPos().x, 0);
+			g.imageMode(PConstants.CORNER);
+			g.image(bg, 0, 0);
+			
+			player.draw();
 	
-		g.imageMode(PConstants.CORNER);
-		g.image(bg, 0, 0);
-		
-		player.draw();
-		
-		for(int i=0; i<rocks.length; i++){
-			rocks[i].draw();
-		}
-
-
-		if(whale != null){
-			whale.draw();
-			if (whale.spearsActive) {
-                for (Spear s : whale.spears) {
-                    if (s != null) {
-                        s.bb.draw();
-                    }
-                }
-            }
-		}
+			if(whale != null){
+				whale.draw();
+			}
+		g.popMatrix();
     }
     
     

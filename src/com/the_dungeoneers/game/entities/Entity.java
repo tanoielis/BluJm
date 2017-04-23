@@ -1,5 +1,6 @@
 package com.the_dungeoneers.game.entities;
 
+import Collision.Polygon;
 import Collision.Square;
 import com.the_dungeoneers.game.Game;
 import processing.core.PVector;

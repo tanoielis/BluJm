@@ -11,11 +11,10 @@ import com.the_dungeoneers.game.states.island.Island;
 import com.the_dungeoneers.game.states.island.IslandManager;
 import processing.core.PConstants;
 import processing.core.PVector;
-import sun.security.provider.SHA;
+
+import static processing.core.PApplet.max;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by Chris on 22/04/2017.
@@ -31,7 +30,7 @@ public class Level2 extends Level {
 
     public Level2(Game g, Player player, Camera camera, Island from, IslandManager im) {
         super(g, player, camera, from, im);
-        this.bg = g.loadImage("images/Backgrounds/Levels/bluey/part2.png");
+        bg = g.loadImage("images/Backgrounds/Levels/bluey/part2.png");
 
         init();
 
@@ -95,29 +94,29 @@ public class Level2 extends Level {
     @Override
     public void drawEntities() {
         g.pushMatrix();
-        g.translate(camera.getPos().x, 0);
-        g.imageMode(PConstants.CORNER);
-        g.image(bg, 0,0);
-        player.draw();
-        drawJellyfish();
-        drawSharks();
+            g.translate(camera.getPos().x, 0);
+            g.imageMode(PConstants.CORNER);
+            g.image(bg, 0,0);
+            player.draw();
+            drawEnemies();
         g.popMatrix();
     }
-
-    private void drawSharks() {
-        for (Shark shark : sharks) {
-            if (shark != null) {
-                shark.draw();
-            }
-        }
-    }
-
-    private void drawJellyfish() {
-        for(Jellyfish jf : jellyFish){
-            if(jf != null){
-                jf.draw();
-            }
-        }
+    
+    private void drawEnemies(){
+        for(int i=0; i<max(sharks.size(), jellyFish.length); i++){
+			if(i<sharks.size()){
+				Shark s = sharks.get(i);
+				if(s != null){
+					s.draw();
+				}
+			}
+			if(i<jellyFish.length){
+				Jellyfish j = jellyFish[i];
+				if(j != null){
+					j.draw();
+				}
+			}
+		}
     }
 
     @Override
