@@ -60,7 +60,7 @@ public abstract class Level implements State {
 				transparency = 0;
 			}
 			
-			if(g.millis() > ((player.timer + Player.currentLung*1000)/255)-timePassed){
+			if(g.millis() > ((player.timer + player.currentLung*1000)/255)+timePassed){
 				timePassed = g.millis();
 				transparency++;
 				if(transparency == 255){
