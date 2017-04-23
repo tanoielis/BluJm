@@ -29,7 +29,6 @@ public class Spear extends MoveableEntity{
 	
 	@Override
 	public void update(){
-		g.frameRate(30);
 		vel.add(accel);
 		pos.add(vel);
 

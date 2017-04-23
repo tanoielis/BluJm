@@ -19,7 +19,7 @@ public class Bomb extends Entity{
 		super(g, pos);
 		
 		this.img = g.loadImage("images/Enemies/mine.png");
-		bb = new Square(g, pos.x, pos.y, 100, 100);
+		bb = new Square(g, pos.x + (img.width - 75)/2, pos.y, 75, 75);
 	}
 	
 	@Override
@@ -30,6 +30,6 @@ public class Bomb extends Entity{
 	@Override
 	public void draw(){
 		g.imageMode(PConstants.CORNER);
-		g.image(img, pos.x, pos.y, 100, 100);
+		g.image(img, pos.x, pos.y, img.width, img.height);
 	}
 }
