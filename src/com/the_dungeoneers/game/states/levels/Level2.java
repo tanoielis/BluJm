@@ -101,7 +101,7 @@ public class Level2 extends Level {
             drawEnemies();
         g.popMatrix();
     }
-    
+
     private void drawEnemies(){
         for(int i=0; i<max(sharks.size(), jellyFish.length); i++){
 			if(i<sharks.size()){

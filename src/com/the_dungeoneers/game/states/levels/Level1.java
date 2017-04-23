@@ -95,9 +95,9 @@ public class Level1 extends Level {
             g.translate(camera.getPos().x, 0);
 			g.imageMode(PConstants.CORNER);
             g.image(bg, 0,0);
-            player.draw();
             drawBombs();
             drawSharks();
+            player.draw();
         g.popMatrix();
     
     }

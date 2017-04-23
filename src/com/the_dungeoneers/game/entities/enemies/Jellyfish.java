@@ -6,6 +6,8 @@ import com.the_dungeoneers.game.entities.MoveableEntity;
 import processing.core.PImage;
 import processing.core.PVector;
 
+import static processing.core.PApplet.degrees;
+
 /**
  * Created by Chris on 23/04/2017.
  */
@@ -18,6 +20,8 @@ public class Jellyfish extends MoveableEntity {
         super(g, pos, vel, accel);
         this.origPos = pos.copy();
         this.img = g.loadImage("images/Enemies/jellyfish.png");
+
+        this.bb = new Square(g, pos.x, pos.y + 55, img.width, img.height - 55, degrees(vel.heading()) - 90);
     }
 
     @Override
@@ -72,7 +76,7 @@ public class Jellyfish extends MoveableEntity {
     @Override
     public void update() {
 
-        this.bb = new Square(g, pos.x, pos.y, img.width, img.height);
+        this.bb = new Square(g, pos.x, pos.y + 55, img.width, img.height - 55, degrees(vel.heading()) - 90);
         moveUp();
     }
 

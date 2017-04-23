@@ -5,8 +5,6 @@ import com.the_dungeoneers.game.camera.Camera;
 import com.the_dungeoneers.game.entities.Player;
 import com.the_dungeoneers.game.states.island.Island;
 import com.the_dungeoneers.game.states.island.IslandManager;
-import com.the_dungeoneers.game.states.levels.Level1;
-import com.the_dungeoneers.game.states.levels.Level6;
 import com.the_dungeoneers.game.states.levels.Level7;
 import com.the_dungeoneers.game.states.levels.Level8;
 
